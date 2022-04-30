@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="single-image bg-shape-dez mt0 wow fadeIn">
-                    <img src="images/service/graphic-design.jpg" alt="image" class="img-fluid no-shadow" />
+                    <img src="{{asset('assets/images/service/graphic-design.jpg')}}" alt="image" class="img-fluid no-shadow" />
                 </div>
             </div>
             <div class="col-lg-8 block-1 m-mt50">

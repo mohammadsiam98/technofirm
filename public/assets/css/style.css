@@ -8105,14 +8105,6 @@ html .mt15 {
     opacity: .9
 }
 
-.cursor.cursor-hover {
-    margin-left: -40px;
-    margin-top: -40px;
-    width: 80px;
-    height: 80px;
-    background-color: #ffbd84;
-    opacity: .2
-}
 
 .cursor-follow {
     margin-left: -18px;

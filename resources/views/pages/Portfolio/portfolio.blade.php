@@ -43,7 +43,7 @@
             <div class="col-lg-12 col-sm-12 wptbb">
                 <div class="pbwide shadow bg-gradient1">
                     <div class="portfolio-item-info-tt">
-                        <div class="logowide mb20"><img src="images/client/customer-logo-5.png" alt="logo" class="img-fluid"></div>
+                        <div class="logowide mb20"><img src="{{asset('assets/images/client/customer-logo-5.png')}}" alt="logo" class="img-fluid"></div>
                         <div class="widebloktag"><span>Design</span> <span>Coding</span> <span>Design</span> </div>
                         <h3 class="mt30 mb30">Weather & Radar - Accurate Weather Forecast</h3>
                         <ul class="info-list-ul">
@@ -57,8 +57,8 @@
                     <div class="portfolio-wide-image">
                         <div class="img-wide-blocktt tilt-outer">
                             <div class="innerwidedevice tilt-inner" data-tilt data-tilt-max="4" data-tilt-speed="1000" data-tilt-perspective="2000">
-                                <div class="desktopblock shadow1"><img src="images/portfolio/portfolio-wide-1.jpg" alt="img" class="img-fluid"> </div>
-                                <div class="mobileblock shadow1"><img src="images/portfolio/portfolio-wide-1a.jpg" alt="img" class="img-fluid"> </div>
+                                <div class="desktopblock shadow1"><img src="{{asset('assets/images/portfolio/portfolio-wide-1.jpg')}}" alt="img" class="img-fluid"> </div>
+                                <div class="mobileblock shadow1"><img src="{{asset('assets/images/portfolio/portfolio-wide-1a.jpg')}}" alt="img" class="img-fluid"> </div>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
             <div class="col-lg-12 col-sm-12 wptbb">
                 <div class="pbwide shadow bg-gradient2">
                     <div class="portfolio-item-info-tt">
-                        <div class="logowide mb20"><img src="images/client/customer-logo-3.png" alt="logo" class="img-fluid"></div>
+                        <div class="logowide mb20"><img src="{{asset('assets/images/client/customer-logo-3.png')}}" alt="logo" class="img-fluid"></div>
                         <div class="widebloktag"><span>Design</span> <span>Coding</span> <span>Design</span> </div>
                         <h3 class="mt30 mb30">Weather & Radar - Accurate Weather Forecast</h3>
                         <ul class="info-list-ul">
@@ -83,8 +83,8 @@
                     <div class="portfolio-wide-image">
                         <div class="img-wide-blocktt tilt-outer">
                             <div class="innerwidedevice tilt-inner" data-tilt data-tilt-max="4" data-tilt-speed="1000" data-tilt-perspective="2000">
-                                <div class="desktopblock shadow1"><img src="images/portfolio/portfolio-wide-2.jpg" alt="img" class="img-fluid"> </div>
-                                <div class="mobileblock shadow1"><img src="images/portfolio/portfolio-wide-2a.jpg" alt="img" class="img-fluid"> </div>
+                                <div class="desktopblock shadow1"><img src="{{asset('assets/images/portfolio/portfolio-wide-2.jpg')}}" alt="img" class="img-fluid"> </div>
+                                <div class="mobileblock shadow1"><img src="{{asset('assets/images/portfolio/portfolio-wide-2a.jpg')}}" alt="img" class="img-fluid"> </div>
                             </div>
                         </div>
                     </div>
@@ -94,7 +94,7 @@
             <div class="col-lg-12 col-sm-12 wptbb">
                 <div class="pbwide shadow bg-gradient3">
                     <div class="portfolio-item-info-tt">
-                        <div class="logowide mb20"><img src="images/client/customer-logo-7.png" alt="logo" class="img-fluid"></div>
+                        <div class="logowide mb20"><img src="{{asset('assets/images/client/customer-logo-7.png')}}" alt="logo" class="img-fluid"></div>
                         <div class="widebloktag"><span>Design</span> <span>Coding</span> <span>Design</span> </div>
                         <h3 class="mt30 mb30">Weather & Radar - Accurate Weather Forecast</h3>
                         <ul class="info-list-ul">
@@ -108,8 +108,8 @@
                     <div class="portfolio-wide-image">
                         <div class="img-wide-blocktt tilt-outer">
                             <div class="innerwidedevice tilt-inner" data-tilt data-tilt-max="4" data-tilt-speed="1000" data-tilt-perspective="2000">
-                                <div class="desktopblock shadow1"><img src="images/portfolio/portfolio-wide-3.jpg" alt="img" class="img-fluid"> </div>
-                                <div class="mobileblock shadow1"><img src="images/portfolio/portfolio-wide-3a.jpg" alt="img" class="img-fluid"> </div>
+                                <div class="desktopblock shadow1"><img src="{{asset('assets/images/portfolio/portfolio-wide-3.jpg')}}" alt="img" class="img-fluid"> </div>
+                                <div class="mobileblock shadow1"><img src="{{asset('assets/images/portfolio/portfolio-wide-3a.jpg')}}" alt="img" class="img-fluid"> </div>
                             </div>
                         </div>
                     </div>
@@ -119,7 +119,7 @@
             <div class="col-lg-12 col-sm-12 wptbb">
                 <div class="pbwide shadow bg-gradient4">
                     <div class="portfolio-item-info-tt">
-                        <div class="logowide mb20"><img src="images/client/customer-logo-5.png" alt="logo" class="img-fluid"></div>
+                        <div class="logowide mb20"><img src="{{asset('assets/images/client/customer-logo-5.png')}}" alt="logo" class="img-fluid"></div>
                         <div class="widebloktag"><span>Design</span> <span>Coding</span> <span>Design</span> </div>
                         <h3 class="mt30 mb30">Weather & Radar - Accurate Weather Forecast</h3>
                         <ul class="info-list-ul">
@@ -133,8 +133,8 @@
                     <div class="portfolio-wide-image">
                         <div class="img-wide-blocktt tilt-outer">
                             <div class="innerwidedevice tilt-inner" data-tilt data-tilt-max="4" data-tilt-speed="1000" data-tilt-perspective="2000">
-                                <div class="desktopblock shadow1"><img src="images/portfolio/portfolio-wide-4.jpg" alt="img" class="img-fluid"> </div>
-                                <div class="mobileblock shadow1"><img src="images/portfolio/portfolio-wide-4a.jpg" alt="img" class="img-fluid"> </div>
+                                <div class="desktopblock shadow1"><img src="{{asset('assets/images/portfolio/portfolio-wide-4.jpg')}}" alt="img" class="img-fluid"> </div>
+                                <div class="mobileblock shadow1"><img src="{{asset('assets/images/portfolio/portfolio-wide-4a.jpg')}}" alt="img" class="img-fluid"> </div>
                             </div>
                         </div>
                     </div>

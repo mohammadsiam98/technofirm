@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>App Name - @yield('title')</title>
+    <title>Technofirm - @yield('title')</title>
     <meta name="description" content="Creative Agency, Marketing Agency Template">
     <meta name="keywords" content="Creative Agency, Marketing Agency">
     <meta name="author" content="rajesh-doot">
@@ -13,18 +13,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="theme-color" content="#2e2a8f">
     <!--website-favicon-->
-    <link href="images/favicon.png" rel="icon">
+    <link href="{{asset('assets/images/favicon.png')}}" rel="icon">
     <!--plugin-css-->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/plugin.min.css" rel="stylesheet">
-    <link href="css/swiper.min.css" rel="stylesheet">
+    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/plugin.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/swiper.min.css')}}" rel="stylesheet">
     <link href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
     <!-- template-style-->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-    <link href="css/darkmode.css" rel="stylesheet">
-    <link href="css/gdpr-cookie.css" rel="stylesheet">
+    <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/responsive.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/darkmode.css')}}" rel="stylesheet">
+
 </head>
 
 <body>
@@ -32,22 +32,22 @@
     <div class="mouse-cursor cursor"></div>
     <div class="mouse-cursor cursor-follow"></div>
     <!-- Custom mouse end-->
-    <!--Start Preloader -->
+    {{-- <!--Start Preloader -->
     <div class="onloadpage" id="page_loader">
         <div class="pre-content">
-            <div class="logo-pre"><img src="images/logo3.png" alt="Logo" class="img-fluid" /></div>
+            <div class="logo-pre"><img src="{{asset('assets/images/logo3.png')}}" alt="Logo" class="img-fluid" /></div>
 
-        </div>
     </div>
-    <!--End Preloader -->
+    </div>
+    <!--End Preloader --> --}}
 
     <!--Start Header -->
     <header class="header-pr nav-bg-b main-header navfix fixed-top menu-white">
         <div class="container-fluid m-pad">
             <div class="menu-header">
                 <div class="dsk-logo"><a class="nav-brand" href="index-2.html">
-                        <img src="images/logo2.png" alt="Logo" class="mega-white-logo" />
-                        <img src="images/logo3.png" alt="Logo" class="mega-darks-logo" />
+                        <img src="{{asset('assets/images/logo2.png')}}" alt="Logo" class="mega-white-logo" />
+                        <img src="{{asset('assets/images/logo3.png')}}" alt="Logo" class="mega-darks-logo" />
                     </a>
                 </div>
                 <div class="custom-nav" role="navigation">
@@ -337,36 +337,24 @@
 
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/plugin.min.js"></script>
-    <script src="js/swiper.min.js"></script>
-    <script src="js/preloader.js"></script>
-    <script src="js/tweenmax.min.js"></script>
-    <script src="js/gdprcookies.js"></script>
-    <script src="js/dark-mode.js"></script>
-    <script src="phpmailer/js/jquery.validate.min.js"></script>
-    <script src="phpmailer/js/sweetalert2.all.min.js"></script>
-    <script src="js/validator.min.js"></script>
-    <script src="js/form.js"></script>
+    <script src="{{asset('assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('assets/js/plugin.min.js')}}"></script>
+    <script src="{{asset('assets/js/swiper.min.js')}}"></script>
+    <script src="{{asset('assets/js/preloader.js')}}"></script>
+    <script src="{{asset('assets/js/dark-mode.js')}}"></script>
+    <script src="{{asset('assets/phpmailer/js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('assets/js/validator.min.js')}}"></script>
+    <script src="{{asset('assets/js/form.js')}}"></script>
     <!--form script file-->
-    <script src="phpmailer/js/main.js"></script>
+    <script src="{{asset('assets/phpmailer/js/main.js')}}"></script>
     <!-- type effect -->
-    <script async src="js/typer.js"></script>
+    <script async src="{{asset('assets/js/typer.js')}}"></script>
 
     <!--common script file-->
-    <script src="js/main.js"></script>
-    <script>
-        gdprCookieNotice({
-            statement: 'https://themeforest.net/user/rajesh-doot/portfolio'
-            , performance: ['JSESSIONID']
-            , analytics: ['xxxx', 'ga']
-            , marketing: ['SSID']
-        });
+    <script src="{{asset('assets/js/main.js')}}"></script>
 
-    </script>
 </body>
 
 </html>

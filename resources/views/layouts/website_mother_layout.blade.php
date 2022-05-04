@@ -15,15 +15,15 @@
     <!--website-favicon-->
     <link href="{{asset('assets/images/favicon.png')}}" rel="icon">
     <!--plugin-css-->
-    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/plugin.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/swiper.min.css')}}" rel="stylesheet">
+    <link href="{{asset('frontendAssets/assets/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('frontendAssets/assets/css/plugin.min.css')}}" rel="stylesheet">
+    <link href="{{asset('frontendAssets/assets/css/swiper.min.css')}}" rel="stylesheet">
     <link href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
     <!-- template-style-->
-    <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/responsive.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/css/darkmode.css')}}" rel="stylesheet">
+    <link href="{{asset('frontendAssets/assets/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('frontendAssets/assets/css/responsive.css')}}" rel="stylesheet">
+    <link href="{{asset('frontendAssets/assets/css/darkmode.css')}}" rel="stylesheet">
 
 </head>
 
@@ -45,48 +45,48 @@
     <header class="header-pr nav-bg-b main-header navfix fixed-top menu-white">
         <div class="container-fluid m-pad">
             <div class="menu-header">
-                <div class="dsk-logo"><a class="nav-brand" href="index-2.html">
-                        <img src="{{asset('assets/images/logo2.png')}}" alt="Logo" class="mega-white-logo" />
-                        <img src="{{asset('assets/images/logo3.png')}}" alt="Logo" class="mega-darks-logo" />
+                <div class="dsk-logo"><a class="nav-brand" href="{{route('homepage')}}">
+                        <img src="{{asset('frontendAssets/assets/images/logo2.png')}}" alt="Logo" class="mega-white-logo" />
+                        <img src="{{asset('frontendAssets/assets/images/logo3.png')}}" alt="Logo" class="mega-darks-logo" />
                     </a>
                 </div>
                 <div class="custom-nav" role="navigation">
                     <ul class="nav-list">
                         <li class="sbmenu">
-                            <a href="about-2.html" class="menu-links">About Us</a>
+                            <a href="{{route('aboutUs')}}" class="menu-links">About Us</a>
 
                         </li>
                         <li class="sbmenu">
-                            <a href="#." class="menu-links">Portfolio</a>
+                            <a href="{{route('ourPortfolio')}}" class="menu-links">Portfolio</a>
                         </li>
                         <li class="sbmenu rpdropdown">
                             <a href="#" class="menu-links">
-                                <img src="{{asset('assets/images/menu.png')}}" alt="" style="margin-right:10px;"> Sectors</a>
+                                <img src="{{asset('frontendAssets/assets/images/menu.png')}}" alt="" style="margin-right:10px;"> Sectors</a>
                             <div class="nx-dropdown menu-dorpdown">
                                 <div class="sub-menu-section">
                                     <div class="sub-menu-center-block">
                                         <div class="sub-menu-column smfull">
                                             <ul>
                                                 <li><a href="">
-                                                        <img src="{{asset('assets/images/development.png')}}" alt="" style="margin-right:10px;"> Web Development</a></li>
+                                                        <img src="{{asset('frontendAssets/assets/images/development.png')}}" alt="" style="margin-right:10px;"> Web Development</a></li>
                                                 <li><a href="">
-                                                        <img src="{{asset('assets/images/web-design.png')}}" alt="" style="margin-right:10px;"> Web Design</a></li>
+                                                        <img src="{{asset('frontendAssets/assets/images/web-design.png')}}" alt="" style="margin-right:10px;"> Web Design</a></li>
                                                 <li><a href="">
-                                                        <img src="{{asset('assets/images/graphic-design.png')}}" alt="" style="margin-right:10px;"> Graphics Design</a> </li>
+                                                        <img src="{{asset('frontendAssets/assets/images/graphic-design.png')}}" alt="" style="margin-right:10px;"> Graphics Design</a> </li>
                                                 <li><a href="">
-                                                        <img src="{{asset('assets/images/mobile-app.png')}}" alt="" style="margin-right:13px;">App Development</a> </li>
+                                                        <img src="{{asset('frontendAssets/assets/images/mobile-app.png')}}" alt="" style="margin-right:13px;">App Development</a> </li>
                                                 <li><a href="">
-                                                        <img src="{{asset('assets/images/edit-video.png')}}" alt="" style="margin-right:13px;">Video Editing</a> </li>
+                                                        <img src="{{asset('frontendAssets/assets/images/edit-video.png')}}" alt="" style="margin-right:13px;">Video Editing</a> </li>
                                                 <li><a href="">
-                                                        <img src="{{asset('assets/images/SEO.png')}}" alt="" style="margin-right:13px;">Search Engine Optimization</a></li>
+                                                        <img src="{{asset('frontendAssets/assets/images/SEO.png')}}" alt="" style="margin-right:13px;">Search Engine Optimization</a></li>
                                                 <li><a href="">
-                                                        <img src="{{asset('assets/images/bullhorn.png')}}" alt="" style="margin-right:13px;">Social Media Marketing</a> </li>
+                                                        <img src="{{asset('frontendAssets/assets/images/bullhorn.png')}}" alt="" style="margin-right:13px;">Social Media Marketing</a> </li>
                                                 <li><a href="">
-                                                        <img src="{{asset('assets/images/creative-writing.png')}}" alt="" style="margin-right:10px;"> Content Writing</a> </li>
+                                                        <img src="{{asset('frontendAssets/assets/images/creative-writing.png')}}" alt="" style="margin-right:10px;"> Content Writing</a> </li>
                                                 <li><a href="">
-                                                        <img src="{{asset('assets/images/photography.png')}}" alt="" style="margin-right:13px;"> Photography</a> </li>
+                                                        <img src="{{asset('frontendAssets/assets/images/photography.png')}}" alt="" style="margin-right:13px;"> Photography</a> </li>
                                                 <li><a href="">
-                                                        <img src="{{asset('assets/images/camera.png')}}" alt="" style="margin-right:13px;"> Cinematography</a> </li>
+                                                        <img src="{{asset('frontendAssets/assets/images/camera.png')}}" alt="" style="margin-right:13px;"> Cinematography</a> </li>
 
                                             </ul>
                                         </div>
@@ -96,21 +96,20 @@
                         </li>
 
                         <li class="sbmenu">
-                            <a href="#." class="menu-links">Blog</a>
+                            <a href="{{route('blog')}}" class="menu-links">Blog</a>
                         </li>
                         <li class="sbmenu">
-                            <a href="#." class="menu-links">Contact Us</a>
+                            <a href="{{route('contactUs')}}" class="menu-links">Contact Us</a>
                         </li>
                     </ul>
                     <!-- mobile + desktop - sidebar menu- dark mode witch and button -->
                     <ul class="nav-list right-end-btn">
 
-                        <li class="hidemobile"><a href="get-quote.html" class="btn-br bg-btn3 btshad-b2 lnk">Project Proposal
+                        <li class="hidemobile"><a href="{{route('projectProposal')}}" class="btn-br bg-btn3 btshad-b2 lnk">Project Proposal
                                 <span class="circle"></span></a> </li>
                         <li class="hidedesktop darkmodeswitch">
                             <div class="switch-wrapper"> <label class="switch" for="niwax"> <input type="checkbox" id="niwax" /> <span class="slider round"></span> </label> </div>
                         </li>
-                        <li class="hidedesktop"><a data-bs-toggle="offcanvas" href="#offcanvasExample" class="btn-round- btn-br bg-btn2"><i class="fas fa-phone-alt"></i></a></li>
                         <li class="navm- hidedesktop"> <a class="toggle" href="#"><span></span></a></li>
                     </ul>
                 </div>
@@ -337,23 +336,23 @@
 
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="{{asset('assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
-    <script src="{{asset('assets/js/jquery.min.js')}}"></script>
-    <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('assets/js/plugin.min.js')}}"></script>
-    <script src="{{asset('assets/js/swiper.min.js')}}"></script>
-    <script src="{{asset('assets/js/preloader.js')}}"></script>
-    <script src="{{asset('assets/js/dark-mode.js')}}"></script>
-    <script src="{{asset('assets/phpmailer/js/jquery.validate.min.js')}}"></script>
-    <script src="{{asset('assets/js/validator.min.js')}}"></script>
-    <script src="{{asset('assets/js/form.js')}}"></script>
+    <script src="{{asset('frontendAssets/assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
+    <script src="{{asset('frontendAssets/assets/js/jquery.min.js')}}"></script>
+    <script src="{{asset('frontendAssets/assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('frontendAssets/assets/js/plugin.min.js')}}"></script>
+    <script src="{{asset('frontendAssets/assets/js/swiper.min.js')}}"></script>
+    <script src="{{asset('frontendAssets/vassets/js/preloader.js')}}"></script>
+    <script src="{{asset('frontendAssets/assets/js/dark-mode.js')}}"></script>
+    <script src="{{asset('frontendAssets/assets/phpmailer/js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('frontendAssets/assets/js/validator.min.js')}}"></script>
+    <script src="{{asset('frontendAssets/assets/js/form.js')}}"></script>
     <!--form script file-->
-    <script src="{{asset('assets/phpmailer/js/main.js')}}"></script>
+    <script src="{{asset('frontendAssets/assets/phpmailer/js/main.js')}}"></script>
     <!-- type effect -->
-    <script async src="{{asset('assets/js/typer.js')}}"></script>
+    <script async src="{{asset('frontendAssets/assets/js/typer.js')}}"></script>
 
     <!--common script file-->
-    <script src="{{asset('assets/js/main.js')}}"></script>
+    <script src="{{asset('frontendAssets/assets/js/main.js')}}"></script>
 
 </body>
 

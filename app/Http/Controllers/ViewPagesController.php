@@ -23,4 +23,30 @@ class ViewPagesController extends Controller
     {
         return view('pages.Portfolio.portfolio');
     }
+
+    // blog function
+    public function blog()
+    {
+        return view('pages.blogs.blog');
+    }
+
+    // contactUs function
+    public function contactUs()
+    {
+         return view('pages.contactForm.contactform');
+    }
+
+    // Project Proposal function
+    public function projectProposal()
+    {
+        return view('pages.projectProposal.project_proposal');
+    }
+
+    // Dashboard function
+    public function dashboard()
+    {
+    return view('pages.ADMIN_DASHBOARD.admin_dashboard_control');
+    }
+
+
 }

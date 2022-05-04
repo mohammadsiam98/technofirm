@@ -1,6 +1,6 @@
 @extends('layouts.website_mother_layout')
 @section('content')
-@section('technofirm', 'about-us')
+@section('title', 'aboutus')
 
 
 <!--Breadcrumb Area-->
@@ -32,7 +32,7 @@
         <div class="row">
             <div class="col-lg-5 v-center">
                 <div class="image-block upset bg-shape wow fadeIn">
-                    <img src="{{asset('assets/images/about/cheerful-businessman.jpg')}}" alt="about us Niwax" class="img-fluid" />
+                    <img src="{{asset('frontendAssets/assets/images/about/cheerful-businessman.jpg')}}" alt="about us Niwax" class="img-fluid" />
                 </div>
             </div>
             <div class="col-lg-7">
@@ -98,7 +98,7 @@
         <div class="row justify-content-center niwaxgap40">
             <div class="col-lg-5 v-center order1">
                 <div class="image-block">
-                    <img src="{{asset('assets/images/about/leadership.jpg')}}" alt="about us Niwax" class="img-fluid" />
+                    <img src="{{asset('frontendAssets/assets/images/about/leadership.jpg')}}" alt="about us Niwax" class="img-fluid" />
                 </div>
             </div>
 
@@ -128,7 +128,7 @@
 
             <div class="col-lg-5 v-center order1">
                 <div class="image-block">
-                    <img src="{{asset('assets/images/about/collaboration.jpg')}}" alt="about us Niwax" class="img-fluid" />
+                    <img src="{{asset('frontendAssets/assets/images/about/collaboration.jpg')}}" alt="about us Niwax" class="img-fluid" />
                 </div>
             </div>
         </div>

@@ -16,9 +16,23 @@ Route::get('/about-us', 'App\Http\Controllers\ViewPagesController@aboutUs')->nam
 Route::get('/our-portfolio', 'App\Http\Controllers\ViewPagesController@portfolio')->name('ourPortfolio');
 //portfolio Route
 
+//blog Route
+Route::get('/blog', 'App\Http\Controllers\ViewPagesController@blog')->name('blog');
+//blog Route
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+//Contact-Us Route
+Route::get('/contact-us', 'App\Http\Controllers\ViewPagesController@contactUs')->name('contactUs');
+//Contact-Us Route
+
+//Project Proposal Route
+Route::get('/project-proposal', 'App\Http\Controllers\ViewPagesController@projectProposal')->name('projectProposal');
+//Project Proposal Route
+Route::get('/logout', 'App\Http\Controllers\LogoutController@perform')->name('logout.perform');
+//Dashbard Route with the role superadministrator
+Route::group(['middleware'=>['auth','role:superadministrator']],function(){    
+    Route::get('/technofirm/dashboard', 'App\Http\Controllers\ViewPagesController@dashboard')->name('superadministrator.dashboard');
+     // Route for Logout
+});
+
 
 require __DIR__.'/auth.php';

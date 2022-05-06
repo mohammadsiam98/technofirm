@@ -95,11 +95,11 @@
                                     @csrf
                                     <div class="mb-1">
                                         <label class="form-label" for="register-username">Name</label>
-                                        <input class="form-control" type="text" name="name" :value="old('name')" id="register-username" placeholder="write your name" autofocus autocomplete="off" required />
+                                        <input class="form-control" type="text" name="name" value="{{ (old('name')?old('name'):'') }}" id="register-username" placeholder="write your name" autofocus autocomplete="off" required />
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="register-email">Email</label>
-                                        <input class="form-control" type="email" name="email" :value="old('email')" placeholder="john@example.com" required />
+                                        <input class="form-control" type="email" name="email" value="{{ (old('email')?old('email'):'') }}" placeholder="john@example.com" required />
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label" for="register-password">Password</label>

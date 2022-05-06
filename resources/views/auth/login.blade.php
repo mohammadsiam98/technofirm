@@ -85,7 +85,7 @@
                                     <!-- Email Insert -->
                                     <div class="mb-1">
                                         <label for="login-email" class="form-label" style="font-family: 'Poppins', sans-serif; font-size:20px">Email</label>
-                                        <input type="email" name="email" :value="old('email')" required autofocus class="form-control" id="email" placeholder="user@gmail.com" autocomplete="off" style="font-size:20px;" />
+                                        <input type="email" name="email" value="{{ (old('email')?old('email'):'') }}" required autofocus class="form-control" id="email" placeholder="user@gmail.com" autocomplete="off" style="font-size:20px;" />
 
                                     </div>
                                     <!-- Email Insert -->

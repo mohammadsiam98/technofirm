@@ -41,6 +41,16 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::get('/Banner/restoreList', 'App\Http\Controllers\BannerController@restoreList')->name('Banner.restoreList');
     Route::get('/Banner/destroyList/{id}', 'App\Http\Controllers\BannerController@restoreData')->name('Banner.restoreData');
     Route::get('/Banner-Permanently-Delete/{id}', 'App\Http\Controllers\BannerController@forceDelete')->name('Banner.forceDelete');
+
+
+    Route::get('/Company-Details/create', 'App\Http\Controllers\CompanyDetailsController@create')->name('CompanyDetails.create');
+    Route::put('/Company-Details/create', 'App\Http\Controllers\CompanyDetailsController@store')->name('CompanyDetails.store');
+    Route::get('/Company-Details/list', 'App\Http\Controllers\CompanyDetailsController@list')->name('CompanyDetails.list');
+    Route::get('/Company-Details/edit/{id}', 'App\Http\Controllers\CompanyDetailsController@edit')->name('CompanyDetails.edit');
+    Route::post('/Company-Details/update/{id}', 'App\Http\Controllers\CompanyDetailsController@update')->name('CompanyDetails.update');
+    Route::get('/Company-Details/delete/{id}', 'App\Http\Controllers\CompanyDetailsController@destroy')->name('CompanyDetails.destroy');
+    Route::get('/Company-Details/preview/{id}', 'App\Http\Controllers\CompanyDetailsController@preview')->name('CompanyDetails.preview');
+  
 });
 
 

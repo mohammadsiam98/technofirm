@@ -32,7 +32,7 @@
     <!-- END: Page CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('ADMIN_ASSETS/app-assets/css/plugins/forms/form-validation.css')}}">
 
-
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
     <link rel="stylesheet" type="text/css" href="{{asset('ADMIN_ASSETS/app-assets/plugins/table/datatable/datatables.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('ADMIN_ASSETS/app-assets/plugins/table/datatable/custom_dt_html5.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('ADMIN_ASSETS/app-assets/plugins/table/datatable/dt-global_style.css')}}">
@@ -215,7 +215,7 @@
                 </li>
                 <li class="{{  request()->routeIs('Banner.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('Banner.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate">Banner</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="app-email.html"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">About Us</span></a>
+                <li class="{{  request()->routeIs('CompanyDetails.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('CompanyDetails.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Company Details</span></a>
                 </li>
                 <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="shield"></i><span class="menu-title text-truncate" data-i18n="Roles &amp; Permission">Services CRUD</span></a>
                     <ul class="menu-content">
@@ -413,6 +413,21 @@
         var firstUpload = new FileUploadWithPreview('myFirstImage')
 
     </script>
+
+
+
+    <script src="//cdn.ckeditor.com/4.6.2/full-all/ckeditor.js"></script>
+    <script>
+        var options = {
+            filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images'
+            , filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token='
+            , filebrowserBrowseUrl: '/laravel-filemanager?type=Files'
+            , filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+        };
+        CKEDITOR.replace('my_editor', options);
+
+    </script>
+
 
 
     <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->

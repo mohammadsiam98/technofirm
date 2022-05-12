@@ -217,6 +217,10 @@
                 </li>
                 <li class="{{  request()->routeIs('CompanyDetails.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('CompanyDetails.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Company Details</span></a>
                 </li>
+                <li class="{{  request()->routeIs('Contact.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('Contact.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Contact List</span></a>
+                </li>
+                
+                
                 <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="shield"></i><span class="menu-title text-truncate" data-i18n="Roles &amp; Permission">Services CRUD</span></a>
                     <ul class="menu-content">
                         <li><a class="d-flex align-items-center" href="app-access-roles.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Roles">Category</span></a>

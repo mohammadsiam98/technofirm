@@ -353,6 +353,39 @@
 
     <!--common script file-->
     <script src="{{asset('frontendAssets/assets/js/main.js')}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('form').on('submit', function (e) {
+            e.preventDefault(); // prevent the form submit
+            var url = '{{ route('contactStore') }}';
+            // create the FormData object from the form context (this),
+            // that will be present, since it is a form event
+            var formData = new FormData(this); 
+            // build the ajax call
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: formData,
+                success: function (response) {
+                    // handle success response
+                    console.log(response.data);
+                    var x = document.getElementById('ContactMSG');
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    }
+    
+                },
+                error: function (response) {
+                    // handle error response
+                    console.log(response.data);
+                },
+                contentType: false,
+                processData: false
+            });
+            document.getElementById('cForm').reset();
+        });
+    </script>
+    
 
 </body>
 

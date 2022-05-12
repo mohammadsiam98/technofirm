@@ -71,7 +71,6 @@ class BannerController extends Controller
             $bannerGurukul->image ="storage/img/".$image->hashName();
         }
         $banner->save();
-        
         return redirect()->route('Banner.list')->with('success','Banner details updated Successfully');
     }
 

@@ -1,7 +1,12 @@
 @extends('layouts.website_mother_layout')
 @section('content')
 @section('title', 'contact-form')
-
+<style>
+    .form-block button:hover {
+    background-color: transparent;
+    
+}
+</style>
 
 <!--Breadcrumb Area-->
 <section class="breadcrumb-area banner-6">
@@ -28,59 +33,38 @@
         <div class="row justify-content-center">
             <div class="col-lg-12">
                 <div class="niwax23form shadow">
-                    <div class="common-heading text-l">
-                        <h1 class="mt0 text-radius text-light text-center text-animation bg-b contact_form">Get in touch</h1>
-                    </div>
+                   
                     <div class="contact-form-card-pr contact-block-sw m0 iconin">
                         <div class="form-block niwaxform">
-                            <form action="#" id="contactform" method="post">
-                                <div class="fieldsets row">
-                                    <div class="col-md-6 form-group floating-label">
-                                        <div class="formicon"><i class="fas fa-user"></i></div>
-                                        <input type="text" placeholder=" " required="required" id="name" class="floating-input" name="fullname">
-                                        <label>Full Name*</label>
-                                        <div class="error-label"></div>
+                            <form id="cForm" role="form" enctype="multipart/form-data">
+                                @csrf
+                                    <div class="alert alert-warning alert-dismissible fade show" id="ContactMSG" role="alert" style="display: none;">
+                                        <strong>Congratulations!</strong> We have received your message. we will knock you soon !!
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="margin-right:-551px;"></button>
                                     </div>
-                                    <div class="col-md-6 form-group floating-label">
-                                        <div class="formicon"><i class="fas fa-phone-alt"></i></div>
-                                        <input type="tel" placeholder=" " required="required" id="mobile_number" class="floating-input" name="mobile_number">
-                                        <label>Mobile Number*</label>
-                                        <div class="error-label"></div>
+                                <div class="fieldsets row">
+                                    <div class="form-group col-sm-6">
+                                        <input type="text" id="name" name="name" placeholder="Enter name" required data-error="Please fill Out" autocomplete="off">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <input type="tel" name="mobilenumber" id="mobilenumber" placeholder="Enter mobile number" required autocomplete="off">
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="fieldsets row">
-                                    <div class="col-md-6 form-group floating-label">
-                                        <div class="formicon"><i class="fas fa-envelope"></i></div>
-                                        <input type="email" placeholder=" " required="required" id="email" class="floating-input" name="email">
-                                        <label>Email Address*</label>
-                                        <div class="error-label"></div>
-                                    </div>
-                                    <div class="col-md-6 form-group floating-label">
-                                        <div class="formicon"><i class="fas fa-file-alt"></i></div>
-                                        <select required="required" id="interested_in" class="floating-select" name="interested_in">
-                                            <option value="">&nbsp;</option>
-                                            <option value="Graphic Design">Graphic Design</option>
-                                            <option value="Web Design">Web Design</option>
-                                            <option value="App Design">App Design</option>
-                                            <option value="Other">Other</option>
-                                        </select>
-                                        <label>Interested In*</label>
-                                        <div class="error-label"></div>
+                                    <div class="form-group col-sm-12">
+                                        <input type="email" name="email" id="email" placeholder="Enter your email" required autocomplete="off">
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="fieldsets row textareax">
-                                    <div class="col-md-12 form-group floating-label">
-                                        <div class="formicon"><i class="fas fa-comment-dots"></i></div>
-                                        <textarea placeholder=" " required="required" id="description" class="floating-input" name="description"></textarea>
-                                        <label>Brief about the project*</label>
-                                        <div class="error-label"></div>
+                                    <div class="form-group col-sm-12">
+                                        <textarea type="text" cols="30" rows="10" name="yourMessage" id="yourMessage" placeholder="Enter your thoughts" required></textarea>
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
-                                <div class="custom-control custom-checkbox ctmsetsw">
-                                    <input type="checkbox" class="custom-control-input ctminpt" id="agree" name="agree" checked="checked">
-                                    <label class="custom-control-label ctmlabl" for="agree">By clicking the “Submit” button you agree to
-                                        our <a href="javascript:void(0)">Terms &amp; Conditions</a>.</label>
-                                </div>
+                                
                                 <div class="fieldsets mt20"> <button type="submit" name="submit" class="btn btn-main bg-btn w-fit mb20"><span>Submit <i class="fas fa-chevron-right fa-icon"></i></span> <span class="loader"></span></button> </div>
                             </form>
                         </div>
@@ -91,6 +75,5 @@
     </div>
 </section>
 <!--End Contact Form-->
-
 
 @endsection

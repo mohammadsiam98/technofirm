@@ -198,7 +198,7 @@
             <div class="col-lg-8">
                 <div class="common-heading">
                     <span>Our Work</span>
-                    <h2 class="mb0 text-radius text-light text-animation bg-b">Our Latest Creative Work</h2>
+                    <h2 class="mb0 text-radius text-light text-animation bg-b">Our Latest Creative Works</h2>
                 </div>
             </div>
         </div>

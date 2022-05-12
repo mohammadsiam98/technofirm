@@ -18,6 +18,8 @@ Route::get('/blog', 'App\Http\Controllers\ViewPagesController@blog')->name('blog
 //Contact-Us Route
 Route::get('/contact-us', 'App\Http\Controllers\ViewPagesController@contactUs')->name('contactUs');
 
+Route::post('/contact/submit', 'App\Http\Controllers\contactusController@store')->name('contactStore');
+
 //Project Proposal Route
 Route::get('/project-proposal', 'App\Http\Controllers\ViewPagesController@projectProposal')->name('projectProposal');
 
@@ -50,6 +52,13 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::post('/Company-Details/update/{id}', 'App\Http\Controllers\CompanyDetailsController@update')->name('CompanyDetails.update');
     Route::get('/Company-Details/delete/{id}', 'App\Http\Controllers\CompanyDetailsController@destroy')->name('CompanyDetails.destroy');
     Route::get('/Company-Details/preview/{id}', 'App\Http\Controllers\CompanyDetailsController@preview')->name('CompanyDetails.preview');
+
+    Route::get('/Contact/list', 'App\Http\Controllers\contactusController@list')->name('Contact.list');
+    Route::get('/Contact/delete/{id}', 'App\Http\Controllers\contactusController@destroy')->name('Contact.destroy');
+    Route::get('/Contact/preview/{id}', 'App\Http\Controllers\contactusController@preview')->name('Contact.preview');
+    Route::get('/Contact/restoreList', 'App\Http\Controllers\contactusController@restoreList')->name('Contact.restoreList');
+    Route::get('/Contact/destroyList/{id}', 'App\Http\Controllers\contactusController@restoreData')->name('Contact.restoreData');
+    Route::get('/Contact-Permanently-Delete/{id}', 'App\Http\Controllers\contactusController@forceDelete')->name('Contact.forceDelete');
   
 });
 

@@ -35,13 +35,6 @@ class ViewPagesController extends Controller
     {
          return view('pages.contactForm.contactform');
     }
-
-    // Project Proposal function
-    public function projectProposal()
-    {
-        return view('pages.projectProposal.project_proposal');
-    }
-
     // Dashboard function
     public function dashboard()
     {

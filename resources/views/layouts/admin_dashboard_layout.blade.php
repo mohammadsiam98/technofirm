@@ -199,7 +199,7 @@
                                     </g>
                                 </g>
                             </svg></span>
-                        <h2 class="brand-text">Vuexy</h2>
+                        <h2 class="brand-text">Technofirm</h2>
                     </a></li>
                 <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pe-0" data-bs-toggle="collapse"><i class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i><i class="d-none d-xl-block collapse-toggle-icon font-medium-4  text-primary" data-feather="disc" data-ticon="disc"></i></a></li>
             </ul>
@@ -210,7 +210,7 @@
 
                 <li class="{{  request()->routeIs('superadministrator.dashboard') ? 'active' : '' }}"><a class=" d-flex align-items-center" href="{{route('superadministrator.dashboard')}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Technofirm Panel</span></a>
                 </li>
-
+               
                 <li class="navigation-header"><span data-i18n="Apps &amp; Pages">Homepage Elements</span><i data-feather="more-horizontal"></i>
                 </li>
                 <li class="{{  request()->routeIs('Banner.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('Banner.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate">Banner</span></a>
@@ -220,15 +220,16 @@
                 <li class="{{  request()->routeIs('Contact.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('Contact.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Contact List</span></a>
                 </li>
                 
-                
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="shield"></i><span class="menu-title text-truncate" data-i18n="Roles &amp; Permission">Services CRUD</span></a>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="shield"></i><span class="menu-title text-truncate" data-i18n="Roles &amp; Permission">About Us</span></a>
                     <ul class="menu-content">
-                        <li><a class="d-flex align-items-center" href="app-access-roles.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Roles">Category</span></a>
+                        <li class="{{ request()->routeIs('ceoDetails.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('ceoDetails.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">CEO Details</span></a>
                         </li>
-                        <li><a class="d-flex align-items-center" href="app-access-permission.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Permission">Overview</span></a>
+                        <li class="{{ request()->routeIs('ourStory.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('ourStory.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Our Story</span></a>
                         </li>
-                        <li><a class="d-flex align-items-center" href="app-access-permission.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Permission">Key Features</span></a>
+                        <li class="{{ request()->routeIs('brands.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('brands.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Brands</span></a>
                         </li>
+                       
+                       
                         <li><a class="d-flex align-items-center" href="app-access-permission.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Permission">Offered Services</span></a>
                         </li>
                         <li><a class="d-flex align-items-center" href="app-access-permission.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Permission"> Sector Stacks</span></a>
@@ -495,6 +496,8 @@
         })
 
     </script>
+
+
 </body>
 <!-- END: Body-->
 

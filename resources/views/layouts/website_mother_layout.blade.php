@@ -104,9 +104,6 @@
                     </ul>
                     <!-- mobile + desktop - sidebar menu- dark mode witch and button -->
                     <ul class="nav-list right-end-btn">
-
-                        <li class="hidemobile"><a href="{{route('projectProposal')}}" class="btn-br bg-btn3 btshad-b2 lnk">Project Proposal
-                                <span class="circle"></span></a> </li>
                         <li class="hidedesktop darkmodeswitch">
                             <div class="switch-wrapper"> <label class="switch" for="niwax"> <input type="checkbox" id="niwax" /> <span class="slider round"></span> </label> </div>
                         </li>
@@ -354,6 +351,7 @@
     <!--common script file-->
     <script src="{{asset('frontendAssets/assets/js/main.js')}}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
     <script>
         $('form').on('submit', function (e) {
             e.preventDefault(); // prevent the form submit
@@ -386,6 +384,42 @@
         });
     </script>
     
+<script>
+    //Owl-Carousel - awards card
+    var owl = $('.niwax-review-slider');
+    owl.owlCarousel({      
+      items: 3,
+      loop: true,
+    center:false,
+      autoplay: true,
+      margin: 20,
+      nav: false,
+      dots: true,
+      autoplayTimeout: 3500,
+      autoplayHoverPause: true,
+      smartSpeed: 2000,
+      responsive: {
+        0: {
+          items: 1,      	
+        },
+        520: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1200: {
+          items: 2
+        },
+        1400: {
+          items: 3
+        },
+        1600: {
+          items: 3
+        },
+      }
+    });
+</script>
 
 </body>
 

@@ -19,7 +19,6 @@ class BannerController extends Controller
     {
         //
         return view('pages.CRUD_OPERATIONS.HomePageCrudOperation.Banner_crud.create');
-
     }
 
     public function store(Request $request)

@@ -1,6 +1,6 @@
 @extends('layouts.admin_dashboard_layout')
 @section('content')
-@section('title', 'CEO Details')
+@section('title', 'Mission-Vision Details')
 
 <!-- BEGIN: Content-->
 <div class="app-content content ">
@@ -12,7 +12,7 @@
                 <div class="row breadcrumbs-top">
                     <div class="col-12">
                         @if($checkdataexists==NULL)
-                        <a href="{{route('ceoDetails.create')}}">
+                        <a href="{{route('goal.create')}}">
                             <button type="button" class="btn btn-dark waves-effect waves-float waves-light" style="float: right; margin-left:10px;">
                                 <span style="font-size: 22px; margin-right:5px;">Create new record</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle">
@@ -26,7 +26,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="content-body">
             <!-- Basic Tables start -->
@@ -38,29 +37,24 @@
                                 <thead>
                                     <tr>
                                         <th class="text-center">Serial Number</th>
-                                        <th class="text-center">Name</th>
-                                        <th class="text-center">Designation</th>
-                                        <th class="text-center">Image</th>
+                                        <th class="text-center">Mission</th>
+                                        <th class="text-center">Vision</th>
                                         <th class="dt-no-sorting">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($ceo as $key=>$ceoDetails)
+                                    @foreach ($goal as $key=>$missionVision)
                                     <tr>
                                         <td class="checkbox-column text-center"> {{$key+1}} </td>
-                                        <td class="text-center">{{$ceoDetails->name}}</td>
-                                        <td class="text-center">{{$ceoDetails->designation}}</td>
+                                        <td class="text-center">{{$missionVision->mission}}</td>
+                                        <td class="text-center">{{$missionVision->vision}}</td>
                                         <td>
-                                            <img src="{{url($ceoDetails->image)}}" style="width: 80px;height:auto;" alt="">
-                                        </td>
-                                       
-                                        <td>
-                                            <a href="{{route('ceoDetails.edit' , $ceoDetails->id)}}">
+                                            <a href="{{route('goal.edit' , $missionVision->id)}}">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2">
                                                     <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
                                                 </svg>
                                             </a>
-                                            <a href="{{route('ceoDetails.destroy' , $ceoDetails->id)}}">
+                                            <a href="{{route('goal.destroy' , $missionVision->id)}}">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2">
                                                     <polyline points="3 6 5 6 21 6"></polyline>
                                                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -68,7 +62,7 @@
                                                     <line x1="14" y1="11" x2="14" y2="17"></line>
                                                 </svg>
                                             </a>
-                                            <a href="{{route('ceoDetails.preview' , $ceoDetails->id)}}">
+                                            <a href="{{route('goal.preview' , $missionVision->id)}}">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chrome">
                                                     <circle cx="12" cy="12" r="10"></circle>
                                                     <circle cx="12" cy="12" r="4"></circle>
@@ -79,6 +73,7 @@
                                             </a>
                                         </td>
                                     </tr>
+                                    
                                     @endforeach
                                 </tbody>
                             </table>
@@ -89,47 +84,5 @@
         </div>
     </div>
 </div>
-
-<script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-
-<script>
-    $(function() {
-        $('#toggle-two').bootstrapToggle({
-            on: 'Enabled'
-            , off: 'Disabled'
-        });
-    })
-
-</script>
-
-
-<script>
-    $('.toggle-class').on('change', function() {
-        var status = $(this).prop('checked') == true ? 1 : 0;
-        var banner_id = $(this).data('id');
-        $.ajax({
-            type: 'GET'
-            , dataType: 'JSON'
-            , url: "{{ route('BannerStatus') }}"
-            , data: {
-                'status': status
-                , 'banner_id': banner_id
-            }
-            , success: function(data) {
-                $('#notifDiv').fadeIn();
-                $('#notifDiv').css('background', 'green');
-                $('#notifDiv').text('Status Updated Successfully');
-                setTimeout(() => {
-                    $('#notifDiv').fadeOut();
-                }, 3000);
-            }
-        });
-    });
-
-</script>
-
-
-
 
 @endsection

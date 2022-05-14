@@ -74,14 +74,22 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::get('/Our-Story/delete/{id}', 'App\Http\Controllers\OurStoriesController@destroy')->name('ourStory.destroy');
     Route::get('/Our-Story/preview/{id}', 'App\Http\Controllers\OurStoriesController@preview')->name('ourStory.preview');
 
-
-
+    
     Route::get('/brands/create', 'App\Http\Controllers\BrandsCollabWithController@create')->name('brands.create');
     Route::put('/brands/create', 'App\Http\Controllers\BrandsCollabWithController@store')->name('brands.store');
     Route::get('/brands/list', 'App\Http\Controllers\BrandsCollabWithController@list')->name('brands.list');
     Route::get('/brands/edit/{id}', 'App\Http\Controllers\BrandsCollabWithController@edit')->name('brands.edit');
     Route::post('/brands/update/{id}', 'App\Http\Controllers\BrandsCollabWithController@update')->name('brands.update');
     Route::get('/brands/delete/{id}', 'App\Http\Controllers\BrandsCollabWithController@destroy')->name('brands.destroy');
+
+
+    Route::get('/goal/create', 'App\Http\Controllers\MissionVissionController@create')->name('goal.create');
+    Route::put('/goal/create', 'App\Http\Controllers\MissionVissionController@store')->name('goal.store');
+    Route::get('/goal/list', 'App\Http\Controllers\MissionVissionController@list')->name('goal.list');
+    Route::get('/goal/edit/{id}', 'App\Http\Controllers\MissionVissionController@edit')->name('goal.edit');
+    Route::post('/goal/update/{id}', 'App\Http\Controllers\MissionVissionController@update')->name('goal.update');
+    Route::get('/goal/delete/{id}', 'App\Http\Controllers\MissionVissionController@destroy')->name('goal.destroy');
+    Route::get('/goal/preview/{id}', 'App\Http\Controllers\MissionVissionController@preview')->name('goal.preview');
 });
 
 require __DIR__.'/auth.php';

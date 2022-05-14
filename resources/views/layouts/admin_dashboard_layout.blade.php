@@ -228,6 +228,8 @@
                         </li>
                         <li class="{{ request()->routeIs('brands.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('brands.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Brands</span></a>
                         </li>
+                        <li class="{{ request()->routeIs('goal.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('goal.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Mission & Vission</span></a>
+                        </li>
                        
                        
                         <li><a class="d-flex align-items-center" href="app-access-permission.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Permission">Offered Services</span></a>

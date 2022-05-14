@@ -245,7 +245,7 @@
       <div class="row upset justify-content-center mt10">
         <div class="col-lg-7 v-center order2">
           <div class="ps-block">
-            <h3>Our Vission</h3>
+            <h3>Our Vision</h3>
             <p>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
           </div>
         </div>

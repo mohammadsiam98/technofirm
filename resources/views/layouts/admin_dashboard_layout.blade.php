@@ -219,7 +219,8 @@
                 </li>
                 <li class="{{  request()->routeIs('Contact.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('Contact.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Contact List</span></a>
                 </li>
-                
+                <li class="{{  request()->routeIs('Category.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('Category.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Categories</span></a>
+                </li>
                 <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="shield"></i><span class="menu-title text-truncate" data-i18n="Roles &amp; Permission">About Us</span></a>
                     <ul class="menu-content">
                         <li class="{{ request()->routeIs('ceoDetails.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('ceoDetails.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">CEO Details</span></a>
@@ -229,12 +230,6 @@
                         <li class="{{ request()->routeIs('brands.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('brands.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Brands</span></a>
                         </li>
                         <li class="{{ request()->routeIs('goal.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('goal.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Mission & Vission</span></a>
-                        </li>
-                       
-                       
-                        <li><a class="d-flex align-items-center" href="app-access-permission.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Permission">Offered Services</span></a>
-                        </li>
-                        <li><a class="d-flex align-items-center" href="app-access-permission.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Permission"> Sector Stacks</span></a>
                         </li>
                     </ul>
                 </li>

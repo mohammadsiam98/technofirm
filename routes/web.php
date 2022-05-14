@@ -90,6 +90,15 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::post('/goal/update/{id}', 'App\Http\Controllers\MissionVissionController@update')->name('goal.update');
     Route::get('/goal/delete/{id}', 'App\Http\Controllers\MissionVissionController@destroy')->name('goal.destroy');
     Route::get('/goal/preview/{id}', 'App\Http\Controllers\MissionVissionController@preview')->name('goal.preview');
+
+
+    
+    Route::get('/category/create', 'App\Http\Controllers\CategoryController@create')->name('Category.create');
+    Route::put('/category/create', 'App\Http\Controllers\CategoryController@store')->name('Category.store');
+    Route::get('/category/list', 'App\Http\Controllers\CategoryController@list')->name('Category.list');
+    Route::get('/category/edit/{id}', 'App\Http\Controllers\CategoryController@edit')->name('Category.edit');
+    Route::post('/category/update/{id}', 'App\Http\Controllers\CategoryController@update')->name('Category.update');
+    Route::get('/category/delete/{id}', 'App\Http\Controllers\CategoryController@destroy')->name('Category.destroy');
 });
 
 require __DIR__.'/auth.php';

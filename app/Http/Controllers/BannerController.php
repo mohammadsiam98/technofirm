@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage; // For Image insert & Edit we use Laravel Illuminate 
 use App\Models\Banner; // Banner Model Import 
 class BannerController extends Controller
-{
-    
+{ 
     public function list()
     {
         //

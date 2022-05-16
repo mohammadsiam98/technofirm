@@ -1,6 +1,6 @@
 @extends('layouts.admin_dashboard_layout')
 @section('content')
-@section('title', 'Single Banner Preview')
+@section('title', 'CEO Details Preview')
 
 <!-- BEGIN: Content-->
 <div class="app-content content ">

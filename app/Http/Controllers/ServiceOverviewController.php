@@ -95,4 +95,11 @@ class ServiceOverViewController extends Controller
         $ServiceOverviewDetails->delete();
         return redirect()->route('ServiceOverviewDetails.list')->with('success',"Deleted Successfully");
     }
+
+    public function preview($id)
+    {
+        //
+        $ServiceOverviewDetails = ServiceOverview::find($id);
+        return view('pages.CRUD_OPERATIONS.DynamicServicesInOnePage.ServiceOverView_crud.preview',compact('ServiceOverviewDetails'));
+    }
 }

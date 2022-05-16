@@ -91,7 +91,6 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::get('/goal/delete/{id}', 'App\Http\Controllers\MissionVissionController@destroy')->name('goal.destroy');
     Route::get('/goal/preview/{id}', 'App\Http\Controllers\MissionVissionController@preview')->name('goal.preview');
 
-
     
     Route::get('/category/create', 'App\Http\Controllers\CategoryController@create')->name('Category.create');
     Route::put('/category/create', 'App\Http\Controllers\CategoryController@store')->name('Category.store');
@@ -99,6 +98,15 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::get('/category/edit/{id}', 'App\Http\Controllers\CategoryController@edit')->name('Category.edit');
     Route::post('/category/update/{id}', 'App\Http\Controllers\CategoryController@update')->name('Category.update');
     Route::get('/category/delete/{id}', 'App\Http\Controllers\CategoryController@destroy')->name('Category.destroy');
+
+
+    Route::get('/service-overview/create', 'App\Http\Controllers\ServiceOverViewController@create')->name('ServiceOverviewDetails.create');
+    Route::put('/service-overview/create', 'App\Http\Controllers\ServiceOverViewController@store')->name('ServiceOverviewDetails.store');
+    Route::get('/service-overview/list', 'App\Http\Controllers\ServiceOverViewController@list')->name('ServiceOverviewDetails.list');
+    Route::get('/service-overview/edit/{id}', 'App\Http\Controllers\ServiceOverViewController@edit')->name('ServiceOverviewDetails.edit');
+    Route::post('/service-overview/update/{id}', 'App\Http\Controllers\ServiceOverViewController@update')->name('ServiceOverviewDetails.update');
+    Route::get('/service-overview/delete/{id}', 'App\Http\Controllers\ServiceOverViewController@destroy')->name('ServiceOverviewDetails.destroy');
+    Route::get('/service-overview/preview/{id}', 'App\Http\Controllers\ServiceOverViewController@preview')->name('ServiceOverviewDetails.preview');
 });
 
 require __DIR__.'/auth.php';

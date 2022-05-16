@@ -24,7 +24,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('ADMIN_ASSETS/app-assets/css/themes/bordered-layout.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('ADMIN_ASSETS/app-assets/css/themes/semi-dark-layout.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('ADMIN_ASSETS/app-assets/css/components.min.css')}}">
-
+    <link rel="stylesheet" type="text/css" href="{{asset('ADMIN_ASSETS/app-assets/vendors/css/forms/select/select2.min.css')}}">
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('ADMIN_ASSETS/app-assets/css/core/menu/menu-types/vertical-menu.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('ADMIN_ASSETS/app-assets/css/pages/dashboard-ecommerce.min.css')}}">
@@ -213,14 +213,19 @@
                
                 <li class="navigation-header"><span data-i18n="Apps &amp; Pages">Homepage Elements</span><i data-feather="more-horizontal"></i>
                 </li>
+
                 <li class="{{  request()->routeIs('Banner.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('Banner.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate">Banner</span></a>
                 </li>
+
                 <li class="{{  request()->routeIs('CompanyDetails.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('CompanyDetails.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Company Details</span></a>
                 </li>
+
                 <li class="{{  request()->routeIs('Contact.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('Contact.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Contact List</span></a>
                 </li>
+
                 <li class="{{  request()->routeIs('Category.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('Category.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Categories</span></a>
                 </li>
+
                 <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="shield"></i><span class="menu-title text-truncate" data-i18n="Roles &amp; Permission">About Us</span></a>
                     <ul class="menu-content">
                         <li class="{{ request()->routeIs('ceoDetails.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('ceoDetails.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">CEO Details</span></a>
@@ -230,6 +235,13 @@
                         <li class="{{ request()->routeIs('brands.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('brands.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Brands</span></a>
                         </li>
                         <li class="{{ request()->routeIs('goal.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('goal.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Mission & Vission</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="shield"></i><span class="menu-title text-truncate" data-i18n="Roles &amp; Permission">Dynamic Services</span></a>
+                    <ul class="menu-content">
+                        <li class="{{ request()->routeIs('ServiceOverviewDetails.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('ServiceOverviewDetails.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Service Overview</span></a>
                         </li>
                     </ul>
                 </li>
@@ -366,8 +378,6 @@
 
     </div>
     <!-- End: Customizer-->
-
-
     </div>
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
@@ -382,7 +392,6 @@
     </footer>
     <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
     <!-- END: Footer-->
-
 
     <!-- BEGIN: Vendor JS-->
     <script src="{{asset('ADMIN_ASSETS/app-assets/vendors/js/vendors.min.js')}}"></script>
@@ -400,6 +409,8 @@
     <script src="{{asset('ADMIN_ASSETS/app-assets/vendors/js/forms/select/select2.full.min.js')}}"></script>
     <script src="{{asset('ADMIN_ASSETS/app-assets/vendors/js/forms/validation/jquery.validate.min.js')}}"></script>
     <script src="{{asset('ADMIN_ASSETS/app-assets/js/scripts/forms/form-validation.js')}}"></script>
+    <script src="{{asset('ADMIN_ASSETS/app-assets/vendors/js/forms/select/select2.full.min.js')}}"></script>
+    <script src="{{asset('ADMIN_ASSETS/app-assets/js/scripts/forms/form-select2.min.js')}}"></script>
 
 
     <!-- BEGIN: Page Vendor JS-->
@@ -413,21 +424,16 @@
 
     <script>
         var firstUpload = new FileUploadWithPreview('myFirstImage')
-
     </script>
-
-
-
     <script src="//cdn.ckeditor.com/4.6.2/full-all/ckeditor.js"></script>
     <script>
-        var options = {
-            filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images'
-            , filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token='
-            , filebrowserBrowseUrl: '/laravel-filemanager?type=Files'
-            , filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
-        };
-        CKEDITOR.replace('my_editor', options);
-
+    var options={
+        filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+        filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+        filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+        filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+    };
+    CKEDITOR.replace('my-editor', options);
     </script>
 
 

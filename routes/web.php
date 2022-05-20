@@ -130,6 +130,17 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::get('/sector-services/restoreList', 'App\Http\Controllers\SectorServicesController@restoreList')->name('SectorServices.restoreList');
     Route::get('/sector-services/destroyList/{id}', 'App\Http\Controllers\SectorServicesController@restoreData')->name('SectorServices.restoreData');
     Route::get('/sector-services-Permanently-Delete/{id}', 'App\Http\Controllers\SectorServicesController@forceDelete')->name('SectorServices.forceDelete');
+
+
+
+    Route::get('/sector-stack-heading/create', 'App\Http\Controllers\Sector_Technologies_Name_Heading@create')->name('SectorTechnologyHeading.create');
+    Route::put('/sector-stack-heading/create', 'App\Http\Controllers\Sector_Technologies_Name_Heading@store')->name('SectorTechnologyHeading.store');
+    Route::get('/sector-stack-heading/list', 'App\Http\Controllers\Sector_Technologies_Name_Heading@list')->name('SectorTechnologyHeading.list');
+    Route::get('/sector-stack-heading/edit/{id}', 'App\Http\Controllers\Sector_Technologies_Name_Heading@edit')->name('SectorTechnologyHeading.edit');
+    Route::post('/sector-stack-heading/update/{id}', 'App\Http\Controllers\Sector_Technologies_Name_Heading@update')->name('SectorTechnologyHeading.update');
+    Route::get('/sector-stack-heading/delete/{id}', 'App\Http\Controllers\Sector_Technologies_Name_Heading@destroy')->name('SectorTechnologyHeading.destroy');
+
+
 });
 
 require __DIR__.'/auth.php';

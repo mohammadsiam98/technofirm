@@ -1,6 +1,6 @@
 @extends('layouts.admin_dashboard_layout')
 @section('content')
-@section('title', 'Banner restoreLists')
+@section('title', 'restoreLists')
 
 <!-- BEGIN: Content-->
 <div class="app-content content ">

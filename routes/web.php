@@ -91,7 +91,7 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::get('/goal/delete/{id}', 'App\Http\Controllers\MissionVissionController@destroy')->name('goal.destroy');
     Route::get('/goal/preview/{id}', 'App\Http\Controllers\MissionVissionController@preview')->name('goal.preview');
 
-    
+
     Route::get('/category/create', 'App\Http\Controllers\CategoryController@create')->name('Category.create');
     Route::put('/category/create', 'App\Http\Controllers\CategoryController@store')->name('Category.store');
     Route::get('/category/list', 'App\Http\Controllers\CategoryController@list')->name('Category.list');
@@ -107,6 +107,29 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::post('/service-overview/update/{id}', 'App\Http\Controllers\ServiceOverViewController@update')->name('ServiceOverviewDetails.update');
     Route::get('/service-overview/delete/{id}', 'App\Http\Controllers\ServiceOverViewController@destroy')->name('ServiceOverviewDetails.destroy');
     Route::get('/service-overview/preview/{id}', 'App\Http\Controllers\ServiceOverViewController@preview')->name('ServiceOverviewDetails.preview');
+
+
+    
+    Route::get('/sector-service-name/create', 'App\Http\Controllers\SectorServicesNamesController@create')->name('SectorServicesNames.create');
+    Route::put('/sector-service-name/create', 'App\Http\Controllers\SectorServicesNamesController@store')->name('SectorServicesNames.store');
+    Route::get('/sector-service-name/list', 'App\Http\Controllers\SectorServicesNamesController@list')->name('SectorServicesNames.list');
+    Route::get('/sector-service-name/edit/{id}', 'App\Http\Controllers\SectorServicesNamesController@edit')->name('SectorServicesNames.edit');
+    Route::post('/sector-service-name/update/{id}', 'App\Http\Controllers\SectorServicesNamesController@update')->name('SectorServicesNames.update');
+    Route::get('/sector-service-name/delete/{id}', 'App\Http\Controllers\SectorServicesNamesController@destroy')->name('SectorServicesNames.destroy');
+
+
+    
+    Route::get('/sector-services/create', 'App\Http\Controllers\SectorServicesController@create')->name('SectorServices.create');
+    Route::put('/sector-services/create', 'App\Http\Controllers\SectorServicesController@store')->name('SectorServices.store');
+    Route::get('/sector-services/list', 'App\Http\Controllers\SectorServicesController@list')->name('SectorServices.list');
+    Route::get('/sector-services/edit/{id}', 'App\Http\Controllers\SectorServicesController@edit')->name('SectorServices.edit');
+    Route::post('/sector-services/update/{id}', 'App\Http\Controllers\SectorServicesController@update')->name('SectorServices.update');
+    Route::get('/sector-services/delete/{id}', 'App\Http\Controllers\SectorServicesController@destroy')->name('SectorServices.destroy');
+    Route::get('/sector-services/preview/{id}', 'App\Http\Controllers\SectorServicesController@preview')->name('SectorServices.preview');
+    Route::get('/sector-services-status/update', 'App\Http\Controllers\SectorServicesController@SectorServicesStatus')->name('SectorServicesStatus');
+    Route::get('/sector-services/restoreList', 'App\Http\Controllers\SectorServicesController@restoreList')->name('SectorServices.restoreList');
+    Route::get('/sector-services/destroyList/{id}', 'App\Http\Controllers\SectorServicesController@restoreData')->name('SectorServices.restoreData');
+    Route::get('/sector-services-Permanently-Delete/{id}', 'App\Http\Controllers\SectorServicesController@forceDelete')->name('SectorServices.forceDelete');
 });
 
 require __DIR__.'/auth.php';

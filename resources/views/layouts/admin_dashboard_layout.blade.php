@@ -214,19 +214,19 @@
                 <li class="navigation-header"><span data-i18n="Apps &amp; Pages">Homepage Elements</span><i data-feather="more-horizontal"></i>
                 </li>
 
-                <li class="{{  request()->routeIs('Banner.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('Banner.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate">Banner</span></a>
+                <li class="{{  request()->routeIs('Banner.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('Banner.list')}}"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sliders"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg><span class="menu-title text-truncate" data-i18n="Email"> Banner</span></a>
                 </li>
 
-                <li class="{{  request()->routeIs('CompanyDetails.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('CompanyDetails.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Company Details</span></a>
+                <li class="{{  request()->routeIs('CompanyDetails.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('CompanyDetails.list')}}"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-justify"><line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="21" y1="18" x2="3" y2="18"></line></svg> Company Details</span></a>
                 </li>
 
-                <li class="{{  request()->routeIs('Contact.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('Contact.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Contact List</span></a>
+                <li class="{{  request()->routeIs('Contact.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('Contact.list')}}"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Contact List</span></a>
                 </li>
 
-                <li class="{{  request()->routeIs('Category.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('Category.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Categories</span></a>
+                <li class="{{  request()->routeIs('Category.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('Category.list')}}"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Categories</a>
                 </li>
 
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="shield"></i><span class="menu-title text-truncate" data-i18n="Roles &amp; Permission">About Us</span></a>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#" style="color: white"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder-plus"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path><line x1="12" y1="11" x2="12" y2="17"></line><line x1="9" y1="14" x2="15" y2="14"></line></svg> About Us</span></a>
                     <ul class="menu-content">
                         <li class="{{ request()->routeIs('ceoDetails.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('ceoDetails.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">CEO Details</span></a>
                         </li>
@@ -238,10 +238,14 @@
                         </li>
                     </ul>
                 </li>
-
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="shield"></i><span class="menu-title text-truncate" data-i18n="Roles &amp; Permission">Dynamic Services</span></a>
+                
+                <li class=" nav-item"><a class="d-flex align-items-center" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder-plus"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path><line x1="12" y1="11" x2="12" y2="17"></line><line x1="9" y1="14" x2="15" y2="14"></line></svg> Dynamic Services</span></a>
                     <ul class="menu-content">
                         <li class="{{ request()->routeIs('ServiceOverviewDetails.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('ServiceOverviewDetails.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Service Overview</span></a>
+                        </li>
+                        <li class="{{ request()->routeIs('SectorServicesNames.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('SectorServicesNames.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Service heading</span></a>
+                        </li>
+                        <li class="{{ request()->routeIs('SectorServices.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('SectorServices.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Sector Services</span></a>
                         </li>
                     </ul>
                 </li>

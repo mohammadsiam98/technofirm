@@ -249,6 +249,8 @@
                         </li>
                         <li class="{{ request()->routeIs('SectorTechnologyHeading.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('SectorTechnologyHeading.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Stack Heading</span></a>
                         </li>
+                        <li class="{{ request()->routeIs('sector_technologies_details.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('sector_technologies_details.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Stack Details</span></a>
+                        </li>
                     </ul>
                 </li>
             </ul>

@@ -1,6 +1,6 @@
 @extends('layouts.admin_dashboard_layout')
 @section('content')
-@section('title', 'Technology Heading | Create')
+@section('title', 'Stack Details Create')
 
 
 <!-- BEGIN: Content-->
@@ -12,9 +12,9 @@
             <div class="content-header-left col-md-12 col-12 mb-2">
                 <div class="row breadcrumbs-top">
                     <div class="col-12">
-                        <a href="{{route('SectorTechnologyHeading.list')}}">
+                        <a href="{{route('sector_technologies_details.list')}}">
                             <button type="button" class="btn btn-dark waves-effect waves-float waves-light" style="float: right">
-                                <span style="font-size: 22px; margin-right:5px;">Details</span>
+                                <span style="font-size: 22px; margin-right:5px;">Stack Details List</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list">
                                     <line x1="8" y1="6" x2="21" y2="6"></line>
                                     <line x1="8" y1="12" x2="21" y2="12"></line>
@@ -34,51 +34,74 @@
                 <div class="row">
                     <div class="card">
                         <div class="card-body">
-                            <form action="{{route('SectorTechnologyHeading.store')}}" method="POST" enctype="multipart/form-data">
-                                @csrf                       
+                            <form action="{{route('sector_technologies_details.store')}}" method="POST" enctype="multipart/form-data">
+                                @csrf
                                 {{method_field('PUT')}}
                                 <div class="row">
-
-
-                                     {{-- Category List --}}
-                                     <div class="col-12 basic-select2">
+                                    {{-- Sector Technology Names List --}}
+                                    <div class="col-12 basic-select2">
                                         <div class="mb-1 row">
                                             <div class="col-sm-3">
-                                                <label class="col-form-label" for="title">Category</label>
+                                                <label class="col-form-label" for="title">Technology Heading</label>
                                             </div>
                                             <div class="col-sm-9">
-                                                <select name="category_id" class="select2 form-select" id="select2-basic">
+                                                <select name="stack_id" class="select2 form-select" id="select2-basic">
                                                     <option class="disabled">--Select Option--</option>
-                                                    @foreach ($categorylist as $category)
-                                                    <option value="{{ $category->id }}">{{ $category->categoryName }}</option>
+                                                    @foreach ($stackList as $sectorTechnologyStackSectionHeading)
+                                                    <option value="{{ $sectorTechnologyStackSectionHeading->id }}">{{ $sectorTechnologyStackSectionHeading->Sector_technologies_name_heading	 }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
-                                    {{-- Category List --}}
-
+                                    {{-- Sector Technology Names List --}}
                                     <div class="col-12">
                                         <div class="mb-1 row">
                                             <div class="col-sm-3">
-                                                <label class="col-form-label" for="Sector_technologies_name_heading">Service Stack name we offer</label>
+                                                <label class="col-form-label" for="stackName">Stack Name</label>
                                             </div>
                                             <div class="col-sm-9">
-                                                <input type="text" id="Sector_technologies_name_heading" class="form-control" name="Sector_technologies_name_heading" value="{{ (old('Sector_technologies_name_heading')?old('Sector_technologies_name_heading'):'') }}" placeholder="Enter a heading" autocomplete="off" />
+                                                <input type="text" id="stackName" class="form-control" name="stackName" value="{{ (old('stackName')?old('stackName'):'') }}" placeholder="Enter your stack name" autocomplete="off" />
                                             </div>
                                         </div>
                                     </div>
-
+                                    <div class="col-12">
+                                        <div class="mb-1 row">
+                                            <div class="col-sm-3">
+                                                <label class="col-form-label" for="details">Stack Details</label>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <input type="text" id="details" class="form-control" name="details" value="{{ (old('details')?old('details'):'') }}" placeholder="Write your stack details" autocomplete="off" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="mb-1 row">
+                                            <div class="custom-file-container" data-upload-id="myFirstImage">
+                                                <label style="font-family: 'Poppins', sans-serif; color:black"> Choose an image<a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image"></a></label>
+                                                <label class="custom-file-container__custom-file">
+                                                    <input type="file" name="image" />
+                                                    <span class="custom-file-container__custom-file__custom-file-control"></span>
+                                                </label>
+                                                <div class="custom-file-container__image-preview"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="col-12">
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                         <button type="reset" class="btn btn-info">Reset</button>
                                     </div>
+
                                 </div>
                             </form>
                         </div>
                     </div>
+
                 </div>
+
             </section>
+
+
         </div>
     </div>
 </div>

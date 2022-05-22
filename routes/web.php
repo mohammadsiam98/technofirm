@@ -132,13 +132,27 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::get('/sector-services-Permanently-Delete/{id}', 'App\Http\Controllers\SectorServicesController@forceDelete')->name('SectorServices.forceDelete');
 
 
-
+    
     Route::get('/sector-stack-heading/create', 'App\Http\Controllers\Sector_Technologies_Name_Heading@create')->name('SectorTechnologyHeading.create');
     Route::put('/sector-stack-heading/create', 'App\Http\Controllers\Sector_Technologies_Name_Heading@store')->name('SectorTechnologyHeading.store');
     Route::get('/sector-stack-heading/list', 'App\Http\Controllers\Sector_Technologies_Name_Heading@list')->name('SectorTechnologyHeading.list');
     Route::get('/sector-stack-heading/edit/{id}', 'App\Http\Controllers\Sector_Technologies_Name_Heading@edit')->name('SectorTechnologyHeading.edit');
     Route::post('/sector-stack-heading/update/{id}', 'App\Http\Controllers\Sector_Technologies_Name_Heading@update')->name('SectorTechnologyHeading.update');
     Route::get('/sector-stack-heading/delete/{id}', 'App\Http\Controllers\Sector_Technologies_Name_Heading@destroy')->name('SectorTechnologyHeading.destroy');
+
+
+
+    Route::get('/sector-stack-details/create', 'App\Http\Controllers\SectorStackTechnologiesController@create')->name('sector_technologies_details.create');
+    Route::put('/sector-stack-details/create', 'App\Http\Controllers\SectorStackTechnologiesController@store')->name('sector_technologies_details.store');
+    Route::get('/sector-stack-details/list', 'App\Http\Controllers\SectorStackTechnologiesController@list')->name('sector_technologies_details.list');
+    Route::get('/sector-stack-details/edit/{id}', 'App\Http\Controllers\SectorStackTechnologiesController@edit')->name('sector_technologies_details.edit');
+    Route::post('/sector-stack-details/update/{id}', 'App\Http\Controllers\SectorStackTechnologiesController@update')->name('sector_technologies_details.update');
+    Route::get('/sector-stack-details/delete/{id}', 'App\Http\Controllers\SectorStackTechnologiesController@destroy')->name('sector_technologies_details.destroy');
+    Route::get('/sector-stack-details/preview/{id}', 'App\Http\Controllers\SectorStackTechnologiesController@preview')->name('sector_technologies_details.preview');
+    Route::get('/sector-stack-details/update', 'App\Http\Controllers\SectorStackTechnologiesController@sector_technologies_detailsStatus')->name('sector_technologies_details_Status');
+    Route::get('/sector-stack-details/restoreList', 'App\Http\Controllers\SectorStackTechnologiesController@restoreList')->name('sector_technologies_details.restoreList');
+    Route::get('/sector-stack-details/destroyList/{id}', 'App\Http\Controllers\SectorStackTechnologiesController@restoreData')->name('sector_technologies_details.restoreData');
+    Route::get('/sector-stack-details-Permanently-Delete/{id}', 'App\Http\Controllers\SectorStackTechnologiesController@forceDelete')->name('sector_technologies_details.forceDelete');
 
 
 });

@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class SectorTechnologiesName extends Model
 {
-    protected $fillable=['Sector_technologies_name_heading'];
+    protected $fillable=['category_id','Sector_technologies_name_heading'];
+    public function get_category()
+    {
+        return $this->belongsTo('App\Models\Category', 'category_id');
+    } 
     use HasFactory;
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\SectorTechnologiesName;
+use App\Models\Category;
 class Sector_Technologies_Name_Heading extends Controller
 {
     public function list()
@@ -16,7 +17,8 @@ class Sector_Technologies_Name_Heading extends Controller
     public function create()
     {
         //
-        return view('pages.CRUD_OPERATIONS.DynamicServicesInOnePage.SectorTechnologiesNames_crud.create');
+        $categorylist = Category::all();
+        return view('pages.CRUD_OPERATIONS.DynamicServicesInOnePage.SectorTechnologiesNames_crud.create',compact('categorylist'));
     }
 
     public function store(Request $request)
@@ -27,6 +29,7 @@ class Sector_Technologies_Name_Heading extends Controller
             'Sector_technologies_name_heading.required' => 'Please write your heading', 
         ]);
         $sector_Technology_head = new SectorTechnologiesName;
+        $sector_Technology_head->category_id=$request->category_id;
         $sector_Technology_head->Sector_technologies_name_heading = $request->Sector_technologies_name_heading;
         $sector_Technology_head->save();
         return redirect()->route('SectorTechnologyHeading.list')->with('success','Created Successfully'); 
@@ -36,12 +39,14 @@ class Sector_Technologies_Name_Heading extends Controller
     {
         //
         $sector_Technology_head = SectorTechnologiesName::find($id); 
-        return view('pages.CRUD_OPERATIONS.DynamicServicesInOnePage.SectorTechnologiesNames_crud.edit',compact('sector_Technology_head'));
+        $categorylist = Category::all();
+        return view('pages.CRUD_OPERATIONS.DynamicServicesInOnePage.SectorTechnologiesNames_crud.edit',compact('sector_Technology_head','categorylist'));
     }
 
     public function update(Request $request, $id)
     {
         $sector_Technology_head = SectorTechnologiesName::find($id);
+        $sector_Technology_head->category_id=$request->category_id;
         $sector_Technology_head->Sector_technologies_name_heading = $request->Sector_technologies_name_heading;
         $sector_Technology_head->save();
         return redirect()->route('SectorTechnologyHeading.list')->with('success','Updated Successfully');

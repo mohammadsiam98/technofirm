@@ -15,6 +15,7 @@ class CreateSectorTechnologiesNamesTable extends Migration
     {
         Schema::create('sector_technologies_names', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id');
             $table->string('Sector_technologies_name_heading');
             $table->timestamps();
         });

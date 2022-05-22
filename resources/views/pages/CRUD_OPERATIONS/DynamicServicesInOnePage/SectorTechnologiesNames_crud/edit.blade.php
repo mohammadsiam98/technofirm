@@ -37,6 +37,26 @@
                             <form id="" action="{{route('SectorTechnologyHeading.update',$sector_Technology_head->id)}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
+
+                                    {{-- Category List --}}
+                                    <div class="col-12 basic-select2">
+                                        <div class="mb-1 row">
+                                            <div class="col-sm-3">
+                                                <label class="col-form-label" for="title">Category</label>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <select name="category_id" class="select2 form-select" id="select2-basic">
+                                                    <option class="disabled">--Select Option--</option>
+                                                    @foreach ($categorylist as $category)
+                                                    <option <?php if($category->id == $sector_Technology_head->category_id){?> selected <?php }  ?> value="{{ $category->id }}">{{ $category->categoryName }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- Category List --}}
+
+
                                     <div class="col-12">
                                         <div class="mb-1 row">
                                             <div class="col-sm-3">

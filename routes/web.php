@@ -140,8 +140,7 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::post('/sector-stack-heading/update/{id}', 'App\Http\Controllers\Sector_Technologies_Name_Heading@update')->name('SectorTechnologyHeading.update');
     Route::get('/sector-stack-heading/delete/{id}', 'App\Http\Controllers\Sector_Technologies_Name_Heading@destroy')->name('SectorTechnologyHeading.destroy');
 
-
-
+    
     Route::get('/sector-stack-details/create', 'App\Http\Controllers\SectorStackTechnologiesController@create')->name('sector_technologies_details.create');
     Route::put('/sector-stack-details/create', 'App\Http\Controllers\SectorStackTechnologiesController@store')->name('sector_technologies_details.store');
     Route::get('/sector-stack-details/list', 'App\Http\Controllers\SectorStackTechnologiesController@list')->name('sector_technologies_details.list');
@@ -153,6 +152,15 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::get('/sector-stack-details/restoreList', 'App\Http\Controllers\SectorStackTechnologiesController@restoreList')->name('sector_technologies_details.restoreList');
     Route::get('/sector-stack-details/destroyList/{id}', 'App\Http\Controllers\SectorStackTechnologiesController@restoreData')->name('sector_technologies_details.restoreData');
     Route::get('/sector-stack-details-Permanently-Delete/{id}', 'App\Http\Controllers\SectorStackTechnologiesController@forceDelete')->name('sector_technologies_details.forceDelete');
+
+
+    
+    Route::get('/sector-special-feature/create', 'App\Http\Controllers\SectorSpecialFeaturesController@create')->name('SectorSF.create');
+    Route::put('/sector-special-feature/create', 'App\Http\Controllers\SectorSpecialFeaturesController@store')->name('SectorSF.store');
+    Route::get('/sector-special-feature/list', 'App\Http\Controllers\SectorSpecialFeaturesController@list')->name('SectorSF.list');
+    Route::get('/sector-special-feature/edit/{id}', 'App\Http\Controllers\SectorSpecialFeaturesController@edit')->name('SectorSF.edit');
+    Route::post('/sector-special-feature/update/{id}', 'App\Http\Controllers\SectorSpecialFeaturesController@update')->name('SectorSF.update');
+    Route::get('/sector-special-feature/delete/{id}', 'App\Http\Controllers\SectorSpecialFeaturesController@destroy')->name('SectorSF.destroy');
 
 
 });

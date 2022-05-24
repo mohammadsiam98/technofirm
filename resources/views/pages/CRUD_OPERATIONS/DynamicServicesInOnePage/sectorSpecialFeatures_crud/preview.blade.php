@@ -1,6 +1,6 @@
 @extends('layouts.admin_dashboard_layout')
 @section('content')
-@section('title', 'Service Overview Preview')
+@section('title', 'Sector SF|Preview')
 
 <!-- BEGIN: Content-->
 <div class="app-content content ">
@@ -12,9 +12,9 @@
                 <div class="row breadcrumbs-top">
                     <div class="col-12">
                         <div class="breadcrumb-wrapper">
-                            <a href="{{route('ServiceOverviewDetails.list')}}">
+                            <a href="{{route('SectorSF.list')}}">
                                 <button type="button" class="btn btn-dark waves-effect waves-float waves-light" style="float: right">
-                                    <span style="font-size: 22px; margin-right:5px;">Details</span>
+                                    <span style="font-size: 22px; margin-right:5px;">List</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list">
                                         <line x1="8" y1="6" x2="21" y2="6"></line>
                                         <line x1="8" y1="12" x2="21" y2="12"></line>
@@ -41,9 +41,9 @@
                             <div class="alert" style="background: #353146">
                                 <div class="alert-body d-flex align-items-center justify-content-between flex-wrap p-2">
                                   <div class="me-1">
-                                    <h4 class="fw-bolder" style="color:white">Category Name</h4>
+                                    <h4 class="fw-bolder" style="color:white">Section heading name</h4>
                                     <p class="fw-normal mb-1 mb-lg-0" style="color:white">
-                                        {{$ServiceOverviewDetails->get_category->categoryName}}
+                                        {{$stackDetails->get_technology_name->Sector_technologies_name_heading}}
                                     </p>
                                   </div>
                                 </div>
@@ -51,9 +51,9 @@
                             <div class="alert" style="background: #353146">
                                 <div class="alert-body d-flex align-items-center justify-content-between flex-wrap p-2">
                                   <div class="me-1">
-                                    <h4 class="fw-bolder" style="color:white">Page Heading</h4>
+                                    <h4 class="fw-bolder" style="color:white">Stack name</h4>
                                     <p class="fw-normal mb-1 mb-lg-0" style="color:white">
-                                        {{$ServiceOverviewDetails->page_heading}}
+                                        {{$stackDetails->stackName}}
                                     </p>
                                   </div>
                                 </div>
@@ -61,19 +61,9 @@
                             <div class="alert" style="background: #353146">
                                 <div class="alert-body d-flex align-items-center justify-content-between flex-wrap p-2">
                                   <div class="me-1">
-                                    <h4 class="fw-bolder" style="color:white">Service Overview Title</h4>
+                                    <h4 class="fw-bolder" style="color:white">Stack Details</h4>
                                     <p class="fw-normal mb-1 mb-lg-0" style="color:white">
-                                        {{$ServiceOverviewDetails->title}}
-                                    </p>
-                                  </div>
-                                </div>
-                            </div> 
-                            <div class="alert" style="background: #353146">
-                                <div class="alert-body d-flex align-items-center justify-content-between flex-wrap p-2">
-                                  <div class="me-1">
-                                    <h4 class="fw-bolder" style="color:white">Service Overview Details</h4>
-                                    <p class="fw-normal mb-1 mb-lg-0" style="color:white">
-                                        {!!$ServiceOverviewDetails->details!!}
+                                        {{$stackDetails->details}}
                                     </p>
                                   </div>
                                 </div>
@@ -84,7 +74,7 @@
                 </div>
                 <div class="row">
                     <h3>The image which you have uploaded is</h3>
-                    <img src="{{url($ServiceOverviewDetails->image)}}" style="width: 120px;height:auto;" alt="">
+                    <img src="{{url($stackDetails->image)}}" style="width: 120px;height:auto;" alt="">
                 </div>
             </section>
             <!-- Basic Tabs end -->
@@ -92,6 +82,4 @@
     </div>
 </div>
 <!-- END: Content-->
-
-
 @endsection

@@ -251,6 +251,8 @@
                         </li>
                         <li class="{{ request()->routeIs('sector_technologies_details.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('sector_technologies_details.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Stack Details</span></a>
                         </li>
+                        <li class="{{ request()->routeIs('SectorSF.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('SectorSF.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Sector SF</span></a>
+                        </li>
                     </ul>
                 </li>
             </ul>

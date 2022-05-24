@@ -49,7 +49,7 @@ class ServiceOverViewController extends Controller
             $image  = $request->file('image');
             Storage::putFile('public/img/',$image);
             $ServiceOverviewDetails->image ="storage/img/".$image->hashName();
-            
+           
             $ServiceOverviewDetails->save();
             return redirect()->route('ServiceOverviewDetails.list')->with('success','Created Successfully');
         }

@@ -66,7 +66,7 @@ class BannerController extends Controller
         if($request->file('image')){
             $image  = $request->file('image');
             Storage::putFile('public/img/',$image);
-            $bannerGurukul->image ="storage/img/".$image->hashName();
+            $banner->image ="storage/img/".$image->hashName();
         }
         $banner->save();
         return redirect()->route('Banner.list')->with('success','Banner details updated Successfully');

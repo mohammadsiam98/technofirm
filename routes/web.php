@@ -176,6 +176,22 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::get('/sector-special-feature-li-list-Permanently-Delete/{id}', 'App\Http\Controllers\SectorSpecialFeaturesDynamicController@forceDelete')->name('SectorSFD.forceDelete');
 
 
+
+
+    
+    Route::get('/Blog/create', 'App\Http\Controllers\BlogController@create')->name('Blogs.create');
+    Route::put('/Blog/create', 'App\Http\Controllers\BlogController@store')->name('Blogs.store');
+    Route::get('/Blog/list', 'App\Http\Controllers\BlogController@list')->name('Blogs.list');
+    Route::get('/Blog/edit/{id}', 'App\Http\Controllers\BlogController@edit')->name('Blogs.edit');
+    Route::post('/Blog/update/{id}', 'App\Http\Controllers\BlogController@update')->name('Blogs.update');
+    Route::get('/Blog/delete/{id}', 'App\Http\Controllers\BlogController@destroy')->name('Blogs.destroy');
+    Route::get('/Blog/preview/{id}', 'App\Http\Controllers\BlogController@preview')->name('Blogs.preview');
+    Route::get('/Blog/update', 'App\Http\Controllers\BlogController@updateStatus')->name('BlogStatus');
+    Route::get('/Blogt/restoreList', 'App\Http\Controllers\BlogController@restoreList')->name('Blogs.restoreList');
+    Route::get('/Blog/destroyList/{id}', 'App\Http\Controllers\BlogController@restoreData')->name('Blogs.restoreData');
+    Route::get('/Blog-Permanently-Delete/{id}', 'App\Http\Controllers\BlogController@forceDelete')->name('Blogs.forceDelete');
+
+
 });
 
 require __DIR__.'/auth.php';

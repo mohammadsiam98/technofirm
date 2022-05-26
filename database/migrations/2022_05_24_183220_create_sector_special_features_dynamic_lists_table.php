@@ -11,7 +11,7 @@ class CreateSectorSpecialFeaturesDynamicListsTable extends Migration
         Schema::create('sector_special_features_dynamic_lists', function (Blueprint $table) {
             $table->id();
             $table->string('featureName');
-            $table->string('sector_Special_feature_id');
+            $table->foreignId('sector_Special_feature_id');
             $table->boolean('status')->default(0);
             $table->softDeletes();
             $table->timestamps();

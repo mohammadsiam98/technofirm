@@ -1,6 +1,6 @@
 @extends('layouts.admin_dashboard_layout')
 @section('content')
-<script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
 @section('title', 'Blog | Create')
 
 

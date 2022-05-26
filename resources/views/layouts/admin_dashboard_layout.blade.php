@@ -253,6 +253,8 @@
                         </li>
                         <li class="{{ request()->routeIs('SectorSF.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('SectorSF.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Sector SF</span></a>
                         </li>
+                        <li class="{{ request()->routeIs('SectorSFD.list') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('SectorSFD.list')}}"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Sector SFD-li</span></a>
+                        </li>
                     </ul>
                 </li>
             </ul>

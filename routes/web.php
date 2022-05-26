@@ -163,6 +163,19 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::get('/sector-special-feature/delete/{id}', 'App\Http\Controllers\SectorSpecialFeaturesController@destroy')->name('SectorSF.destroy');
 
 
+    Route::get('/sector-special-feature-li-list/create', 'App\Http\Controllers\SectorSpecialFeaturesDynamicController@create')->name('SectorSFD.create');
+    Route::put('/sector-special-feature-li-list/create', 'App\Http\Controllers\SectorSpecialFeaturesDynamicController@store')->name('SectorSFD.store');
+    Route::get('/sector-special-feature-li-list/list', 'App\Http\Controllers\SectorSpecialFeaturesDynamicController@list')->name('SectorSFD.list');
+    Route::get('/sector-special-feature-li-list/edit/{id}', 'App\Http\Controllers\SectorSpecialFeaturesDynamicController@edit')->name('SectorSFD.edit');
+    Route::post('/sector-special-feature-li-list/update/{id}', 'App\Http\Controllers\SectorSpecialFeaturesDynamicController@update')->name('SectorSFD.update');
+    Route::get('/sector-special-feature-li-list/delete/{id}', 'App\Http\Controllers\SectorSpecialFeaturesDynamicController@destroy')->name('SectorSFD.destroy');
+    Route::get('/sector-special-feature-li-list/preview/{id}', 'App\Http\Controllers\SectorSpecialFeaturesDynamicController@preview')->name('SectorSFD.preview');
+    Route::get('/sector-special-feature-li-list/update', 'App\Http\Controllers\SectorSpecialFeaturesDynamicController@sector_special_features_dynamic_Status')->name('Sector_SFD_li');
+    Route::get('/sector-special-feature-li-list/restoreList', 'App\Http\Controllers\SectorSpecialFeaturesDynamicController@restoreList')->name('SectorSFD.restoreList');
+    Route::get('/sector-special-feature-li-list/destroyList/{id}', 'App\Http\Controllers\SectorSpecialFeaturesDynamicController@restoreData')->name('SectorSFD.restoreData');
+    Route::get('/sector-special-feature-li-list-Permanently-Delete/{id}', 'App\Http\Controllers\SectorSpecialFeaturesDynamicController@forceDelete')->name('SectorSFD.forceDelete');
+
+
 });
 
 require __DIR__.'/auth.php';

@@ -10,12 +10,13 @@ class CreateProjectProposalsTable extends Migration
     {
         Schema::create('project_proposals', function (Blueprint $table) {
             $table->id();
-            $table->string('servicesSelected');
-            $table->string('full_name');
-            $table->string('email');
-            $table->string('mobile_number');
-            $table->string('ref_website');
-            $table->text('details');
+            $table->string('servicesSelected')->nullable();
+            $table->string('full_name')->nullable();
+            $table->string('email')->nullable();
+            $table->string('mobile_number')->nullable();
+            $table->string('ref_website')->unique();
+            $table->text('details')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -200,6 +200,15 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::get('/Blog/destroyList/{id}', 'App\Http\Controllers\BlogController@restoreData')->name('Blogs.restoreData');
     Route::get('/Blog-Permanently-Delete/{id}', 'App\Http\Controllers\BlogController@forceDelete')->name('Blogs.forceDelete');
 
+
+
+    Route::get('/project-proposal/list', 'App\Http\Controllers\ProjectProposalController@list')->name('ProjectProposal.list');
+    Route::get('/project-proposa/delete/{id}', 'App\Http\Controllers\ProjectProposalController@destroy')->name('ProjectProposal.destroy');
+    Route::get('/project-proposa/preview/{id}', 'App\Http\Controllers\ProjectProposalController@preview')->name('ProjectProposal.preview');
+    Route::get('/project-proposa/restoreList', 'App\Http\Controllers\ProjectProposalController@restoreList')->name('ProjectProposal.restoreList');
+    Route::get('/project-proposa/destroyList/{id}', 'App\Http\Controllers\ProjectProposalController@restoreData')->name('ProjectProposal.restoreData');
+    Route::get('/project-proposa-Permanently-Delete/{id}', 'App\Http\Controllers\ProjectProposalController@forceDelete')->name('ProjectProposal.forceDelete');
+
 });
 
 require __DIR__.'/auth.php';

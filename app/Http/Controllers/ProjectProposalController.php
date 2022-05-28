@@ -10,7 +10,7 @@ class ProjectProposalController extends Controller
     {
         //
         $ProjectProposalDetails = ProjectProposal::all();
-        return view ('pages.CRUD_OPERATIONS.ProjectProposalCrudOperation.ProjectProposal_crud.list',compact('categoryDetails'));
+        return view ('pages.CRUD_OPERATIONS.ProjectProposalCrudOperation.ProjectProposal_crud.list',compact('ProjectProposalDetails'));
     }
 
     public function store(Request $data)
@@ -28,26 +28,41 @@ class ProjectProposalController extends Controller
 
     }
 
-    public function edit($id)
-    {
-        //
-        $ProjectProposalDetails = ProjectProposal::find($id); // Fetch specific banner id
-        return view('pages.CRUD_OPERATIONS.ProjectProposalCrudOperation.ProjectProposal_crud.edit',compact('categoryDetails'));
-    }
-
-    public function update(Request $request, $id)
-    {
-        $ProjectProposalDetails = ProjectProposal::find($id);
-        $ProjectProposalDetails->categoryName = $request->categoryName;
-        $ProjectProposalDetails->save();
-        return redirect()->route('ProjectProposal.list')->with('success','Updated Successfully');
-    }
-
     public function destroy($id)
     {
         //
         $ProjectProposalDetails = ProjectProposal::find($id);
         $ProjectProposalDetails->delete();
         return redirect()->route('ProjectProposal.list')->with('success','Deleted Successfully');
+    }
+
+    public function preview($id)
+    {
+        //
+        $ProjectProposalDetails = ProjectProposal::find($id);
+        return view('pages.CRUD_OPERATIONS.ProjectProposalCrudOperation.ProjectProposal_crud.preview',compact('ProjectProposalDetails'));
+    }
+
+    public function restoreList()
+    {
+        //
+        $ProjectProposalDetails = ProjectProposal::onlyTrashed()->get();
+        return view ('pages.CRUD_OPERATIONS.ProjectProposalCrudOperation.ProjectProposal_crud.restoreList',compact('ProjectProposalDetails'));
+    }
+
+
+    public function restoreData($id)
+    {
+        //
+        $ProjectProposalDetails = ProjectProposal::onlyTrashed()->find($id)->restore();
+        return redirect()->route('ProjectProposal.restoreList')->with('success',"Restored Successfully");
+    }
+
+
+    public function forceDelete($id)
+    {
+        //
+        $ProjectProposalDetails = ProjectProposal::onlyTrashed()->find($id)->forceDelete();
+        return redirect()->route('ProjectProposal.restoreList')->with('success',"Permanently Deleted Successfully");
     }
 }

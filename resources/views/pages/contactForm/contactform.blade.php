@@ -4,7 +4,6 @@
 <style>
     .form-block button:hover {
     background-color: transparent;
-    
 }
 </style>
 
@@ -33,8 +32,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-12">
                 <div class="niwax23form shadow">
-                   
-                    <div class="contact-form-card-pr contact-block-sw m0 iconin">
+                   <div class="contact-form-card-pr contact-block-sw m0 iconin">
                         <div class="form-block niwaxform">
                             <form id="cForm" role="form" enctype="multipart/form-data">
                                 @csrf
@@ -75,5 +73,38 @@
     </div>
 </section>
 <!--End Contact Form-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+<script>
+    $('form').on('submit', function (e) {
+        e.preventDefault(); // prevent the form submit
+        var url = '{{ route('contactStore') }}';
+        // create the FormData object from the form context (this),
+        // that will be present, since it is a form event
+        var formData = new FormData(this); 
+        // build the ajax call
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: formData,
+            success: function (response) {
+                // handle success response
+                console.log(response.data);
+                var x = document.getElementById('ContactMSG');
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                }
+
+            },
+            error: function (response) {
+                // handle error response
+                console.log(response.data);
+            },
+            contentType: false,
+            processData: false
+        });
+        document.getElementById('cForm').reset();
+    });
+</script>
 
 @endsection

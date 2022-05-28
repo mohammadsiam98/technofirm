@@ -19,9 +19,7 @@
                                 solutions</p>
                         </div>
                         <div class="clearfix"></div>
-                        <div data-swiper-parallax="500" class="slide-btns">
-                            <a href="#" class="btn-main bg-btn lnk">View Showcase <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -38,9 +36,7 @@
                                 solutions</p>
                         </div>
                         <div class="clearfix"></div>
-                        <div data-swiper-parallax="500" class="slide-btns">
-                            <a href="#" class="btn-main bg-btn lnk">View Showcase <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -228,7 +224,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-lg-12 col-sm-12 wptbb">
                 <div class="pbwide shadow bg-gradient2">
                     <div class="portfolio-item-info-tt">
@@ -251,57 +246,14 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-12 col-sm-12 wptbb">
-                <div class="pbwide shadow bg-gradient3">
-                    <div class="portfolio-item-info-tt">
-                        <div class="logowide mb20"><img src="{{asset('frontendAssets/assets/images/client/customer-logo-7.png')}}" style="height: 50px; width:auto" alt="logo" class="img-fluid"></div>
-                        <div class="widebloktag"><span>Design</span> <span>Coding</span></div>
-                        <h3 class="mt30 mb30">That Column</h3>
-                        <ul class="info-list-ul">
-                            <li><img src="{{asset('frontendAssets/assets/images/check.png')}}" alt=""> Able to upload blog</li>
-                            <li><img src="{{asset('frontendAssets/assets/images/check.png')}}" alt=""> 15 blog features</li>
-                            <li><img src="{{asset('frontendAssets/assets/images/check.png')}}" alt=""> users can upload blog</li>
-                            <li><img src="{{asset('frontendAssets/assets/images/check.png')}}" alt=""> users can buy blogs</li>
-                        </ul>
-
-                    </div>
-                    <div class="portfolio-wide-image">
-                        <div class="img-wide-blocktt tilt-outer">
-                            <div class="innerwidedevice tilt-inner" data-tilt data-tilt-max="4" data-tilt-speed="1000" data-tilt-perspective="2000">
-                                <div class="desktopblock shadow1"><img src="{{asset('frontendAssets/assets/images/thatColumn.PNG')}}" alt="img" class="img-fluid"> </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-12 col-sm-12 wptbb">
-                <div class="pbwide shadow bg-gradient4">
-                    <div class="portfolio-item-info-tt">
-                        <div class="logowide mb20"><img src="{{asset('frontendAssets/assets/images/school.png')}}" style="height: 50px; width:auto" alt="logo" class="img-fluid"></div>
-                        <div class="widebloktag"><span>Design</span> <span>Coding</span></div>
-                        <h3 class="mt30 mb30">River Dale School</h3>
-                        <ul class="info-list-ul">
-                            <li><img src="{{asset('frontendAssets/assets/images/check.png')}}" alt=""> School Information</li>
-                            <li><img src="{{asset('frontendAssets/assets/images/check.png')}}" alt=""> Pay Online </li>
-                            <li><img src="{{asset('frontendAssets/assets/images/check.png')}}" alt=""> Admission Information</li>
-                            <li><img src="{{asset('frontendAssets/assets/images/check.png')}}" alt=""> Student's Syllabus</li>
-                        </ul>
-                        <a href="#" class="btn-outline lnk mt30">View Case Study <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
-                    </div>
-                    <div class="portfolio-wide-image">
-                        <div class="img-wide-blocktt tilt-outer">
-                            <div class="innerwidedevice tilt-inner" data-tilt data-tilt-max="4" data-tilt-speed="1000" data-tilt-perspective="2000">
-                                <div class="desktopblock shadow1"><img src="{{asset('frontendAssets/assets/images/riverdaleSchool.PNG')}}" alt="img" class="img-fluid"> </div>
-
-                            </div>
-                        </div>
-                    </div>
+            <div class="-cta-btn mt70">
+                <div class="free-cta-title v-center  wow zoomInDown" data-wow-delay=".9s" style="visibility: visible; animation-delay: 0.9s; animation-name: zoomInDown;">
+                    <a href="{{route('ourPortfolio')}}" class="btn-main bg-btn2 lnk">View more portfolio<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
                 </div>
             </div>
         </div>
+
+       
     </div>
 </section>
 <!--End Portfolio-->
@@ -663,6 +615,12 @@
                             </div>
                         </div>
                     </div>
+                  
+                </div>
+            </div>
+            <div class="-cta-btn mt70">
+                <div class="free-cta-title v-center  wow zoomInDown" data-wow-delay=".9s" style="visibility: visible; animation-delay: 0.9s; animation-name: zoomInDown;">
+                    <a href="{{route('blog')}}" class="btn-main bg-btn2 lnk">View more blogs<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
                 </div>
             </div>
         </div>

@@ -40,7 +40,7 @@
 
                     <h3 class="mb0">Tom Smile</h3>
                     <p class="niwax21">Founder, Chairman & CFO</p>
-                    <p class="pt20"><i class="fas fa-quote-left"></i> Lorem Ipsum is simply dummy text of the printing and
+                    <p class="pt20 ceoDetails"><i class="fas fa-quote-left"></i> Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
                         an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is
                         simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the
@@ -58,10 +58,10 @@
         <div class="row">
             <div class="col-lg-12 col-sm-12">
                 <h2 class="text-radius text-light text-animation bg-b" style="text-align: center; margin-bottom:20px">Our
-                    Story</h2>
+                    Story of our company</h2>
             </div>
             <div class="col-lg-12 col-sm-12">
-                <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                <p class="text-center ourStory">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                     has been the
                     industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the
@@ -231,7 +231,7 @@
       </div>
       <div class="row upset justify-content-center mt10">
         <div class="col-lg-4 v-center order1">
-          <div class="image-blockx">
+          <div class="image-blockx lead-intro-">
             <img src="{{asset('frontendAssets/assets/images/mission.svg')}}" alt="Process" class="img-fluid"/>
           </div>
         </div>
@@ -250,7 +250,7 @@
           </div>
         </div>
         <div class="col-lg-4 v-center order1">
-          <div class="image-blockx">
+          <div class="image-blockx lead-intro-">
             <img src="{{asset('frontendAssets/assets/images/vission.svg')}}" alt="Process" class="img-fluid"/>
           </div>
         </div>

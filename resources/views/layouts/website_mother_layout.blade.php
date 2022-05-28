@@ -18,7 +18,7 @@
     <link href="{{asset('frontendAssets/assets/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('frontendAssets/assets/css/plugin.min.css')}}" rel="stylesheet">
     <link href="{{asset('frontendAssets/assets/css/swiper.min.css')}}" rel="stylesheet">
-    <link href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3f89815316.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
     <!-- template-style-->
     <link href="{{asset('frontendAssets/assets/css/style.css')}}" rel="stylesheet">
@@ -100,6 +100,9 @@
                         </li>
                         <li class="sbmenu">
                             <a href="{{route('contactUs')}}" class="menu-links">Contact Us</a>
+                        </li>
+                        <li class="sbmenu">
+                            <a href="{{route('projectProposal')}}" class="menu-links">Project Proposal</a>
                         </li>
                     </ul>
                     <!-- mobile + desktop - sidebar menu- dark mode witch and button -->
@@ -350,40 +353,8 @@
 
     <!--common script file-->
     <script src="{{asset('frontendAssets/assets/js/main.js')}}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
-    <script>
-        $('form').on('submit', function (e) {
-            e.preventDefault(); // prevent the form submit
-            var url = '{{ route('contactStore') }}';
-            // create the FormData object from the form context (this),
-            // that will be present, since it is a form event
-            var formData = new FormData(this); 
-            // build the ajax call
-            $.ajax({
-                url: url,
-                type: 'POST',
-                data: formData,
-                success: function (response) {
-                    // handle success response
-                    console.log(response.data);
-                    var x = document.getElementById('ContactMSG');
-                    if (x.style.display === "none") {
-                        x.style.display = "block";
-                    }
-    
-                },
-                error: function (response) {
-                    // handle error response
-                    console.log(response.data);
-                },
-                contentType: false,
-                processData: false
-            });
-            document.getElementById('cForm').reset();
-        });
-    </script>
-    
+   
 <script>
     //Owl-Carousel - awards card
     var owl = $('.niwax-review-slider');

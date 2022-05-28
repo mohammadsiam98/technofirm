@@ -18,7 +18,16 @@ Route::get('/blog', 'App\Http\Controllers\ViewPagesController@blog')->name('blog
 //Contact-Us Route
 Route::get('/contact-us', 'App\Http\Controllers\ViewPagesController@contactUs')->name('contactUs');
 
+//Contact-Us Route store
 Route::post('/contact/submit', 'App\Http\Controllers\contactusController@store')->name('contactStore');
+
+
+//project-proposal Route
+Route::get('/project-proposal', 'App\Http\Controllers\ViewPagesController@projectProposal')->name('projectProposal');
+
+//project-proposal Route store
+Route::post('/proposalStore', 'App\Http\Controllers\ProjectProposalController@store')->name('storePP');
+
 
 // Route for Logout
 Route::get('/logout', 'App\Http\Controllers\LogoutController@perform')->name('logout.perform');
@@ -190,7 +199,6 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::get('/Blogt/restoreList', 'App\Http\Controllers\BlogController@restoreList')->name('Blogs.restoreList');
     Route::get('/Blog/destroyList/{id}', 'App\Http\Controllers\BlogController@restoreData')->name('Blogs.restoreData');
     Route::get('/Blog-Permanently-Delete/{id}', 'App\Http\Controllers\BlogController@forceDelete')->name('Blogs.forceDelete');
-
 
 });
 

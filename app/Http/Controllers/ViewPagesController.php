@@ -11,25 +11,21 @@ class ViewPagesController extends Controller
     {
         return view('pages.homepage.index');
     }
-
     // aboutUs function
     public function aboutUs()
     {
         return view('pages.about.about');
     }
-
     // portfolio function
     public function portfolio()
     {
         return view('pages.Portfolio.portfolio');
     }
-
     // blog function
     public function blog()
     {
         return view('pages.blogs.blog');
-    }
-
+    } 
     // contactUs function
     public function contactUs()
     {
@@ -38,7 +34,12 @@ class ViewPagesController extends Controller
     // Dashboard function
     public function dashboard()
     {
-    return view('pages.ADMIN_DASHBOARD.admin_dashboard_control');
+        return view('pages.ADMIN_DASHBOARD.admin_dashboard_control');
+    }
+    // project proposal function
+    public function projectProposal()
+    {
+         return view('pages.projectProposal.project_proposal');
     }
 
 

@@ -28,9 +28,9 @@ class ServiceOverViewController extends Controller
         // Validation
         $this->validate($request,[
             'page_heading' => 'required|min:3|max:100|string',
-            'title' => 'required|min:3|max:100|string',
-            'details' => 'required|min:3|max:100|string',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:15630',
+            'title' => 'required|min:3|string',
+            'details' => 'required|min:3|string',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ],[
             'page_heading.required' => 'Please write your page heading',
             'title.required' => 'Please write service overview title',

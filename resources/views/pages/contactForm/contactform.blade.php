@@ -8,15 +8,14 @@
 </style>
 
 <!--Breadcrumb Area-->
-<section class="breadcrumb-area banner-6">
+<section class="breadcrumb-area banner-3">
     <div class="text-block">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 v-center">
                     <div class="bread-inner">
-
-                        <div class="bread-title wow fadeInUp" data-wow-delay=".5s">
-                            <h2>Contact Form</h2>
+                        <div class="bread-title">
+                            <h2 class="sub_pages_title">Contact-Us</h2>
                         </div>
                     </div>
                 </div>
@@ -30,7 +29,10 @@
 <section class="contact-page pad-tb bg-gradient5">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-12">
+            <div class="col-lg-12 col-sm-12">
+                <h2 class="text-radius text-light text-animation bg-b" style="text-align: center; margin-bottom:20px">Contact with us for any kind of information</h2>
+            </div>
+            <div class="col-lg-12" style="margin-top:30px;">
                 <div class="niwax23form shadow">
                    <div class="contact-form-card-pr contact-block-sw m0 iconin">
                         <div class="form-block niwaxform">

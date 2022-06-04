@@ -693,11 +693,18 @@ div.custom-nav>ul>li:hover .nx-dropdown {
 
 .sub-menu-column ul li a {
     width: 100%;
-    font-size: 15px;
+    font-size: 18px;
     color: #050748;
     position: relative;
-    line-height: 25px;
-    font-weight: 600
+    line-height: 30px;
+    font-weight: 600;
+    padding:2px;
+    border-radius: 10px;
+}
+
+.sub-menu-column ul li a:hover{
+    background-color: #002147;
+    color: white;
 }
 
 .sub-menu-section {
@@ -1339,7 +1346,7 @@ a.play-video::after {
 }
 
 .service-img3:after {
-    background: url(../images/Website_Creator-bro.svg);
+    background: url(../images/development.svg);
 }
 
 .service-img4 {
@@ -1347,7 +1354,7 @@ a.play-video::after {
 }
 
 .service-img4:after {
-    background: url(../images/Website_designer-cuate.svg);
+    background: url(../images/SEO.svg);
 }
 
 .wide-block:after {
@@ -2379,7 +2386,7 @@ footer.ftshap:before {
 }
 
 .breadcrumb-area {
-    padding: 150px 0 90px;
+    padding: 250px 0 90px;
     position: relative;
     overflow: hidden;
     text-align: center
@@ -2396,6 +2403,14 @@ footer.ftshap:before {
 
 .bread-titlev2 {
     text-align: center
+}
+
+h2.sub_pages_title {
+    font-size: 70px;
+    color: white;
+    line-height: 40px;
+    padding: 20px;
+    font-family: poppins,'sans-serif';
 }
 
 .statistics-wrap {
@@ -2431,7 +2446,7 @@ footer.ftshap:before {
     z-index: 0;
     background: -moz-linear-gradient(-45deg, #ffdee9 0, #c8fff4 100%);
     background: -webkit-linear-gradient(-45deg, #ffdee9 0, #c8fff4 100%);
-    background: linear-gradient(to right, #ff1f8e 0, #007bff 100%);
+    background: linear-gradient(to right, #002147 0, #007BE2 100%)
 }
 
 .breadcrumb-area:after {
@@ -2476,13 +2491,6 @@ footer.ftshap:before {
 .text-block {
     position: relative;
     z-index: 55
-}
-
-.bread-title h2 {
-    font-weight: 600;
-    font-size: 35px;
-    line-height: 47px;
-    margin: 15px 0 0
 }
 
 .bread-inner p {
@@ -7687,7 +7695,7 @@ a.smllbtnn {
 
 .hero-slider {
     width: 100%;
-    height: 100vh;
+    height: 75vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -9347,7 +9355,8 @@ html body .title-hero p {
 
 .main-header {
     display: flex;
-    align-items: center
+    align-items: center;
+    background-color: #002147;
 }
 
 .sidebarform input,

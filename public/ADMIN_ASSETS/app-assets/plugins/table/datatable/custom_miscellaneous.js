@@ -25,7 +25,7 @@ $(document).ready(function() {
         },
         "stripeClasses": [],
         "lengthMenu": [7, 10, 20, 50],
-        "pageLength": 7 
+        "pageLength": 40
     });
 
     multiCheck(cf);
@@ -55,7 +55,7 @@ $(document).ready(function() {
         },
         "stripeClasses": [],
         "lengthMenu": [7, 10, 20, 50],
-        "pageLength": 7 
+        "pageLength": 40 
     });
  
     // Apply the search
@@ -140,7 +140,7 @@ $(document).ready(function() {
         ],
         "stripeClasses": [],
         "lengthMenu": [7, 10, 20, 50],
-        "pageLength": 7
+        "pageLength": 40
     } );
 
 } );

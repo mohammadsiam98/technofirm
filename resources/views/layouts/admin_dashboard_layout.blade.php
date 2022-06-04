@@ -457,6 +457,8 @@
     };
     CKEDITOR.replace('my-editor', options);
     </script>
+    
+
 
 
 
@@ -503,7 +505,7 @@
             , }
             , "stripeClasses": []
             , "lengthMenu": [7, 10, 20, 50]
-            , "pageLength": 7
+            , "pageLength": 30
         });
 
     </script>

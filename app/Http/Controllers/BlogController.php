@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage; // For Image insert & Edit we use Laravel Illuminate 
 use App\Models\Category;
@@ -29,8 +30,8 @@ class BlogController extends Controller
             'category_id' => 'required|string',
             'title' => 'required|string',
             'description' => 'required|string',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:15630',
-            'thumbnail_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:15630',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:15630',
+            'thumbnail_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:15630',
 
         ],[
             'category_id.required' => 'Please select a category', 
@@ -43,6 +44,7 @@ class BlogController extends Controller
         $blog_details->category_id = $request->category_id;
         $blog_details->user_id = $user_id;
         $blog_details->title = $request->title;
+        $blog_details->slug = Str::slug($request->title);
         $blog_details->description = $request->description;
 
         $image  = $request->file('image');

@@ -4,25 +4,20 @@
 
 
 <!--Breadcrumb Area-->
-<section class="breadcrumb-area text-l banner-3">
-    <div class="text-block">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 v-center">
-                    <div class="bread-inner">
-                        <div class="bread-menu">
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+<section class="breadcrumb-area banner-3">
+  <div class="text-block">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 v-center">
+                  <div class="bread-inner">
+                      <div class="bread-title">
+                          <h2 class="sub_pages_title">About Us</h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </section>
 <!--End Breadcrumb Area-->
 

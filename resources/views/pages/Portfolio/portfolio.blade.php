@@ -9,14 +9,8 @@
             <div class="row">
                 <div class="col-lg-12 v-center">
                     <div class="bread-inner">
-                        <div class="bread-menu">
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="#">Portfolio</a></li>
-                            </ul>
-                        </div>
                         <div class="bread-title">
-                            <h2>Our Projects</h2>
+                            <h2 class="sub_pages_title">Our Portfolio</h2>
                         </div>
                     </div>
                 </div>
@@ -30,11 +24,8 @@
 <section class="portfolio-page pad-tb">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <div class="common-heading">
-                    <span>Our Work</span>
-                    <h2 class="mb0">Portfolio</h2>
-                </div>
+            <div class="col-lg-12 col-sm-12">
+                <h2 class="text-radius text-light text-animation bg-b" style="text-align: center; margin-bottom:20px">We are proudly share our portfolio</h2>
             </div>
         </div>
 

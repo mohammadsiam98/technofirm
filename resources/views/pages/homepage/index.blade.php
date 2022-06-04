@@ -6,42 +6,18 @@
 <section class="hero-slider hero-style">
     <div class="swiper-container">
         <!-- start swiper-wrapper -->
+       
         <div class="swiper-wrapper">
+            @foreach($bannerFetch as $banner)
             <!--slider 1 start -->
             <div class="swiper-slide">
-                <div class="slide-inner slide-bg-image" data-background="{{asset('frontendAssets/assets/images/hero/slider-1.jpg')}}">
-                    <div class="container">
-                        <div data-swiper-parallax="300" class="slide-title">
-                            <h2>Build Your Brand With Niwax</h2>
-                        </div>
-                        <div data-swiper-parallax="400" class="slide-text">
-                            <p>We are enabling digital transformation for our clients since 1999 by providing tailored
-                                solutions</p>
-                        </div>
-                        <div class="clearfix"></div>
-                       
-                    </div>
+                <div class="slide-inner slide-bg-image" style="background-image: url(<?php echo $banner->image?>) ">
                 </div>
             </div>
             <!--slider 1 end -->
-            <!--slider 2 start -->
-            <div class="swiper-slide">
-                <div class="slide-inner slide-bg-image" data-background="{{asset('frontendAssets/assets/images/hero/slider-2.jpg')}}">
-                    <div class="container">
-                        <div data-swiper-parallax="300" class="slide-title">
-                            <h2>Find Your Place on the Web</h2>
-                        </div>
-                        <div data-swiper-parallax="400" class="slide-text">
-                            <p>We are enabling digital transformation for our clients since 1999 by providing tailored
-                                solutions</p>
-                        </div>
-                        <div class="clearfix"></div>
-                       
-                    </div>
-                </div>
-            </div>
-            <!--slider 2 end -->
+            @endforeach
         </div>
+       
         <!-- end swiper-wrapper -->
         <!-- swipper controls -->
         <div class="swiper-pagination"></div>
@@ -58,21 +34,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="common-heading text-l">
-                    <h2 class="mb30 text-center"><span class="text-second text-bold">Technofirm | </span> Why do you
-                        choose us
-                    </h2>
-                    <p style="font-family: poppins; text-align:center">Lorem Ipsum is text of the printing and typesetting
-                        industry. Lorem
-                        Ipsum has been the industry's
-                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book.</p>
+                    @foreach($companyDetailsFetch as $companyDetails)
+                    <p style="font-family: poppins; text-align:center">{{$companyDetails->details}}</p>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -86,7 +50,6 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="common-heading">
-                    <span>Services We’re Provided</span>
                     <h2 class="mb30 text-radius text-light text-animation bg-b">Our Top Digital Marketing Services</h2>
                 </div>
             </div>
@@ -105,7 +68,7 @@
                 <div class="wide-block service-img2" data-tilt data-tilt-max="2" data-tilt-speed="600">
                     <div class="block-space-">
                         <span>Content Writing </span>
-                        <h4>Content Marketing Service</h4>
+                        <h4>Content Writing Service</h4>
                         <a href="javascript:void(0)">Learn More <i class="fas fa-chevron-right fa-icon"></i></a>
                     </div>
                 </div>
@@ -114,7 +77,7 @@
                 <div class="wide-block service-img3" data-tilt data-tilt-max="2" data-tilt-speed="600">
                     <div class="block-space-">
                         <span>Wep Application</span>
-                        <h4>Website & Software Development</h4>
+                        <h4>Website Design & Development</h4>
                         <a href="javascript:void(0)">Learn More <i class="fas fa-chevron-right fa-icon"></i></a>
                     </div>
                 </div>
@@ -122,8 +85,8 @@
             <div class="col-lg-6 col-sm-6 mt30  wow fadeInUp" data-wow-delay=".8s">
                 <div class="wide-block service-img4" data-tilt data-tilt-max="2" data-tilt-speed="600">
                     <div class="block-space-">
-                        <span>WEB DESIGN</span>
-                        <h4>Website Design & Development</h4>
+                        <span>SEO</span>
+                        <h4>Search Engine Optimization</h4>
                         <a href="javascript:void(0)">Learn More <i class="fas fa-chevron-right fa-icon"></i></a>
                     </div>
                 </div>
@@ -145,8 +108,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="common-heading text-l">
-                    <span>Why Choose Us</span>
-                    <h2 class="mb20">Technofirm<span class="text-second text-bold"> Our company features</span></h2>
+                    <h2 class="mb20"><span class="text-second text-bold"> Our company features</span></h2>
                     <div class="itm-media-object mt40 tilt-3d">
                         <div class="media">
                             <div class="img-ab- base" data-tilt data-tilt-max="20" data-tilt-speed="1000"><img src="{{asset('frontendAssets/assets/images/icons/computers.svg')}}" alt="icon" class="layer"></div>
@@ -176,11 +138,9 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div data-tilt data-tilt-max="5" data-tilt-speed="1000" class="single-image wow fadeIn" data-wow-duration="2s"><img src="{{asset('frontendAssets/assets/images/Development-cuate.svg')}}" alt="image" class="w-100"></div>
-
-                <div data-tilt data-tilt-max="5" data-tilt-speed="1000" class="single-image wow fadeIn" data-wow-duration="2s"><img src="{{asset('frontendAssets/assets/images/About us page-cuate.svg')}}" alt="image" class="w-100"></div>
-
-
+                <div style="margin-top:180px" data-tilt data-tilt-max="5" data-tilt-speed="1000" class="single-image wow fadeIn" data-wow-duration="2s">
+                    <img src="{{asset('frontendAssets/assets/images/Company-pana.svg')}}" alt="image" class="w-100">
+                </div>
             </div>
         </div>
     </div>
@@ -193,7 +153,6 @@
         <div class="row justify-content-center ">
             <div class="col-lg-8">
                 <div class="common-heading">
-                    <span>Our Work</span>
                     <h2 class="mb0 text-radius text-light text-animation bg-b">Our Latest Creative Works</h2>
                 </div>
             </div>
@@ -518,106 +477,38 @@
             </div>
         </div>
         <div class="row justify-content-center">
+            @foreach($blogsFetch as $blogs)
             <div class="col-lg-4 col-sm-6 mt30">
                 <div class="single-blog-post- up-hor shdo">
                     <div class="single-blog-img-">
-                        <a href="#"><img src="{{asset('frontendAssets/assets/images/blog/blog-dg-1.jpg')}}" alt="girl" class="img-fluid" /></a>
+                        <a href="{{route('singleBlogPost',[$blogs->title])}}"><img src="{{url($blogs->thumbnail_image)}}" alt="girl" class="img-fluid" /></a>
                         <div class="entry-blog-post dg-bg2">
-                            <span class="bypost-"><a href="#"><i class="fas fa-tag"></i> Nodejs</a></span>
-                            <span class="posted-on-">
-                                <a href="#"><i class="fas fa-clock"></i> Sep 23, 2020</a>
-                            </span>
+                            <span class="bypost-"><a href="#"><i class="fas fa-tag"></i>  <td class="text-center badge rounded-pill badge-light-primary me-1" style="margin-top: 12px;">{{$blogs->get_category->categoryName}}</td></a></span>
                         </div>
                     </div>
                     <div class="blog-content-tt">
                         <div class="single-blog-info-">
-                            <h4><a href="#">Everything You Need To Know About Nodejs!</a></h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h4><a href="{{ route('singleBlogPost',$blogs->slug) }}">{{$blogs->title}}</a></h4>
+                            <p>{!!Str::limit($blogs->description,50, $end='....')!!}</p>
                         </div>
                         <div class="post-social">
                             <div class="ss-inline-share-wrapper ss-hover-animation-fade ss-inline-total-counter-left ss-left-inline-content ss-small-icons ss-with-spacing ss-circle-icons ss-without-labels">
-                                <div class="ss-inline-share-content">
-                                    <div class="ss-social-icons-container">
-                                        <a href="javascript:void(0)">Shares</a>
-                                        <a href="javascript:void(0)" target="blank"><i class="fab fa-facebook"></i></a>
-                                        <a href="javascript:void(0)" target="blank"><i class="fab fa-twitter"></i></a>
-                                        <a href="javascript:void(0)" target="blank"><i class="fab fa-linkedin"></i></a>
-                                        <a href="javascript:void(0)" target="blank"><i class="fas fa-envelope"></i></a>
-                                        <a href="javascript:void(0)" target="blank"><i class="fab fa-facebook-messenger"></i></a>
-                                    </div>
-                                </div>
+                                <span class="posted-on-">
+                                    <a href="#">
+                                        <i class="fas fa-clock"></i>
+                                        <?php
+                                        echo date("d.m.Y", strtotime($blogs->created_at));
+                                        ?>
+                                    </a>
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6 mt30">
-                <div class="single-blog-post- up-hor shdo">
-                    <div class="single-blog-img-">
-                        <a href="#"><img src="{{asset('frontendAssets/assets/images/blog/blog-dg-2.jpg')}}" alt="girl" class="img-fluid" /></a>
-                        <div class="entry-blog-post dg-bg2">
-                            <span class="bypost-"><a href="#"><i class="fas fa-tag"></i> Laravel</a></span>
-                            <span class="posted-on-">
-                                <a href="#"><i class="fas fa-clock"></i> Sep 24, 2020</a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="blog-content-tt">
-                        <div class="single-blog-info-">
-                            <h4><a href="#">Exploring the Key Features of Laravel 7 Framework</a></h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                        <div class="post-social">
-                            <div class="ss-inline-share-wrapper ss-hover-animation-fade ss-inline-total-counter-left ss-left-inline-content ss-small-icons ss-with-spacing ss-circle-icons ss-without-labels">
-                                <div class="ss-inline-share-content">
-                                    <div class="ss-social-icons-container">
-                                        <a href="javascript:void(0)">Shares</a>
-                                        <a href="javascript:void(0)" target="blank"><i class="fab fa-facebook"></i></a>
-                                        <a href="javascript:void(0)" target="blank"><i class="fab fa-twitter"></i></a>
-                                        <a href="javascript:void(0)" target="blank"><i class="fab fa-linkedin"></i></a>
-                                        <a href="javascript:void(0)" target="blank"><i class="fas fa-envelope"></i></a>
-                                        <a href="javascript:void(0)" target="blank"><i class="fab fa-facebook-messenger"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mt30">
-                <div class="single-blog-post- up-hor shdo">
-                    <div class="single-blog-img-">
-                        <a href="#"><img src="{{asset('frontendAssets/assets/images/blog/blog-dg-3.jpg')}}" alt="girl" class="img-fluid" /></a>
-                        <div class="entry-blog-post dg-bg2">
-                            <span class="bypost-"><a href="#"><i class="fas fa-tag"></i> Mobile Application</a></span>
-                            <span class="posted-on-">
-                                <a href="#"><i class="fas fa-clock"></i> Sep 25, 2020</a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="blog-content-tt">
-                        <div class="single-blog-info-">
-                            <h4><a href="#">Best Technology for Mobile Application Development</a></h4>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                        <div class="post-social">
-                            <div class="ss-inline-share-wrapper ss-hover-animation-fade ss-inline-total-counter-left ss-left-inline-content ss-small-icons ss-with-spacing ss-circle-icons ss-without-labels">
-                                <div class="ss-inline-share-content">
-                                    <div class="ss-social-icons-container">
-                                        <a href="javascript:void(0)">Shares</a>
-                                        <a href="javascript:void(0)" target="blank"><i class="fab fa-facebook"></i></a>
-                                        <a href="javascript:void(0)" target="blank"><i class="fab fa-twitter"></i></a>
-                                        <a href="javascript:void(0)" target="blank"><i class="fab fa-linkedin"></i></a>
-                                        <a href="javascript:void(0)" target="blank"><i class="fas fa-envelope"></i></a>
-                                        <a href="javascript:void(0)" target="blank"><i class="fab fa-facebook-messenger"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  
-                </div>
-            </div>
+            @endforeach
+           
+          
             <div class="-cta-btn mt70">
                 <div class="free-cta-title v-center  wow zoomInDown" data-wow-delay=".9s" style="visibility: visible; animation-delay: 0.9s; animation-name: zoomInDown;">
                     <a href="{{route('blog')}}" class="btn-main bg-btn2 lnk">View more blogs<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>

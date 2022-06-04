@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Storage; // For Image insert & Edit we use Larave
 use Illuminate\Http\Request;
 use App\Models\SectorSpecialFeatureSection;
 use App\Models\Category;
+use DB;
 class SectorSpecialFeaturesController extends Controller
 {
     public function list()
@@ -24,8 +25,8 @@ class SectorSpecialFeaturesController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'heading' => 'required|min:3|max:100|string',
-            'details' => 'required|min:3|max:100|string',
+            'heading' => 'required|min:3|string',
+            'details' => 'required|min:3|string',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:15630',
         ],[
             'heading.required' => 'Please write your heading', 
@@ -43,6 +44,7 @@ class SectorSpecialFeaturesController extends Controller
         Storage::putFile('public/img/',$image);
         $SectorSF->image ="storage/img/".$image->hashName(); // if same image is again upload then it will be renamed that's why we use hashname when we try to save an image.
         $SectorSF->save();
+        return redirect()->route('SectorSF.list')->with('success','Created Successfully');
         }
         else{
             return 'In this category there is already data inserted.';

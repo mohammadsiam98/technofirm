@@ -15,6 +15,11 @@ Route::get('/our-portfolio', 'App\Http\Controllers\ViewPagesController@portfolio
 //blog Route
 Route::get('/blog', 'App\Http\Controllers\ViewPagesController@blog')->name('blog');
 
+//Single Blog Fetch Route
+Route::get('/blog/{tag:slug}', 'App\Http\Controllers\ViewPagesController@SinglePost')->name('singleBlogPost');
+//sector Route
+
+
 //Contact-Us Route
 Route::get('/contact-us', 'App\Http\Controllers\ViewPagesController@contactUs')->name('contactUs');
 
@@ -27,6 +32,12 @@ Route::get('/project-proposal', 'App\Http\Controllers\ViewPagesController@projec
 
 //project-proposal Route store
 Route::post('/proposalStore', 'App\Http\Controllers\ProjectProposalController@store')->name('storePP');
+
+
+//sector Route
+Route::get('/sectors/{id}', 'App\Http\Controllers\SectosController@sectors')->name('sectors');
+//sector Route
+
 
 
 // Route for Logout

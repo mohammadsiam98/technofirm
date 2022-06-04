@@ -10,20 +10,20 @@
 </style>
 
 <!--Breadcrumb Area-->
-<section class="breadcrumb-area banner-6">
-      <div class="text-block">
-        <div class="container">
+<section class="breadcrumb-area banner-3">
+  <div class="text-block">
+      <div class="container">
           <div class="row">
-            <div class="col-lg-12 v-center">
-              <div class="bread-inner">
-                <div class="bread-title wow fadeInUp" data-wow-delay=".5s">
-                  <h2>Project Proposal</h2>
-                </div>
+              <div class="col-lg-12 v-center">
+                  <div class="bread-inner">
+                      <div class="bread-title">
+                          <h2 class="sub_pages_title">Project-Proposal</h2>
+                      </div>
+                  </div>
               </div>
-            </div>
           </div>
-        </div>
       </div>
+  </div>
 </section>
 <!--End Breadcrumb Area-->
 
@@ -47,7 +47,7 @@
                 <img src="{{asset('frontendAssets/assets/images/gmail.png')}}" alt="project" class="img-fluid">
               </div>
               <div class="statnumb counter-number">
-                <span class="">technofirmbd@gmail.com</span><span></span>
+                <a href="mailto:technofirmbd@gmail.com"><span class="">technofirmbd@gmail.com</span></a>
                 <p>Email Address</p>
               </div>
             </div>
@@ -127,33 +127,31 @@
                         </li>
                       </ul>
                     <div class="fieldsets row">
-                      <div class="col-md-6 form-group floating-label">
+                      <div class="col-md-12 form-group floating-label">
                         <div class="formicon"><i class="fas fa-user"></i></div>
-                        <input type="text" placeholder=" "  id="full_name" class="floating-input" name="full_name">
+                        <input type="text" placeholder=" "  id="full_name" class="floating-input" name="full_name" autocomplete="off">
                         <label>Full Name*</label>
                       
                       </div>
-                      <div class="col-md-6 form-group floating-label">
+                      <div class="col-md-12 form-group floating-label">
                         <div class="formicon"><i class="fas fa-phone-alt"></i></div>
-                        <input type="email" placeholder=" " id="email" class="floating-input" name="email">
+                        <input type="email" placeholder=" " id="email" class="floating-input" name="email" autocomplete="off">
                         <label>Email Address*</label>
 
                       </div>
-                      <div class="col-md-6 form-group floating-label">
+                      <div class="col-md-12 form-group floating-label">
                         <div class="formicon"><i class="fas fa-phone-alt"></i></div>
-                        <input type="text" placeholder=" "  id="mobile_number" class="floating-input" name="mobile_number">
+                        <input type="text" placeholder=" "  id="mobile_number" class="floating-input" name="mobile_number" autocomplete="off">
                         <label>Mobile Number*</label>
 
                       </div>
                     </div>
                     <div class="fieldsets row">
-                      <div class="col-md-6 form-group floating-label">
+                      <div class="col-md-12 form-group floating-label">
                         <div class="formicon"><i class="fas fa-envelope"></i></div>
-                        <input type="text" placeholder=" " id="ref_website" class="floating-input" name="ref_website">
+                        <input type="text" placeholder=" " id="ref_website" class="floating-input" name="ref_website" autocomplete="off">
                         <label>Refference website*</label>
-
                       </div>
-                     
                     </div>
                     <div class="fieldsets row">
                       <div class="col-md-12 form-group floating-label">

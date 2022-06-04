@@ -2,7 +2,9 @@
 @section('content')
 <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
 @section('title', 'Blog | Create')
-
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+</style>
 
 <!-- BEGIN: Content-->
 <div class="app-content content ">
@@ -62,7 +64,7 @@
                                                 <label class="col-form-label" for="title"> Blog Title</label>
                                             </div>
                                             <div class="col-sm-9">
-                                                <input type="text" id="title" class="form-control" name="title" value="{{ (old('title')?old('title'):'') }}" placeholder="Write your blog title" autocomplete="off" />
+                                                <input type="text" id="title" class="form-control" name="title" value="{{ (old('title')?old('title'):'') }}" placeholder="Write your blog title" autocomplete="off" style="font-family: 'Poppins', sans-serif;font-size:20px;" />
                                             </div>
                                         </div>
                                     </div>
@@ -74,8 +76,9 @@
                                             <div class="col-sm-9">
                                                 <textarea id="my-editor" name="description" class="form-control"></textarea>
                                             </div>
-                                        </div>
+                                        </div>   
                                     </div> 
+
                                     <div class="col-12">
                                         <div class="mb-1 row">
                                             <div class="custom-file-container" data-upload-id="myFirstImage">
@@ -105,21 +108,16 @@
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                         <button type="reset" class="btn btn-info">Reset</button>
                                     </div>
-
                                 </div>
+                                
                             </form>
                         </div>
                     </div>
-
                 </div>
-
             </section>
-
-
         </div>
     </div>
 </div>
 <!-- END: Content-->
-
 
 @endsection

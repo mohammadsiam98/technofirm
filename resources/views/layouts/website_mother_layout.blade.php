@@ -6,14 +6,13 @@
 <head>
     <meta charset="utf-8" />
     <title>Technofirm - @yield('title')</title>
-    <meta name="description" content="Creative Agency, Marketing Agency Template">
-    <meta name="keywords" content="Creative Agency, Marketing Agency">
-    <meta name="author" content="rajesh-doot">
+    <meta name="description" content="Helping you in the technology field so that you can do your business well">
+    <meta name="keywords" content="Website Development Company,Website Development Company in Dhaka, Best Website Development Company in Bangladesh, Website Development Services Creative Agency in Bangladesh, Digital Marketing company in Bangladesh">
+    <meta name="author" content="Technofirm">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#2e2a8f">
     <!--website-favicon-->
-    <link href="{{asset('assets/images/favicon.png')}}" rel="icon">
+    <link href="{{asset('frontendAssets/assets/images/logo2.png')}}" rel="icon">
     <!--plugin-css-->
     <link href="{{asset('frontendAssets/assets/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('frontendAssets/assets/css/plugin.min.css')}}" rel="stylesheet">
@@ -24,6 +23,15 @@
     <link href="{{asset('frontendAssets/assets/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('frontendAssets/assets/css/responsive.css')}}" rel="stylesheet">
     <link href="{{asset('frontendAssets/assets/css/darkmode.css')}}" rel="stylesheet">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RF1QRNVH90"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RF1QRNVH90');
+    </script>
 
 </head>
 
@@ -32,14 +40,6 @@
     <div class="mouse-cursor cursor"></div>
     <div class="mouse-cursor cursor-follow"></div>
     <!-- Custom mouse end-->
-    {{-- <!--Start Preloader -->
-    <div class="onloadpage" id="page_loader">
-        <div class="pre-content">
-            <div class="logo-pre"><img src="{{asset('assets/images/logo3.png')}}" alt="Logo" class="img-fluid" /></div>
-
-    </div>
-    </div>
-    <!--End Preloader --> --}}
 
     <!--Start Header -->
     <header class="header-pr nav-bg-b main-header navfix fixed-top menu-white">
@@ -58,9 +58,9 @@
                         <li class="">
                             <a href="{{route('ourPortfolio')}}" class="menu-links">Portfolio</a>
                         </li>
-                        <li class="sbmenu rpdropdown">
+                        <li class="rpdropdown">
                             <a href="#" class="menu-links">
-                                <img src="{{asset('frontendAssets/assets/images/menu.png')}}" alt="" style="margin-right:10px;"> Sectors</a>
+                                <img src="{{asset('frontendAssets/assets/images/menu.png')}}" alt="" style="margin-right:10px;">Sectors</a>
                             <div class="nx-dropdown menu-dorpdown">
                                 <div class="sub-menu-section">
                                     <div class="sub-menu-center-block">
@@ -68,8 +68,6 @@
                                             <ul>
                                                 <li><a href="{{route('sectors','website-development')}}">
                                                         <img src="{{asset('frontendAssets/assets/images/development.png')}}" alt="" style="margin-right:10px;"> Web Development</a></li>
-                                                <li><a href="{{route('sectors','Website-Design')}}">
-                                                        <img src="{{asset('frontendAssets/assets/images/web-design.png')}}" alt="" style="margin-right:10px;"> Web Design</a></li>
                                                 <li><a href="{{route('sectors','Mobile-Application-Development')}}">
                                                         <img src="{{asset('frontendAssets/assets/images/mobile-app.png')}}" alt="" style="margin-right:13px;">App Development</a> </li>
                                                 <li><a href="{{route('sectors','Search-Engine-Optimization')}}">
@@ -190,6 +188,25 @@
     @yield('content')
 
 
+
+    <div class="footer-brands">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 v-center">
+              <h5 class="mb10">Top App Development Companies</h5>
+              <p>News letter dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Enter your email</p>
+            </div>
+            <div class="col-lg-8 v-center">
+              <ul class="footer-badges-">
+                <li><a href="#"><img src="{{asset('frontendAssets/assets/images/footer/gmail.png')}}" alt="gmail"></a></li>
+                <li><a href="#"><img src="{{asset('frontendAssets/assets/images/footer/facebook.png')}}" alt="facebook"></a></li>
+                <li><a href="#"><img src="{{asset('frontendAssets/assets/images/footer/linkedin.png')}}" alt="linkedin"></a></li>
+                <li><a href="#"><img src="{{asset('frontendAssets/assets/images/footer/blogging.png')}}" alt="blogging"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        </div>
 
 
     <!--Start Footer-->
@@ -312,6 +329,19 @@
     });
 </script>
 
-</body>
 
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/629d10c1b0d10b6f3e75cf45/1g4qoit5s';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
 </html>

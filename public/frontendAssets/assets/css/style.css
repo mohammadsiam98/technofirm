@@ -293,7 +293,7 @@ span.circle2 {
     display: inline-block;
     margin-left: 3px;
     vertical-align: baseline;
-    content: "+";
+    content: "";
     border-top: 0;
     border-right: 0;
     border-bottom: 0;
@@ -2124,14 +2124,14 @@ a.play-video::after {
 
 #scrollUp {
     bottom: 20px;
-    right: 20px;
+    right: 95px;
     width: 30px;
-    height: 50px;
+    height: 68px;
     -webkit-border-radius: 100px;
     border-radius: 100px;
     color: #fff;
-    opacity: .4;
-    background: url(../images/icons/up-arrow.svg) #00baff;
+    opacity: 1;
+    background: url(../images/icons/up-arrow.svg) #002147;
     background-repeat: no-repeat;
     background-size: 15px;
     background-position: center center;
@@ -5727,7 +5727,7 @@ table.border {
 }
 
 .footer-badges- li a img {
-    width: 150px
+    width: 70px
 }
 
 .footer-brands {

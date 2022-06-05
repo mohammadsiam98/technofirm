@@ -30,7 +30,10 @@ class SectosController extends Controller
         // dd($SectorSF_list);
         $SectorServicesName=DB::table('sector_services_names')->join('sector_services','sector_services_names.id','sector_services.Sector_service_name_id')->where('category_id',$categoryId)->first(); 
         // dd($SectorServicesName);
-    
+        $SectorStackName = SectorTechnologiesName::where('category_id',$categoryId)->first();
+        // dd($SectorStackName);
+        $SectorStack_list =DB::table('stack_teches')->join('sector_technologies_names','sector_technologies_names.category_id','stack_teches.stack_id')->where('category_id',$categoryId)->get(); 
+        // dd($SectorStack_list);
         return view('pages.DynamicServices.services',compact('serviceOverview','categoryId','SectorServices','SectorServices','SectorSF','SectorSF_list','SectorServicesName'));
     }
 }

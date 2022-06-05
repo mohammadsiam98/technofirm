@@ -1,12 +1,11 @@
 @extends('layouts.website_mother_layout')
 @section('content')
-@section('title', 'homepage')
+@section('title', 'Digital Marketing Agency')
 
 <!--Start Hero-->
 <section class="hero-slider hero-style">
     <div class="swiper-container">
         <!-- start swiper-wrapper -->
-       
         <div class="swiper-wrapper">
             @foreach($bannerFetch as $banner)
             <!--slider 1 start -->
@@ -17,11 +16,9 @@
             <!--slider 1 end -->
             @endforeach
         </div>
-       
         <!-- end swiper-wrapper -->
         <!-- swipper controls -->
         <div class="swiper-pagination"></div>
-
         <!-- swipper controls -->
     </div>
 </section>
@@ -32,6 +29,11 @@
 <section class="about-sec-app pad-tb pt60 dark-bg2">
     <div class="container">
         <div class="row">
+            <div class="col-lg-12">
+                <div class="common-heading">
+                    <h2 class="mb30 text-radius text-light text-animation bg-b">Details About Our Business</h2>
+                </div>
+            </div>
             <div class="col-lg-12">
                 <div class="common-heading text-l">
                     @foreach($companyDetailsFetch as $companyDetails)

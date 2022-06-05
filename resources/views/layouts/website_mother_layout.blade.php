@@ -23,15 +23,16 @@
     <link href="{{asset('frontendAssets/assets/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('frontendAssets/assets/css/responsive.css')}}" rel="stylesheet">
     <link href="{{asset('frontendAssets/assets/css/darkmode.css')}}" rel="stylesheet">
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RF1QRNVH90"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RF1QRNVH90');
-    </script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RF1QRNVH90"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RF1QRNVH90');
+        </script>
+         <!-- Global site tag (gtag.js) - Google Analytics -->
 
 </head>
 

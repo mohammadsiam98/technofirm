@@ -29,7 +29,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="content-body">
             <!-- Basic tabs start -->
@@ -90,6 +89,5 @@
     </div>
 </div>
 <!-- END: Content-->
-
 
 @endsection

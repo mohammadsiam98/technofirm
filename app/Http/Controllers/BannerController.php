@@ -9,19 +9,20 @@ class BannerController extends Controller
 { 
     public function list()
     {
-        //
+        // Fetch Banner List
         $banner = Banner::all();
         return view ('pages.CRUD_OPERATIONS.HomePageCrudOperation.Banner_crud.list',compact('banner'));
     }
 
     public function create()
     {
-        //
+        // Redirect to Banner Create View Page
         return view('pages.CRUD_OPERATIONS.HomePageCrudOperation.Banner_crud.create');
     }
 
     public function store(Request $request)
     {
+        // Validation when a banner store in database
         $this->validate($request,[
             'heading' => 'required|min:3|max:100|string',
             'subheading' => 'required|min:3|max:100|string',
@@ -52,7 +53,6 @@ class BannerController extends Controller
 
     public function edit($id)
     {
-        //
         $banner = Banner::find($id); // Fetch specific banner id
         return view('pages.CRUD_OPERATIONS.HomePageCrudOperation.Banner_crud.edit',compact('banner'));
     }
@@ -74,7 +74,6 @@ class BannerController extends Controller
 
     public function destroy($id)
     {
-        //
         $banner = Banner::find($id);
         $banner->delete();
         return redirect()->route('Banner.list')->with('success','Banner Deleted Successfully');
@@ -91,7 +90,6 @@ class BannerController extends Controller
 
     public function preview($id)
     {
-        //
         $banner = Banner::find($id);
         return view('pages.CRUD_OPERATIONS.HomePageCrudOperation.Banner_crud.preview',compact('banner'));
     }
@@ -99,7 +97,6 @@ class BannerController extends Controller
 
     public function restoreList()
     {
-        //
         $banner = Banner::onlyTrashed()->get();
         return view ('pages.CRUD_OPERATIONS.HomePageCrudOperation.Banner_crud.restoreList',compact('banner'));
     }
@@ -107,7 +104,6 @@ class BannerController extends Controller
 
     public function restoreData($id)
     {
-        //
         $banner = Banner::onlyTrashed()->find($id)->restore();
         return redirect()->route('Banner.restoreList')->with('success',"Banner Restored Successfully");
     }
@@ -115,7 +111,6 @@ class BannerController extends Controller
 
     public function forceDelete($id)
     {
-        //
         $banner = Banner::onlyTrashed()->find($id)->forceDelete();
         return redirect()->route('Banner.restoreList')->with('success',"Banner Permanently Deleted Successfully");
     }

@@ -38,7 +38,7 @@
             <section id="basic-tabs-components">
                 <div class="row match-height">
                     <div class="col-xl-12 col-lg-12">
-                        <div class="card">
+                        <div class="">
                             <!-- Category Preview: In which category this blog is uploaded -->
                             <div class="alert" style="background: #353146">
                                 <div class="alert-body d-flex align-items-center justify-content-between flex-wrap p-2">

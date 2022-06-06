@@ -49,7 +49,7 @@
                             <table id="html5-extension" class="table table-bordered non-hover" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th class="text-center">Serial Number</th> 
+                                        <th class="text-center">Serial Number</th>
                                         <th class="text-center">Blog title</th>
                                         <th class="dt-no-sorting">Action</th>
                                     </tr>
@@ -59,17 +59,19 @@
                                     <tr>
                                         <td class="checkbox-column text-center"> {{$key+1}} </td>
                                         <td class="text-center">{{$blog_detailsFetch->title}}</td>
-                                       
+
                                         <td>
                                             <a href="{{route('Blogs.edit' , $blog_detailsFetch->id)}}">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2">
-                                                    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                                    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z">
+                                                    </path>
                                                 </svg>
                                             </a>
                                             <a href="{{route('Blogs.destroy' , $blog_detailsFetch->id)}}">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2">
                                                     <polyline points="3 6 5 6 21 6"></polyline>
-                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                                    </path>
                                                     <line x1="10" y1="11" x2="10" y2="17"></line>
                                                     <line x1="14" y1="11" x2="14" y2="17"></line>
                                                 </svg>
@@ -95,5 +97,5 @@
         </div>
     </div>
 </div>
-
+<!-- END: Content-->
 @endsection

@@ -26,7 +26,7 @@ class SectosController extends Controller
         // dd($SectorServices);
         $SectorSF  = SectorSpecialFeatureSection::where('category_id',$categoryId)->first();
         // dd($SectorSF);
-        $SectorSF_list =DB::table('sector_special_features_dynamic_lists')->join('sector_special_feature_sections','sector_special_feature_sections.category_id','sector_special_features_dynamic_lists.sector_Special_feature_id')->where('category_id',$categoryId)->get(); 
+        $SectorSF_list = DB::table('sector_special_features_dynamic_lists')->join('sector_special_feature_sections','sector_special_feature_sections.id','sector_special_features_dynamic_lists.sector_Special_feature_id')->where('category_id',$categoryId)->get(); 
         // dd($SectorSF_list);
         $SectorServicesName=DB::table('sector_services_names')->join('sector_services','sector_services_names.id','sector_services.Sector_service_name_id')->where('category_id',$categoryId)->first(); 
         // dd($SectorServicesName);
@@ -34,6 +34,6 @@ class SectosController extends Controller
         // dd($SectorStackName);
         $SectorStack_list =DB::table('stack_teches')->join('sector_technologies_names','sector_technologies_names.category_id','stack_teches.stack_id')->where('category_id',$categoryId)->get(); 
         // dd($SectorStack_list);
-        return view('pages.DynamicServices.services',compact('serviceOverview','categoryId','SectorServices','SectorServices','SectorSF','SectorSF_list','SectorServicesName'));
+        return view('pages.DynamicServices.services',compact('serviceOverview','categoryId','SectorServices','SectorServices','SectorSF','SectorSF_list','SectorServicesName','SectorStackName','SectorStack_list'));
     }
 }

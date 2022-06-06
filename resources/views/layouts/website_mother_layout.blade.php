@@ -57,7 +57,7 @@
                             <a href="{{route('aboutUs')}}" class="menu-links">About Us</a>
                         </li>
                         <li class="">
-                            <a href="{{route('ourPortfolio')}}" class="menu-links">Portfolio</a>
+                            <a href="{{route('ourPortfolio')}}" class="menu-links" >Portfolio</a>
                         </li>
                         <li class="rpdropdown">
                             <a href="#" class="menu-links">
@@ -67,16 +67,16 @@
                                     <div class="sub-menu-center-block">
                                         <div class="sub-menu-column smfull">
                                             <ul>
-                                                <li><a href="{{route('sectors','website-development')}}">
-                                                        <img src="{{asset('frontendAssets/assets/images/development.png')}}" alt="" style="margin-right:10px;"> Web Development</a></li>
-                                                <li><a href="{{route('sectors','Mobile-Application-Development')}}">
-                                                        <img src="{{asset('frontendAssets/assets/images/mobile-app.png')}}" alt="" style="margin-right:13px;">App Development</a> </li>
+                                                <li><a href="{{route('sectors','website-development')}}" class="activePage">
+                                                        <img src="" alt="" style="margin-right:10px;"> Web Development</a></li>
+                                                <li><a href="{{route('sectors','Mobile-Application-Development')}}" >
+                                                        <img src="" alt="" style="margin-right:13px;">Mobile App Development</a> </li>
                                                 <li><a href="{{route('sectors','Search-Engine-Optimization')}}">
-                                                        <img src="{{asset('frontendAssets/assets/images/SEO.png')}}" alt="" style="margin-right:13px;">Search Engine Optimization</a></li>
+                                                        <img src="" alt="" style="margin-right:13px;">Search Engine Optimization</a></li>
                                                 <li><a href="{{route('sectors','Social-Media-Marketing')}}">
-                                                        <img src="{{asset('frontendAssets/assets/images/bullhorn.png')}}" alt="" style="margin-right:13px;">Social Media Marketing</a> </li>
+                                                        <img src="" alt="" style="margin-right:13px;" class="">Social Media Marketing</a> </li>
                                                 <li><a href="{{route('sectors','Content-Writing')}}">
-                                                        <img src="{{asset('frontendAssets/assets/images/creative-writing.png')}}" alt="" style="margin-right:10px;"> Content Writing</a> </li>
+                                                        <img src="" alt="" style="margin-right:10px;"> Content Writing</a> </li>
                                             </ul>
                                         </div>
                                     </div>

@@ -70,7 +70,7 @@
                             <!-- The image which you uploaded is: Preview Image When Edit -->
                             <div>
                                 <h4 class="mt-25">The image which you uploaded is </h4>
-                                <img src="{{url($brands->image)}}" style="width: 80px;height:auto;" alt="">
+                                <img style="width: 150px; height:auto" src="{{ asset('images/brandsCollabWith/'.$brands->created_at->format('Y/M/').'/'.$brands->image) }}" alt="Brands Collab Images">
                             </div>
                             <!-- The image which you uploaded is: Preview Image When Edit -->
                         </div>

@@ -1,7 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Storage; // For Image insert & Edit we use Laravel Illuminate 
+use Illuminate\Support\Str;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\File;
+use Intervention\Image\Facades\Image as Image;
+use Illuminate\Contracts\Encryption\DecryptException;
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Storage;
+use Response;
+use DB;
 use Illuminate\Http\Request;
 use App\Models\brands;
 class BrandsCollabWithController extends Controller
@@ -28,9 +36,14 @@ class BrandsCollabWithController extends Controller
             'image.required' => 'Please upload your image', // Image is required in banner.
         ]);
         $brands = new brands;
-        $image  = $request->file('image');
-        Storage::putFile('public/img/',$image);
-        $brands->image ="storage/img/".$image->hashName(); // if same image is again upload then it will be renamed that's why we use hashname when we try to save an image.
+        $image= $request->file('image');
+        $IMGNAME = Str::random(10).'.'. $image->getClientOriginalExtension();       
+        $brands_image = 'images/brandsCollabWith/'. Carbon::now()->format('Y/M/').'/';
+        //Make Directory 
+        File::makeDirectory($brands_image, $mode=0777, true, true);        
+        //save Image to the thumbnail path
+        Image::make($image)->save(public_path($brands_image.$IMGNAME));
+        $brands->image = $IMGNAME;
         $brands->save();
         return redirect()->route('brands.list')->with('success','Brand Image Inserted Successfully'); // redirect to banner create page with a success message.
 
@@ -47,10 +60,23 @@ class BrandsCollabWithController extends Controller
     {
         // Fetch Specific single banner
         $brands = brands::find($id);
-        if($request->file('image')){
-            $image  = $request->file('image');
-            Storage::putFile('public/img/',$image);
-            $brands->image ="storage/img/".$image->hashName();
+        if($request->hasFile('image')){
+            $image= $request->file('image');
+            $IMGNAME = Str::random(10).'.'. $image->getClientOriginalExtension();       
+            $brands_image = 'images/brandsCollabWith/'. Carbon::now()->format('Y/M/').'/';
+
+            //Make Directory 
+            File::makeDirectory($brands_image, $mode=0777, true, true);        
+            //save Image to the thumbnail path
+            Image::make($image)->save(public_path($brands_image.$IMGNAME));
+
+            //Delete previous Image
+            $old_img_location = public_path('images/blog/'.$brands->created_at->format('Y/M/').'/'.$brands->image);
+            if(file_exists($old_img_location)){
+               unlink($old_img_location);
+            }                
+            //saving the new image
+            $brands->image = $IMGNAME;
         }
         $brands->save();
         return redirect()->route('brands.list')->with('success','Image updated Successfully');

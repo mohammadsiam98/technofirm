@@ -121,7 +121,7 @@
 
                 <div>
                     <h3>The image which you have uploaded is </h3>
-                    <img src="{{url($SectorServices->image)}}" style="width: 80px;height:auto;" alt=""> 
+                    <img style="width: 150px; height:auto" src="{{ asset('images/SectorServices/'.$SectorServices->created_at->format('Y/M/').'/'.$SectorServices->image) }}" alt="Sector Services Images">
                 </div>
 
             </section>

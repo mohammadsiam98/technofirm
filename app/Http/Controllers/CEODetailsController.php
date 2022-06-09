@@ -34,8 +34,8 @@ class CEODetailsController extends Controller
         //
         $this->validate($request,[
             'name' => 'required|min:1|max:100|string',
-            'designation' => 'required|min:3|max:100|string',
-            'speech' => 'required|min:3|max:2000|string',
+            'designation' => 'required|string',
+            'speech' => 'required|string',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:15630',
 
         ],[
@@ -49,9 +49,15 @@ class CEODetailsController extends Controller
         $Ceo->name = $request->name;
         $Ceo->designation = $request->designation;
         $Ceo->speech = $request->speech;
-        $image  = $request->file('image');
-        Storage::putFile('public/img/',$image);
-        $Ceo->image ="storage/img/".$image->hashName(); // if same image is again upload then it will be renamed that's why we use hashname when we try to save an image.
+
+        $image= $request->file('image');
+        $IMGNAME = Str::random(10).'.'. $image->getClientOriginalExtension();       
+        $ceo_image = 'images/CEO_Image/'. Carbon::now()->format('Y/M/').'/';
+        //Make Directory 
+        File::makeDirectory($ceo_image, $mode=0777, true, true);        
+        //save Image to the thumbnail path
+        Image::make($image)->save(public_path($ceo_image.$IMGNAME));
+        $Ceo->image = $IMGNAME;
         $Ceo->save();
         return redirect()->route('ceoDetails.list')->with('success','CEO Details Deleted Successfully');
     }
@@ -67,14 +73,29 @@ class CEODetailsController extends Controller
     {
         //
         $Ceo = CeoDetails::find($id);
-        $Ceo->name = $data->name;
-        $Ceo->designation = $data->designation;
-        $Ceo->speech = $data->speech;
-        if($request->file('image')){
-            $image  = $data->file('image');
-            Storage::putFile('public/img/',$image);
-            $Ceo->image ="storage/img/".$image->hashName();
+        $Ceo->name = $request->name;
+        $Ceo->designation = $request->designation;
+        $Ceo->speech = $request->speech;
+        if($request->hasFile('image')){
+            $image= $request->file('image');
+            $IMGNAME = Str::random(10).'.'. $image->getClientOriginalExtension();       
+            $ceo_image = 'images/CEO_Image/'. Carbon::now()->format('Y/M/').'/';
+
+            //Make Directory 
+            File::makeDirectory($ceo_image, $mode=0777, true, true);        
+            //save Image to the thumbnail path
+            Image::make($image)->save(public_path($ceo_image.$IMGNAME));
+
+            //Delete previous Image
+            $old_img_location = public_path('images/CEO_Image/'.$Ceo->created_at->format('Y/M/').'/'.$Ceo->image);
+            if(file_exists($old_img_location)){
+               unlink($old_img_location);
+            }                
+            //saving the new image
+            $Ceo->image = $IMGNAME;
         }
+        $Ceo->save();
+        return redirect()->route('ceoDetails.list')->with('success','Details updated Successfully');
     }
 
     public function destroy($id)
@@ -82,7 +103,7 @@ class CEODetailsController extends Controller
         //
         $Ceo = CeoDetails::find($id);
         $Ceo->delete();
-        return redirect()->route('ceoDetails.list')->with('success','Banner Deleted Successfully');
+        return redirect()->route('ceoDetails.list')->with('success','Deleted Successfully');
     }
 
     public function preview($id)

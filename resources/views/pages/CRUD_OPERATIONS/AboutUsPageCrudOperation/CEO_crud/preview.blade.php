@@ -35,54 +35,58 @@
             <!-- Basic tabs start -->
             <section id="basic-tabs-components">
                 <div class="row match-height">
-
-                    <!-- Tabs with Icon starts -->
-                    <div class="col-xl-6 col-lg-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">CEO Details</h4>
-                            </div>
-                            <div class="card-body">
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" id="homeIcon-tab" data-bs-toggle="tab" href="#homeIcon" aria-controls="home" role="tab" aria-selected="true"> Name</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="profileIcon-tab" data-bs-toggle="tab" href="#profileIcon" aria-controls="profile" role="tab" aria-selected="false"> Designation</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="image-tab" data-bs-toggle="tab" href="#imageTab" aria-controls="profile" role="tab" aria-selected="false">Image</a>
-                                    </li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-pane active" id="homeIcon" aria-labelledby="homeIcon-tab" role="tabpanel">
-                                        <p>
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="">
+                            <!-- Ceo's Name Preview -->
+                            <div class="alert" style="background: #353146">
+                                <div class="alert-body d-flex align-items-center justify-content-between flex-wrap p-2">
+                                    <div class="me-1">
+                                        <h4 class="fw-bolder" style="color:white">Category</h4>
+                                        <p class="fw-normal mb-1 mb-lg-0" style="color:white">
                                             {{$Ceo->name}}
                                         </p>
-
                                     </div>
-                                    <div class="tab-pane" id="profileIcon" aria-labelledby="profileIcon-tab" role="tabpanel">
-                                        <p>
+                                </div>
+                            </div>
+                            <!-- Ceo's Name Preview -->
+
+                            <!-- Ceo's Designation Preview -->
+                            <div class="alert" style="background: #353146">
+                                <div class="alert-body d-flex align-items-center justify-content-between flex-wrap p-2">
+                                    <div class="me-1">
+                                        <h4 class="fw-bolder" style="color:white">Designation</h4>
+                                        <p class="fw-normal mb-1 mb-lg-0" style="color:white">
                                             {{$Ceo->designation}}
                                         </p>
                                     </div>
-
-                                    <div class="tab-pane" id="imageTab" aria-labelledby="image-tab" role="tabpanel">
-                                        <p>
-                                            <img src="{{url($Ceo->image)}}" style="width: 300px;height:auto;" alt="">
-                                        </p>
-                                    </div>
-                                    
                                 </div>
                             </div>
+                            <!-- Ceo's Designation Preview -->
+
+                            <!-- Ceo's Speech Preview -->
+                            <div class="alert" style="background: #353146">
+                                <div class="alert-body d-flex align-items-center justify-content-between flex-wrap p-2">
+                                    <div class="me-1">
+                                        <h4 class="fw-bolder" style="color:white">Speech</h4>
+                                        <p class="fw-normal mb-1 mb-lg-0" style="color:white">
+                                            {{$Ceo->speech}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ceo's Speech Preview -->
+
                         </div>
                     </div>
-                    <!-- Tabs with Icon ends -->
-                    <div class="col-xl-6 col-lg-12">
-                        <h3>CEO's Speech</h3>
-                        <p>{{$Ceo->speech}}</p>
-                    </div>
                 </div>
+
+                <!-- Image Preview Which Already Uploaded -->
+                <div class="row">
+                    <h3>The image which you have uploaded is</h3>
+                    <img style="width: 120px; height:auto" src="{{ asset('images/CEO_Image/'.$Ceo->created_at->format('Y/M/').'/'.$Ceo->image) }}" alt="CEO Image">
+                </div>
+                <!-- Image Preview Which Already Uploaded -->
+
             </section>
             <!-- Basic Tabs end -->
         </div>

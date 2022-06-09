@@ -51,7 +51,7 @@
                                         <td class="text-center">{{$ceoDetails->name}}</td>
                                         <td class="text-center">{{$ceoDetails->designation}}</td>
                                         <td>
-                                            <img src="{{url($ceoDetails->image)}}" style="width: 80px;height:auto;" alt="">
+                                            <img style="width: 150px; height:auto" src="{{ asset('images/CEO_Image/'.$ceoDetails->created_at->format('Y/M/').'/'.$ceoDetails->image) }}" alt="CEO Image">
                                         </td>
                                        
                                         <td>

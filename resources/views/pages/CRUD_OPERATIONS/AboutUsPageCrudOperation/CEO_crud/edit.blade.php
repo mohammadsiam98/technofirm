@@ -43,7 +43,7 @@
                                                 <label class="col-form-label" for="name">Name</label>
                                             </div>
                                             <div class="col-sm-9">
-                                                <input type="text" id="name" class="form-control" name="name" value="{{$Ceo->name}}" value="{{ (old('name')?old('name'):'') }}" placeholder="Edit the name of the CEO" autocomplete="off" />
+                                                <input type="text" id="name" class="form-control" name="name" value="{{$Ceo->name}}" placeholder="Edit the name of the CEO" autocomplete="off" />
                                             </div>
                                         </div>
                                     </div>
@@ -53,7 +53,7 @@
                                                 <label class="col-form-label" for="designation">Designation</label>
                                             </div>
                                             <div class="col-sm-9">
-                                                <input type="text" id="subheading" class="form-control" name="designation" value="{{$Ceo->designation}}" value="{{ (old('designation')?old('designation'):'') }}" placeholder="Edit the designation of the CEO" autocomplete="off" />
+                                                <input type="text" id="designation" class="form-control" name="designation" value="{{$Ceo->designation}}" placeholder="Edit the designation of the CEO" autocomplete="off" />
                                             </div>
                                         </div>
                                     </div>
@@ -64,7 +64,7 @@
                                                 <label class="col-form-label" for="designation">Speech</label>
                                             </div>
                                             <div class="col-sm-9">
-                                                <textarea type="text" id="speech" class="form-control" name="designation" value="{{ (old('speech')?old('speech'):'') }}" placeholder="Edit the speech of the CEO" autocomplete="off" rows="20" cols="40">{{$Ceo->speech}}</textarea>
+                                                <textarea type="text" id="speech" class="form-control" name="speech" placeholder="Edit the speech of the CEO" autocomplete="off" rows="20" cols="40">{{$Ceo->speech}}</textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -91,7 +91,7 @@
                             </form>
                             <div>
                                 <h4 class="mt-25">The image which you uploaded is </h4>
-                                <img src="{{url($Ceo->image)}}" style="width: 80px;height:auto;" alt="">
+                                <img style="width: 150px; height:auto" src="{{ asset('images/CEO_Image/'.$Ceo->created_at->format('Y/M/').'/'.$Ceo->image) }}" alt="CEO Image">
                             </div>
                         </div>
                     </div>

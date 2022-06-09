@@ -74,7 +74,7 @@
                 </div>
                 <div class="row">
                     <h3>The image which you have uploaded is</h3>
-                    <img src="{{url($stackDetails->image)}}" style="width: 120px;height:auto;" alt="">
+                    <img style="width: 150px; height:auto" src="{{ asset('images/SectorTechnologyImages/'.$stackDetails->created_at->format('Y/M/').'/'.$stackDetails->image) }}" alt="Sector Stack Details Images">
                 </div>
             </section>
             <!-- Basic Tabs end -->

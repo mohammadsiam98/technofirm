@@ -87,23 +87,16 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="col-12">
                                         <button type="submit" class="btn btn-primary">Update Stack Details</button>
                                         <button type="reset" class="btn btn-info">Reset</button>
-
                                     </div>
-
                                 </div>
                             </form>
                         </div>
                     </div>
-
                 </div>
-
             </section>
-
-
         </div>
     </div>
 </div>

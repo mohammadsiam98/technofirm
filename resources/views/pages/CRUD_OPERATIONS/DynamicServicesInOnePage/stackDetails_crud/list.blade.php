@@ -84,7 +84,9 @@
                                         <td class="checkbox-column text-center"> {{$key+1}} </td>
                                         <td class="text-center badge rounded-pill badge-light-primary me-1" style="margin-top: 25px; display:flex;justify-content:center;">{{$stackDetailsFetch->get_technology_name->Sector_technologies_name_heading}}</td>
                                         <td class="text-center">{{$stackDetailsFetch->stackName}}</td>
-                                        <td><img src="{{url($stackDetailsFetch->image)}}" style="width: 100px;height:auto;" alt=""></td>
+                                        <td>
+                                            <img style="width: 50px; height:auto" src="{{ asset('images/SectorTechnologyImages/'.$stackDetailsFetch->created_at->format('Y/M/').'/'.$stackDetailsFetch->image) }}" alt="Sector Stack Details Images">
+                                        </td>
                                         <td>
                                             <input type="checkbox" class="toggle-class" data-id="{{ $stackDetailsFetch->id }}" data-toggle="toggle" data-style="slow" data-on="Enabled" data-off="Disabled" {{ $stackDetailsFetch->status == true ? 'checked' : ''}}>
                                         </td>

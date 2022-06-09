@@ -5,6 +5,18 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Models\SectorTechnologiesName;
 use App\Models\StackTech;
+
+use Illuminate\Support\Str;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\File;
+use Intervention\Image\Facades\Image as Image;
+use Illuminate\Contracts\Encryption\DecryptException;
+use Illuminate\Support\Facades\Crypt;
+use Response;
+use DB;
+
+
+
 class SectorStackTechnologiesController extends Controller
 {
     public function list()
@@ -30,10 +42,15 @@ class SectorStackTechnologiesController extends Controller
         $stackDetails->stackName = $request->stackName;      
         $stackDetails->details= $request->details;
 
-        $image  = $request->file('image');
-        Storage::putFile('public/img/',$image);
-        $stackDetails->image ="storage/img/".$image->hashName();
-
+        $image= $request->file('image');
+        $IMGNAME = Str::random(10).'.'. $image->getClientOriginalExtension();       
+        $SD_image = 'images/SectorTechnologyImages/'. Carbon::now()->format('Y/M/').'/';
+        //Make Directory 
+        File::makeDirectory($SD_image, $mode=0777, true, true);        
+        //save Image to the thumbnail path
+        Image::make($image)->save(public_path($SD_image.$IMGNAME));
+        $stackDetails->image = $IMGNAME;
+      
         $stackDetails->save();
         return redirect()->route('sector_technologies_details.list')->with('success','Created Successfully');
     }
@@ -54,11 +71,25 @@ class SectorStackTechnologiesController extends Controller
         $stackDetails->stackName = $request->stackName;      
         $stackDetails->details= $request->details;
 
-        if($request->file('image')){
-            $image  = $request->file('image');
-            Storage::putFile('public/img/',$image);
-            $stackDetails->image ="storage/img/".$image->hashName();
+        if($request->hasFile('image')){
+            $image= $request->file('image');
+            $IMGNAME = Str::random(10).'.'. $image->getClientOriginalExtension();       
+            $SD_image = 'images/SectorTechnologyImages/'. Carbon::now()->format('Y/M/').'/';
+
+            //Make Directory 
+            File::makeDirectory($SD_image, $mode=0777, true, true);        
+            //save Image to the thumbnail path
+            Image::make($image)->save(public_path($SD_image.$IMGNAME));
+
+            //Delete previous Image
+            $old_img_location = public_path('images/SectorTechnologyImages/'.$stackDetails->created_at->format('Y/M/').'/'.$stackDetails->image);
+            if(file_exists($old_img_location)){
+               unlink($old_img_location);
+            }                
+            //saving the new image
+            $stackDetails->image = $IMGNAME;
         }
+
         $stackDetails->save();
         return redirect()->route('sector_technologies_details.list')->with('success',"Deleted Successfully");
     }

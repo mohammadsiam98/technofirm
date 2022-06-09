@@ -41,9 +41,9 @@
                             <div class="alert" style="background: #353146">
                                 <div class="alert-body d-flex align-items-center justify-content-between flex-wrap p-2">
                                   <div class="me-1">
-                                    <h4 class="fw-bolder" style="color:white">Section heading name</h4>
+                                    <h4 class="fw-bolder" style="color:white">Category Name</h4>
                                     <p class="fw-normal mb-1 mb-lg-0" style="color:white">
-                                        {{$stackDetails->get_technology_name->Sector_technologies_name_heading}}
+                                        {{$SectorSF->get_category->categoryName}}
                                     </p>
                                   </div>
                                 </div>
@@ -51,30 +51,20 @@
                             <div class="alert" style="background: #353146">
                                 <div class="alert-body d-flex align-items-center justify-content-between flex-wrap p-2">
                                   <div class="me-1">
-                                    <h4 class="fw-bolder" style="color:white">Stack name</h4>
+                                    <h4 class="fw-bolder" style="color:white">Special Feature Heading</h4>
                                     <p class="fw-normal mb-1 mb-lg-0" style="color:white">
-                                        {{$stackDetails->stackName}}
+                                        {{$SectorSF->heading}}
                                     </p>
                                   </div>
                                 </div>
                             </div>
-                            <div class="alert" style="background: #353146">
-                                <div class="alert-body d-flex align-items-center justify-content-between flex-wrap p-2">
-                                  <div class="me-1">
-                                    <h4 class="fw-bolder" style="color:white">Stack Details</h4>
-                                    <p class="fw-normal mb-1 mb-lg-0" style="color:white">
-                                        {{$stackDetails->details}}
-                                    </p>
-                                  </div>
-                                </div>
-                            </div> 
                         </div>
                     </div>
                     <!-- Tabs with Icon ends -->
                 </div>
                 <div class="row">
                     <h3>The image which you have uploaded is</h3>
-                    <img src="{{url($stackDetails->image)}}" style="width: 120px;height:auto;" alt="">
+                    <img src="/images/Sector_SF_Section/{{ $SectorSF->image }}" style="width: 33%">
                 </div>
             </section>
             <!-- Basic Tabs end -->

@@ -79,8 +79,6 @@
                                         </div>
                                     </div>
 
-
-                                    
                                     <div class="col-12">
                                         <div class="mb-1 row">
                                             <div class="custom-file-container" data-upload-id="myFirstImage">

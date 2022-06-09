@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Storage; // For Image insert & Edit we use Laravel Illuminate 
+
 use Illuminate\Http\Request;
 use App\Models\SectorSpecialFeatureSection;
 use App\Models\Category;
-use DB;
+
 class SectorSpecialFeaturesController extends Controller
 {
     public function list()
@@ -36,17 +36,22 @@ class SectorSpecialFeaturesController extends Controller
         $if_a_SectorSF_already_written = DB::table('sector_special_feature_sections')->where('category_id',$request->category_id)->first();
         if (empty($if_a_SectorSF_already_written))
         {
-        $SectorSF = new SectorSpecialFeatureSection;
-        $SectorSF->category_id=$request->category_id;
-        $SectorSF->heading=$request->heading;
-        $SectorSF->details = $request->details;
-        $image  = $request->file('image');
-        Storage::putFile('public/img/',$image);
-        $SectorSF->image ="storage/img/".$image->hashName(); // if same image is again upload then it will be renamed that's why we use hashname when we try to save an image.
-        $SectorSF->save();
-        return redirect()->route('SectorSF.list')->with('success','Created Successfully');
+            $SectorSF = new SectorSpecialFeatureSection;
+            $SectorSF->category_id=$request->category_id;
+            $SectorSF->heading=$request->heading;
+            $SectorSF->details = $request->details;
+            if ($image = $request->file('image'))
+            {
+                $destinationPath = 'images/Sector_SF_Section/';
+                $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+                $image->move($destinationPath, $profileImage);
+                $SectorSF['image'] = "$profileImage";
+            }
+            $SectorSF->save();
+            return redirect()->route('SectorSF.list')->with('success','Created Successfully');
         }
-        else{
+        else
+        {
             return 'In this category there is already data inserted.';
         }
     }
@@ -65,11 +70,13 @@ class SectorSpecialFeaturesController extends Controller
         $SectorSF->category_id=$request->category_id;
         $SectorSF->heading=$request->heading;
         $SectorSF->details = $request->details;
-        if($request->file('image')){
-            $image  = $request->file('image');
-            Storage::putFile('public/img/',$image);
-            $SectorSF->image ="storage/img/".$image->hashName();
-        }
+        if ($image = $request->file('image'))
+            {
+                $destinationPath = 'images/Sector_SF_Section/';
+                $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+                $image->move($destinationPath, $profileImage);
+                $SectorSF['image'] = "$profileImage";
+            }
         $SectorSF->save();
         return redirect()->route('SectorSF.list')->with('success','Updated Successfully');
     }
@@ -81,4 +88,11 @@ class SectorSpecialFeaturesController extends Controller
         $SectorSF->delete();
         return redirect()->route('SectorSF.list')->with('success','Deleted Successfully');
     }
+
+    public function preview($id)
+    {
+        $SectorSF = SectorSpecialFeatureSection::find($id);
+        return view('pages.CRUD_OPERATIONS.DynamicServicesInOnePage.sectorSpecialFeatures_crud.preview',compact('SectorSF'));
+    }
+
 }

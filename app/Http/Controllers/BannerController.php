@@ -68,36 +68,49 @@ class BannerController extends Controller
     public function edit($id)
     {
         $banner = Banner::find($id); // Fetch specific banner id
-        return view('pages.CRUD_OPERATIONS.HomePageCrudOperation.Banner_crud.edit',compact('banner'));
+        if(!empty($banner)){
+            return view('pages.CRUD_OPERATIONS.HomePageCrudOperation.Banner_crud.edit',compact('banner'));
+        }
+        else{
+            return 'putki mara khaisi';
+        }
+        
     }
 
-    public function update(Request $request, $id)
+    public function update ($id)
     {
         // Fetch Specific single banner
         $banner = Banner::find($id);
-        $banner->heading = $request->heading;
-        $banner->subheading = $request->subheading;
-        if($request->hasFile('image')){
-            $image= $request->file('image');
-            $IMGNAME = Str::random(10).'.'. $image->getClientOriginalExtension();       
-            $banner_image = 'images/blog/'. Carbon::now()->format('Y/M/').'/';
+        if (!empty($banner)){
 
-            //Make Directory 
-            File::makeDirectory($banner_image, $mode=0777, true, true);        
-            //save Image to the thumbnail path
-            Image::make($image)->save(public_path($banner_image.$IMGNAME));
-
-            //Delete previous Image
-            $old_img_location = public_path('images/blog/'.$banner->created_at->format('Y/M/').'/'.$banner->image);
-            if(file_exists($old_img_location)){
-               unlink($old_img_location);
-            }                
-            //saving the new image
-            $banner->image = $IMGNAME;
+            $banner->heading = $request->heading;
+            $banner->subheading = $request->subheading;
+            if($request->hasFile('image')){
+                $image= $request->file('image');
+                $IMGNAME = Str::random(10).'.'. $image->getClientOriginalExtension();       
+                $banner_image = 'images/blog/'. Carbon::now()->format('Y/M/').'/';
+    
+                //Make Directory 
+                File::makeDirectory($banner_image, $mode=0777, true, true);        
+                //save Image to the thumbnail path
+                Image::make($image)->save(public_path($banner_image.$IMGNAME));
+    
+                //Delete previous Image
+                $old_img_location = public_path('images/blog/'.$banner->created_at->format('Y/M/').'/'.$banner->image);
+                if(file_exists($old_img_location)){
+                   unlink($old_img_location);
+                }                
+                //saving the new image
+                $banner->image = $IMGNAME;
+            }
+    
+            $banner->save();
+            return redirect()->route('Banner.list')->with('success','Banner details updated Successfully');
         }
-
-        $banner->save();
-        return redirect()->route('Banner.list')->with('success','Banner details updated Successfully');
+        else
+        {
+          return 'siam';
+        }
     }
 
     public function destroy($id)

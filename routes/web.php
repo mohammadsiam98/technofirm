@@ -181,6 +181,7 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::get('/sector-special-feature/edit/{id}', 'App\Http\Controllers\SectorSpecialFeaturesController@edit')->name('SectorSF.edit');
     Route::post('/sector-special-feature/update/{id}', 'App\Http\Controllers\SectorSpecialFeaturesController@update')->name('SectorSF.update');
     Route::get('/sector-special-feature/delete/{id}', 'App\Http\Controllers\SectorSpecialFeaturesController@destroy')->name('SectorSF.destroy');
+    Route::get('/sector-special-feature/preview/{id}', 'App\Http\Controllers\SectorSpecialFeaturesController@preview')->name('SectorSF.preview');
 
 
     Route::get('/sector-special-feature-li-list/create', 'App\Http\Controllers\SectorSpecialFeaturesDynamicController@create')->name('SectorSFD.create');

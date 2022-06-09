@@ -47,7 +47,7 @@
         <div class="container-fluid m-pad">
             <div class="menu-header">
                 <div class="dsk-logo"><a class="nav-brand" href="{{route('homepage')}}">
-                        <img src="{{asset('frontendAssets/assets/images/logo2.png')}}" alt="Logo" class="mega-white-logo" />
+                        <img src="{{asset('frontendAssets/assets/images/logo3.png')}}" alt="Logo" class="mega-white-logo" />
                         <img src="{{asset('frontendAssets/assets/images/logo3.png')}}" alt="Logo" class="mega-darks-logo" />
                     </a>
                 </div>
@@ -67,7 +67,7 @@
                                     <div class="sub-menu-center-block">
                                         <div class="sub-menu-column smfull">
                                             <ul>
-                                                <li><a href="{{route('sectors','website-development')}}" class="activePage">
+                                                <li><a href="{{route('sectors','website-development')}}">
                                                         <img src="" alt="" style="margin-right:10px;"> Web Development</a></li>
                                                 <li><a href="{{route('sectors','Mobile-Application-Development')}}" >
                                                         <img src="" alt="" style="margin-right:13px;">Mobile App Development</a> </li>
@@ -87,12 +87,8 @@
                         <li class="">
                             <a href="{{route('blog')}}" class="menu-links">Blog</a>
                         </li>
-                        <li class="">
-                            <a href="{{route('contactUs')}}" class="menu-links">Contact Us</a>
-                        </li>
-                        <li class="">
-                            <a href="{{route('projectProposal')}}" class="menu-links">Project Proposal</a>
-                        </li>
+                        <a href="{{route('contactUs')}}" class="contact_Us_Button pr-5" style="font-size:20px;"><button class="bg-btn5 smllbtnn lnk">Contact-Us<span class="circle"></span></button></a>
+                        <a href="{{route('projectProposal')}}" style="font-size:20px;"><button class="bg-btn5 smllbtnn lnk">Project Proposal<span class="circle"></span></button></a>
                     </ul>
                     <!-- mobile + desktop - sidebar menu- dark mode witch and button -->
                     <ul class="nav-list right-end-btn">

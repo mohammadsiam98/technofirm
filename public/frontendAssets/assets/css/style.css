@@ -463,7 +463,8 @@ header .dropdown-menu {
 }
 
 .nav-bg-b .custom-nav .nav-list li a.menu-links {
-    color: #fff;
+    color: black;
+    font-size: 20px;
 }
 
 .main-header.sticky {
@@ -901,7 +902,8 @@ a.play-video::after {
     padding-bottom: 100px;
     height: 100vh;
     align-items: center;
-    display: flex
+    display: flex;
+    background: #1a161f;
 }
 
 .hero-main-rp {
@@ -971,7 +973,7 @@ a.play-video::after {
 }
 
 .image-sr-mm {
-    height: 250px;
+    height: 360px;
     width: 100%;
     padding: 0;
     position: relative;
@@ -9357,7 +9359,7 @@ html body .title-hero p {
 .main-header {
     display: flex;
     align-items: center;
-    background-color: #002147;
+    background-color:whitesmoke;
 }
 
 .sidebarform input,
@@ -9868,4 +9870,103 @@ img.animated
     width:36px;
     height: auto;
 }
-a.activePage{ color: green; border-bottom: solid; border-width: 3px;}
+a.contact_Us_Button
+{
+    padding: 10px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    h1.header_text {
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        font-family: 'Poppins';
+    }
+  }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {h1.header_text {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-family: 'Poppins';
+}}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {h1.header_text {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'Poppins';
+}}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {h1.header_text{
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+    font-family: 'Poppins';
+}}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {h1.header_text{
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+    font-family: 'Poppins';
+}}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .btn-main {
+        font-size: 20px;
+        font-weight: 400;
+        font-family: Poppins, sans-serif;
+        padding: 0 66px;
+        line-height: 56px;
+        text-align: center;
+        outline: 0;
+        color: #fff;
+        background-color: #ff1f8e;
+        border: none;
+        -webkit-border-radius: 100px;
+        border-radius: 100px;
+        display: inline-block;
+        position: relative;
+        -webkit-box-shadow: 0 10px 15px 0 rgb(233 30 99 / 15%);
+        box-shadow: 0 10px 15px 0 rgb(233 30 99 / 15%);
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px){
+    .-cta-btn p {
+        font-size: 20px;
+        color: #050748;
+        margin: 0 15px 0 0;
+       
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {.-cta-btn p {
+    font-size: 20px;
+    color: #050748;
+    margin: 0 15px 0 0;
+    display: none;
+}}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {.-cta-btn p {
+    font-size: 20px;
+    color: #050748;
+    margin: 0 15px 0 0;
+}}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {.-cta-btn p {
+    font-size: 20px;
+    color: #050748;
+    margin: 0 15px 0 0;
+}}

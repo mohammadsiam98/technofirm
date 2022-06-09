@@ -18,7 +18,7 @@ class ViewPagesController extends Controller
     {
         $bannerFetch = Banner::all();
         $companyDetailsFetch = CompanyDetails::all();
-        $blogsFetch = Blog::paginate(3);
+        $blogsFetch = Blog::orderBy('updated_at','desc')->limit(3)->get();
         return view('pages.homepage.index',compact('bannerFetch','companyDetailsFetch','blogsFetch'));
     }
 
@@ -29,7 +29,7 @@ class ViewPagesController extends Controller
         
         $ceoDetailsFetch = CeoDetails::all();
         $ourStoryFetch = ourStory::all();
-        $blogsFetch = Blog::paginate(3);
+        $blogsFetch = Blog::orderBy('updated_at','desc')->limit(2)->get();
         $brandsFetch = brands::all();
         $MissionVissionFetch = MissionVission::all();
         return view('pages.about.about',compact('ceoDetailsFetch','ourStoryFetch','blogsFetch','brandsFetch','MissionVissionFetch'));

@@ -3,8 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage; // For Image insert & Edit we use Laravel Illuminate 
 use App\Models\Banner; // Banner Model Import 
+use Illuminate\Support\Str;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\File;
+use Intervention\Image\Facades\Image as Image;
+use Illuminate\Contracts\Encryption\DecryptException;
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Storage;
+use Response;
+use DB;
 class BannerController extends Controller
 { 
     public function list()
@@ -43,9 +51,15 @@ class BannerController extends Controller
         $banner = new Banner;
         $banner->heading = $request->heading;
         $banner->subheading = $request->subheading;
-        $image  = $request->file('image');
-        Storage::putFile('public/img/',$image);
-        $banner->image ="storage/img/".$image->hashName(); // if same image is again upload then it will be renamed that's why we use hashname when we try to save an image.
+
+        $image= $request->file('image');
+        $IMGNAME = Str::random(10).'.'. $image->getClientOriginalExtension();       
+        $banner_image = 'images/blog/'. Carbon::now()->format('Y/M/').'/';
+        //Make Directory 
+        File::makeDirectory($banner_image, $mode=0777, true, true);        
+        //save Image to the thumbnail path
+        Image::make($image)->save(public_path($banner_image.$IMGNAME));
+        $banner->image = $IMGNAME;
         $banner->save();
         return redirect()->route('Banner.list')->with('success','New Banner created Successfully'); // redirect to banner create page with a success message.
 
@@ -63,11 +77,25 @@ class BannerController extends Controller
         $banner = Banner::find($id);
         $banner->heading = $request->heading;
         $banner->subheading = $request->subheading;
-        if($request->file('image')){
-            $image  = $request->file('image');
-            Storage::putFile('public/img/',$image);
-            $banner->image ="storage/img/".$image->hashName();
+        if($request->hasFile('image')){
+            $image= $request->file('image');
+            $IMGNAME = Str::random(10).'.'. $image->getClientOriginalExtension();       
+            $banner_image = 'images/blog/'. Carbon::now()->format('Y/M/').'/';
+
+            //Make Directory 
+            File::makeDirectory($banner_image, $mode=0777, true, true);        
+            //save Image to the thumbnail path
+            Image::make($image)->save(public_path($banner_image.$IMGNAME));
+
+            //Delete previous Image
+            $old_img_location = public_path('images/blog/'.$banner->created_at->format('Y/M/').'/'.$banner->image);
+            if(file_exists($old_img_location)){
+               unlink($old_img_location);
+            }                
+            //saving the new image
+            $banner->image = $IMGNAME;
         }
+
         $banner->save();
         return redirect()->route('Banner.list')->with('success','Banner details updated Successfully');
     }

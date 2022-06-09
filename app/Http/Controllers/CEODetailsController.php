@@ -2,9 +2,17 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-
-use Illuminate\Support\Facades\Storage; // For Image insert & Edit we use Laravel Illuminate 
 use App\Models\CeoDetails;
+use Illuminate\Support\Str;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\File;
+use Intervention\Image\Facades\Image as Image;
+use Illuminate\Contracts\Encryption\DecryptException;
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Storage;
+use Response;
+use DB;
+
 class CEODetailsController extends Controller
 {
     public function list()

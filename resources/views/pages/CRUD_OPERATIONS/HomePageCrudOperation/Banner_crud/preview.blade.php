@@ -69,7 +69,7 @@
 
                                     <div class="tab-pane" id="imageTab" aria-labelledby="image-tab" role="tabpanel">
                                         <p>
-                                            <img src="{{url($banner->image)}}" style="width: 300px;height:auto;" alt="">
+                                            <img class="blog-img-view-121" style="width: 150px; height:auto" src="{{ asset('images/blog/'.$banner->created_at->format('Y/M/').'/'.$banner->image) }}" alt="Blog Img">
                                         </p>
                                     </div>
                                 </div>

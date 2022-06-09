@@ -44,11 +44,11 @@
     var d = g(".service-card-prb");
     d.owlCarousel({
         items: 4,
-        loop: true,
+        loop: false,
         autoplay: true,
         margin: 20,
         nav: false,
-        dots: false,
+        dots: true,
         autoplayTimeout: 3500,
         autoplayHoverPause: true,
         smartSpeed: 2000,
@@ -60,16 +60,16 @@
                 items: 2
             },
             768: {
-                items: 3
+                items: 4
             },
             1200: {
-                items: 3
+                items: 4
             },
             1400: {
-                items: 3
+                items: 4
             },
             1600: {
-                items: 3
+                items: 4
             },
         }
     });

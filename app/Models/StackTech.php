@@ -11,6 +11,10 @@ class StackTech extends Model
     use SoftDeletes;
 
     protected $fillable=['stack_id','stackName','details','image','status'];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
     public function get_technology_name()
     {
         return $this->belongsTo('App\Models\SectorTechnologiesName', 'stack_id');

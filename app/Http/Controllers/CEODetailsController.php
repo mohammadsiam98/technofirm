@@ -65,6 +65,7 @@ class CEODetailsController extends Controller
     public function edit($id)
     {
         //
+<<<<<<< HEAD
         $Ceo = CeoDetails::find($id);
         if(!empty($Ceo)){
             return view('pages.CRUD_OPERATIONS.AboutUsPageCrudOperation.CEO_crud.edit',compact('Ceo'));
@@ -72,6 +73,10 @@ class CEODetailsController extends Controller
         else{
             return 'putki mara khaisi';
         } 
+=======
+        $Ceo = CeoDetails::find($id); // Fetch specific id
+        return view('pages.CRUD_OPERATIONS.AboutUsPageCrudOperation.CEO_crud.edit',compact('Ceo'));
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
     }
 
     public function update(Request $request, $id)

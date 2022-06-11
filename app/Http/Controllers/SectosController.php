@@ -32,10 +32,16 @@ class SectosController extends Controller
         // dd($SectorServicesName);
         $SectorStackName = SectorTechnologiesName::where('category_id',$categoryId)->first();
         // dd($SectorStackName);
+<<<<<<< HEAD
         // $SectorStack_list =DB::table('stack_teches')->join('sector_technologies_names','sector_technologies_names.category_id','stack_teches.stack_id')->where('category_id',$categoryId)->get(); 
         // // dd($SectorStack_list);
         $yeamin = StackTech::where('stack_id',$SectorStackName->id)->get(); 
         // dd($yeamin);
         return view('pages.DynamicServices.services',compact('serviceOverview','categoryId','SectorServices','SectorServices','SectorSF','SectorSF_list','SectorServicesName','SectorStackName','yeamin'));
+=======
+        $SectorStack_list =DB::table('stack_teches')->join('sector_technologies_names','sector_technologies_names.category_id','stack_teches.stack_id')->where('category_id',$categoryId)->get(); 
+        // dd($SectorStack_list);
+        return view('pages.DynamicServices.services',compact('serviceOverview','categoryId','SectorServices','SectorServices','SectorSF','SectorSF_list','SectorServicesName','SectorStackName','SectorStack_list'));
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
     }
 }

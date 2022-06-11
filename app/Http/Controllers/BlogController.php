@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage; // For Image insert & Edit we use Larave
 use App\Models\Category;
 use App\Models\User;
 use App\Models\Blog;
+<<<<<<< HEAD
 use Carbon\Carbon;
 use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image as Image;
@@ -20,6 +21,8 @@ use DB;
 
 
 
+=======
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
 class BlogController extends Controller
 {
     public function list()
@@ -59,6 +62,7 @@ class BlogController extends Controller
         $blog_details->slug = Str::slug($request->title);
         $blog_details->description = $request->description;
 
+<<<<<<< HEAD
         $image= $request->file('image');
         $IMGNAME = Str::random(10).'.'. $image->getClientOriginalExtension();       
         $post_image = 'images/WebsitePosts/'. Carbon::now()->format('Y/M/').'/';
@@ -81,6 +85,15 @@ class BlogController extends Controller
         Image::make($thumbnail_image)->save(public_path($preview_image.$thumbnail_IMGNAME));
         $blog_details->thumbnail_image = $thumbnail_IMGNAME;
 
+=======
+        $image  = $request->file('image');
+        Storage::putFile('public/img/',$image);
+        $blog_details->image ="storage/img/".$image->hashName(); // if same image is again upload then it will be renamed that's why we use hashname when we try to save an image.
+
+        $thumbnail_image  = $request->file('thumbnail_image');
+        Storage::putFile('public/img/',$thumbnail_image);
+        $blog_details->thumbnail_image ="storage/img/".$thumbnail_image->hashName(); // if same image is again upload then it will be renamed that's why we use hashname when we try to save an image.
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
         $blog_details->save();
         return redirect()->route('Blogs.list')->with('success','New Blog created Successfully'); // redirect to banner create page with a success message.
     }
@@ -90,6 +103,7 @@ class BlogController extends Controller
         //
         $blog_details = Blog::find($id);
         $categorylist = Category::all();
+<<<<<<< HEAD
 
         if(!empty($blog_details)){
             return view('pages.CRUD_OPERATIONS.BlogPageCrudOperation.Blog_crud.edit',compact('blog_details','categorylist'));
@@ -97,6 +111,9 @@ class BlogController extends Controller
         else{
             return 'putki mara khaisi';
         }
+=======
+        return view('pages.CRUD_OPERATIONS.BlogPageCrudOperation.Blog_crud.edit',compact('blog_details','categorylist'));
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
     }
 
     public function update(Request $request, $id)
@@ -107,6 +124,7 @@ class BlogController extends Controller
         $blog_details->category_id = $request->category_id;
         $blog_details->user_id = $user_id;
         $blog_details->title = $request->title;
+<<<<<<< HEAD
         $blog_details->slug = Str::slug($request->title);
         $blog_details->description = $request->description;
 
@@ -153,6 +171,19 @@ class BlogController extends Controller
             $blog_details->thumbnail_image = $thumbnail_IMGNAME;
         }
 
+=======
+        $blog_details->description = $request->description;
+        if($request->file('image')){
+            $image  = $request->file('image');
+            Storage::putFile('public/img/',$image);
+            $blog_details->image ="storage/img/".$image->hashName();
+        }
+        if($request->file('thumbnail_image')){
+            $thumbnail_image  = $request->file('thumbnail_image');
+            Storage::putFile('public/img/',$thumbnail_image);
+            $blog_details->thumbnail_image ="storage/img/".$thumbnail_image->hashName();
+        }
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
         $blog_details->save();
         return redirect()->route('Blogs.list')->with('success','Blog details updated Successfully');
     }
@@ -178,12 +209,16 @@ class BlogController extends Controller
     {
         //
         $blog_details = Blog::find($id);
+<<<<<<< HEAD
         if(!empty($blog_details)){
             return view('pages.CRUD_OPERATIONS.BlogPageCrudOperation.Blog_crud.preview',compact('blog_details'));
         }
         else{
             return 'putki mara khaisi';
         }
+=======
+        return view('pages.CRUD_OPERATIONS.BlogPageCrudOperation.Blog_crud.preview',compact('blog_details'));
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
     }
 
 

@@ -23,7 +23,11 @@ class OurStoriesController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
+<<<<<<< HEAD
             'details' => 'required|min:3|string',
+=======
+            'details' => 'required|min:3|max:100|string',
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
         ],[
             'details.required' => 'Please write our story details',
         ]);

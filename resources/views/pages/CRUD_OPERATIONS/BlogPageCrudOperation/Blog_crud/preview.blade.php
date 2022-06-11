@@ -65,6 +65,7 @@
                             </div>
                             <!-- Blog Title Preview -->
 
+<<<<<<< HEAD
 
                              <!-- Blog Slug Preview -->
                              <div class="alert" style="background: #353146">
@@ -79,6 +80,8 @@
                             </div>
                             <!-- Blog Slug Preview -->
 
+=======
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
                             <!-- Blog Description Preview -->
                             <div class="alert" style="background: #353146">
                                 <div class="alert-body d-flex align-items-center justify-content-between flex-wrap p-2">
@@ -99,14 +102,22 @@
                 <!-- Blog Image Preview Which Already Uploaded -->
                 <div class="row">
                     <h3>The image which you have uploaded is</h3>
+<<<<<<< HEAD
                     <img style="width: 150px; height:auto" src="{{ asset('images/WebsitePosts/'.$blog_details->created_at->format('Y/M/').'/'.$blog_details->image) }}" alt="Blog Image">
+=======
+                    <img src="{{url($blog_details->image)}}" style="width: 120px;height:auto;" alt="">
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
                 </div>
                 <!-- Blog Image Preview Which Already Uploaded -->
 
                 <!-- Blog Image Thumbnail Preview Which Already Uploaded -->
                 <div class="row">
                     <h3>The thumbnail image which you have uploaded is</h3>
+<<<<<<< HEAD
                     <img style="width: 150px; height:auto" src="{{ asset('images/WebsitePosts/'.$blog_details->created_at->format('Y/M/').'/'.$blog_details->thumbnail_image) }}" alt="Blog Thumbnail Image">
+=======
+                    <img src="{{url($blog_details->thumbnail_image)}}" style="width: 120px;height:auto;" alt="">
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
                 </div>
                 <!-- Blog Image Thumbnail Preview Which Already Uploaded -->
 

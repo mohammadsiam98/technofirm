@@ -40,6 +40,7 @@ class CompanyDetailsController extends Controller
     {
         //
         $Details = CompanyDetails::find($id); // Fetch specific id
+<<<<<<< HEAD
         if(!empty($Details)){
             return view('pages.CRUD_OPERATIONS.HomePageCrudOperation.CompanyDetails_crud.edit',compact('Details'));
         }
@@ -47,6 +48,9 @@ class CompanyDetailsController extends Controller
             return 'putki mara khaisi';
         } 
         
+=======
+        return view('pages.CRUD_OPERATIONS.HomePageCrudOperation.CompanyDetails_crud.edit',compact('Details'));
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
     }
 
     public function update(Request $request, $id)

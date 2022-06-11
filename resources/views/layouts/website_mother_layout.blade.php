@@ -71,10 +71,13 @@
                                                         <img src="" alt="" style="margin-right:10px;"> Web Development</a></li>
                                                 <li><a href="{{route('sectors','Mobile-Application-Development')}}" >
                                                         <img src="" alt="" style="margin-right:13px;">Mobile App Development</a> </li>
+<<<<<<< HEAD
                                                 
                                                 <li><a href="{{route('sectors','Graphics-Design')}}">
                                                     <img src="" alt="" style="margin-right:13px;">Graphics Design</a>   </li>
 
+=======
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
                                                 <li><a href="{{route('sectors','Search-Engine-Optimization')}}">
                                                         <img src="" alt="" style="margin-right:13px;">Search Engine Optimization</a></li>
                                                 <li><a href="{{route('sectors','Social-Media-Marketing')}}">

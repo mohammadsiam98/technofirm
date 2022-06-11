@@ -487,7 +487,11 @@
             <div class="col-lg-4 col-sm-6 mt30">
                 <div class="single-blog-post- up-hor shdo">
                     <div class="single-blog-img-">
+<<<<<<< HEAD
                         <a href="{{route('singleBlogPost',[$blogs->slug])}}"><img src="{{ asset('images/WebsitePosts/'.$blogs->created_at->format('Y/M/').'/'.$blogs->thumbnail_image) }}" alt="Blog Image" class="img-fluid" /></a>
+=======
+                        <a href="{{route('singleBlogPost',[$blogs->title])}}"><img src="{{url($blogs->thumbnail_image)}}" alt="girl" class="img-fluid" /></a>
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
                         <div class="entry-blog-post dg-bg2">
                             <span class="bypost-"><a href="#"><i class="fas fa-tag"></i>  <td class="text-center badge rounded-pill badge-light-primary me-1" style="margin-top: 12px;">{{$blogs->get_category->categoryName}}</td></a></span>
                         </div>

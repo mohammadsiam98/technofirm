@@ -37,6 +37,7 @@ class CategoryController extends Controller
     public function edit($id)
     {
         //
+<<<<<<< HEAD
         $categoryDetails = Category::find($id);
         if(!empty($categoryDetails)){
             return view('pages.CRUD_OPERATIONS.CategoryCrudOperation.Category_crud.edit',compact('categoryDetails'));
@@ -44,6 +45,10 @@ class CategoryController extends Controller
         else{
             return 'putki mara khaisi';
         }  
+=======
+        $categoryDetails = Category::find($id); // Fetch specific banner id
+        return view('pages.CRUD_OPERATIONS.CategoryCrudOperation.Category_crud.edit',compact('categoryDetails'));
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
     }
 
     public function update(Request $request, $id)

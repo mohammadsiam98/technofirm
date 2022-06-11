@@ -56,7 +56,25 @@
                     Story of our company</h2>
             </div>
             <div class="col-lg-12 col-sm-12">
+<<<<<<< HEAD
                 <p class="text-center ourStory">{{$ourStoryFetch->details}}</p>
+=======
+                <p class="text-center ourStory">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has been the
+                    industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s.</p>
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
             </div>
         </div>
 
@@ -79,12 +97,62 @@
         <div class="col-lg-12">
           <div class="clients-logos text-center col-12">
             <ul class="row text-center clearfix">
+<<<<<<< HEAD
               @foreach($brandsFetch as $brands)
               <li class="col-lg-3 col-md-3 col-sm-4 col-6">
                 <div class="brand-logo"><img src="{{ asset('images/brandsCollabWith/'.$brands->created_at->format('Y/M/').'/'.$brands->image) }}" alt="clients" class="img-fluid"></div>
               </li>
               @endforeach
               
+=======
+              <li class="col-lg-3 col-md-3 col-sm-4 col-6">
+                <div class="brand-logo"><img src="{{asset('frontendAssets/assets/images/client/clients-1.png')}}" alt="clients" class="img-fluid"></div>
+                <p>Shutter, USA</p>
+              </li>
+              <li class="col-lg-3 col-md-3 col-sm-4 col-6">
+                <div class="brand-logo"><img src="{{asset('frontendAssets/assets/images/client/clients-2.png')}}" alt="clients" class="img-fluid"></div>
+                <p>Hipster, USA</p>
+              </li>
+              <li class="col-lg-3 col-md-3 col-sm-4 col-6">
+                <div class="brand-logo"><img src="{{asset('frontendAssets/assets/images/client/clients-3.png')}}" alt="clients" class="img-fluid"></div>
+                <p>Happy, USA</p>
+              </li>
+              <li class="col-lg-3 col-md-3 col-sm-4 col-6">
+                <div class="brand-logo"><img src="{{asset('frontendAssets/assets/images/client/clients-4.png')}}" alt="clients" class="img-fluid"></div>
+                <p>Opera Tours, USA</p>
+              </li>
+              <li class="col-lg-3 col-md-3 col-sm-4 col-6">
+                <div class="brand-logo"><img src="{{asset('frontendAssets/assets/images/client/clients-4.png')}}" alt="clients" class="img-fluid"></div>
+                <p>Opera Tours, USA</p>
+              </li>
+              <li class="col-lg-3 col-md-3 col-sm-4 col-6">
+                <div class="brand-logo"><img src="{{asset('frontendAssets/assets/images/client/clients-4.png')}}" alt="clients" class="img-fluid"></div>
+                <p>Opera Tours, USA</p>
+              </li>
+              <li class="col-lg-3 col-md-3 col-sm-4 col-6">
+                <div class="brand-logo"><img src="{{asset('frontendAssets/assets/images/client/clients-4.png')}}" alt="clients" class="img-fluid"></div>
+                <p>Opera Tours, USA</p>
+              </li>
+              <li class="col-lg-3 col-md-3 col-sm-4 col-6">
+                <div class="brand-logo"><img src="{{asset('frontendAssets/assets/images/client/clients-4.png')}}" alt="clients" class="img-fluid"></div>
+                <p>Opera Tours, USA</p>
+              </li>
+              <li class="col-lg-3 col-md-3 col-sm-4 col-6">
+                <div class="brand-logo"><img src="{{asset('frontendAssets/assets/images/client/clients-4.png')}}" alt="clients" class="img-fluid"></div>
+                <p>Opera Tours, USA</p>
+              </li>
+              <li class="col-lg-3 col-md-3 col-sm-4 col-6">
+                <div class="brand-logo"><img src="{{asset('frontendAssets/assets/images/client/clients-4.png')}}" alt="clients" class="img-fluid"></div>
+                <p>Opera Tours, USA</p>
+              </li>
+              <li class="col-lg-3 col-md-3 col-sm-4 col-6">
+                <div class="brand-logo"><img src="{{asset('frontendAssets/assets/images/client/clients-4.png')}}" alt="clients" class="img-fluid"></div>
+                <p>Opera Tours, USA</p>
+              </li>
+              <li class="col-lg-3 col-md-3 col-sm-4 col-6">
+                <div class="brand-logo"><img src="{{asset('frontendAssets/assets/images/client/clients-4.png')}}" alt="clients" class="img-fluid"></div>
+                <p>Opera Tours, USA</p>
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
             </ul>
           </div>
         </div>

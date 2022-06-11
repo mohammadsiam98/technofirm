@@ -28,7 +28,11 @@ class ViewPagesController extends Controller
     {
         
         $ceoDetailsFetch = CeoDetails::all();
+<<<<<<< HEAD
         $ourStoryFetch = ourStory::first();
+=======
+        $ourStoryFetch = ourStory::all();
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
         $blogsFetch = Blog::orderBy('updated_at','desc')->limit(2)->get();
         $brandsFetch = brands::all();
         $MissionVissionFetch = MissionVission::all();

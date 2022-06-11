@@ -53,12 +53,16 @@ class BrandsCollabWithController extends Controller
     {
         //
         $brands = brands::find($id); // Fetch specific banner id
+<<<<<<< HEAD
         if(!empty($brands)){
             return view('pages.CRUD_OPERATIONS.AboutUsPageCrudOperation.brands_crud.edit',compact('brands'));
         }
         else{
             return 'putki mara khaisi';
         }
+=======
+        return view('pages.CRUD_OPERATIONS.AboutUsPageCrudOperation.brands_crud.edit',compact('brands'));
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
     }
 
     public function update(Request $request, $id)

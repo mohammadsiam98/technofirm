@@ -142,6 +142,7 @@
                                     {{-- Enter & Reset Button --}}
                                 </div>
 
+<<<<<<< HEAD
                               <!-- Blog Image Preview Which Already Uploaded -->
                             <div class="row">
                                 <h3>The image which you have uploaded is</h3>
@@ -159,6 +160,22 @@
                                     alt="Blog Thumbnail Image">
                             </div>
                             <!-- Blog Image Thumbnail Preview Which Already Uploaded -->
+=======
+                                {{-- Blog Image Show --}}
+                                <div class="row">
+                                    <h3>The image which you have uploaded is</h3>
+                                    <img src="{{url($blog_details->image)}}" style="width: 120px;height:auto;">
+                                </div>
+                                {{-- Blog Image Show --}}
+                                
+                                
+                                {{-- Blog Thumbnail Image Show --}}
+                                <div class="row">
+                                    <h3>The thumbnail image which you have uploaded is</h3>
+                                    <img src="{{url($blog_details->thumbnail_image)}}" style="width: 120px;height:auto;">
+                                </div>
+                                {{-- Blog Thumbnail Image Show --}}
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
                             </form>
                         </div>
                     </div>

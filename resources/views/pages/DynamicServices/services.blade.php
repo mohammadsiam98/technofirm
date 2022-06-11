@@ -47,7 +47,11 @@
             </div>
             <div class="col-lg-5">
                 <div class="single-image wow fadeIn">
+<<<<<<< HEAD
                     <img src="{{ asset('images/Sector_SF_Section/'.$SectorSF->image) }}" alt="Sector Services Images" class="img-fluid no-shadow"/>
+=======
+                    <img src="{{url($SectorSF->image)}}" alt="image" class="img-fluid no-shadow" />
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
                 </div>
             </div>
             <div class="col-lg-12 mt30">
@@ -80,7 +84,11 @@
             @foreach($SectorServices as $givenServices)
             <div class="col-lg-6 col-md-12 mt30 wow fadeInUp" data-wow-delay=".2s">
                 <div class="s-block wide-sblock">
+<<<<<<< HEAD
                     <div class="s-card-icon-large"><img src="{{ asset('images/SectorServices/'.$givenServices->created_at->format('Y/M/').'/'.$givenServices->image) }}" alt="Sector Services Images" class="img-fluid" />
+=======
+                    <div class="s-card-icon-large"><img src="{{url($givenServices->image)}}" alt="service" class="img-fluid" />
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
                     </div>
                     <div class="s-block-content-large">
                         <h4>{{$givenServices->title}}</h4>
@@ -113,6 +121,7 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
      <div class="row upset ovr-bg1 ho-gdnt">
          @foreach($yeamin as $SectorStack_names)
             <div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s"
@@ -125,6 +134,16 @@
                         <h4>{{$SectorStack_names->stackName}}</h4>
                         <p>{{$SectorStack_names->details}}.</p>
                         <a href="javascript:void(0)">Learn More <i class="fas fa-chevron-right fa-icon"></i></a>
+=======
+        <div class="row justify-content-center">
+            @foreach($SectorStack_list as $SectorStack_names)
+            <div class="col-lg-4 col-sm-6 mt30  wow fadeIn" data-wow-delay=".2s">
+                <div class="s-block wide-sblock">
+                    <div class="s-card-icon"><img src="{{url($SectorStack_names->image)}}" alt="service" class="img-fluid"></div>
+                    <div class="s-block-content">
+                        <h4>{{$SectorStack_names->stackName}}</h4>
+                        <p>{{$SectorStack_names->details}}.</p>
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
                     </div>
                 </div>
             </div>
@@ -139,7 +158,10 @@
     </div>
 </section>
 <!--Stack Name & Lists What We Use-->
+<<<<<<< HEAD
 
+=======
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
 @endif
 <!--Do not show this section if SectorStackName does not found -->
 

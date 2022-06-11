@@ -196,6 +196,12 @@ Route::group(['middleware'=>['auth','role:superadministrator']],function(){
     Route::get('/sector-special-feature-li-list/destroyList/{id}', 'App\Http\Controllers\SectorSpecialFeaturesDynamicController@restoreData')->name('SectorSFD.restoreData');
     Route::get('/sector-special-feature-li-list-Permanently-Delete/{id}', 'App\Http\Controllers\SectorSpecialFeaturesDynamicController@forceDelete')->name('SectorSFD.forceDelete');
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 961b3759e142d60936e58246ab405ada43e28be3
     
     Route::get('/Blog/create', 'App\Http\Controllers\BlogController@create')->name('Blogs.create');
     Route::put('/Blog/create', 'App\Http\Controllers\BlogController@store')->name('Blogs.store');
